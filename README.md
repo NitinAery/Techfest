@@ -23,7 +23,7 @@ A modern, high-end restaurant web application inspired by award-winning UI/UX de
 The entire interface has been redesigned based on the modern restaurant UI reference video:
 1. **Hero Section ("Take a taste • Come join us. Life is so endlessly delicious"):**
    - High-contrast modern typography with subtle orange spice accents.
-   - Large floating circular dish presentation with soft depth shadow and subtle float animation.
+   - Modern floating showcase frame highlighting the authentic **Magic Masala** restaurant entrance photo with fairy lights, balloons, and dining room.
    - Floating review and pure-veg verification chips.
    - Price highlight: **₹1–200 per person** (Google Maps verified).
 
