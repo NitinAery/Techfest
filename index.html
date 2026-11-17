@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REDBRICK — Scarlet Ink Editorial Coffee & Scratch Bakery</title>
+  
+  <!-- Google Fonts: Editorial Old (Playfair Display 300) + Surt (Plus Jakarta Sans 400) + GTStandard-M (JetBrains Mono 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,300;1,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =======================================================================
+       1. TOP ANNOUNCEMENT BAR (FULL-BLEED #e82c2a)
+       ======================================================================= -->
+  <aside class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="announcement-text">
+      FOR COFFEE DRINKERS • ROASTED IN SMALL BATCHES • DAILY BAKE FROM 7:00 AM
+    </div>
+    <ul class="announcement-nav">
+      <li><a href="#story">About</a></li>
+      <li><a href="#menu">Wholesale</a></li>
+      <li><a href="#menu">Office Coffee</a></li>
+      <li><a href="#reservation">Table Booking</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- =======================================================================
+       2. PRIMARY & SECONDARY HEADER NAVIGATION
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="primary-nav-strip">
+      <a href="#" class="brand-identity" aria-label="Redbrick Coffee Home">
+        <!-- 3D Brick Isometric Vector Icon in #e82c2a -->
+        <svg class="brand-brick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span class="brand-wordmark">REDBRICK</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="primary-nav-links">
+          <li><a href="#menu">Blends & Menu</a></li>
+          <li><a href="#story">Our Craft</a></li>
+          <li><a href="#gallery">Atmosphere</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+          <li><a href="#journal">Editorial Journal</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#reservation" class="action-link-outlined rect">Book a Table →</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Nav Row: Sub-Category Navigation Strip separated by 1px #e82c2a rule -->
+    <div class="secondary-nav-strip">
+      <ul class="secondary-nav-list">
+        <li><a href="#menu" class="active">Coffee Coffee</a></li>
+        <li><a href="#menu">Good Day Blend</a></li>
+        <li><a href="#menu">Rogue Single Origin</a></li>
+        <li><a href="#menu">Dark Batch</a></li>
+        <li><a href="#menu">Decaf Coffee</a></li>
+        <li><a href="#menu">48-Hr Viennoiserie</a></li>
+        <li><a href="#menu">Heritage Sourdough</a></li>
+        <li><a href="#menu">Reserve Pour-Over</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#menu" class="mobile-link">The Menu</a></li>
+      <li><a href="#story" class="mobile-link">Our Story</a></li>
+      <li><a href="#gallery" class="mobile-link">Atmosphere</a></li>
+      <li><a href="#reservation" class="mobile-link">Reserve Table</a></li>
+      <li><a href="#footer" class="mobile-link">Contact & Hours</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="#reservation" class="action-link-outlined mobile-link" style="width: 100%;">Book a Table ⟶</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- =======================================================================
+         3. HERO SECTION (50/50 EDITORIAL SPLIT)
+         ======================================================================= -->
+    <section class="hero-editorial-split" id="hero">
+      <div class="container-full">
+        <div class="hero-grid-split">
+          <!-- Left Column: Editorial Display Headline in Weight 300 Serif -->
+          <div class="hero-text-block">
+            <span class="micro-label" style="margin-bottom: var(--spacing-20);">ISSUE NO. 09 • MORNING DISPATCH</span>
+            <h1 class="hero-headline">Morning ritual printed in scarlet.</h1>
+            <p class="hero-paragraph">
+              We treat specialty coffee and scratch baking like print journalism: honest, unhurried, and produced with uncompromising intention. Warm laminated pastries pulled at dawn, single-origin micro-lots dialed on brass, and a quiet table by the window.
+            </p>
+            <div class="hero-actions">
+              <a href="#reservation" class="action-link-outlined">Reserve a Table →</a>
+              <a href="#menu" class="action-link-outlined rect">Explore Offerings →</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Rounded 25px Overhead Lifestyle Photography -->
+          <div class="lifestyle-image-block">
+            <img 
+              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop" 
+              alt="Overhead lifestyle view of hand-poured latte art and flaky croissant on wooden cafe table"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SIGNATURE MENU & BLENDS (PRODUCT CARD GRID ON #f2f2f2)
+         ======================================================================= -->
+    <section class="menu-showcase-section" id="menu">
+      <div class="container-full">
+        <!-- Section Divider with Running Head -->
+        <div class="section-running-head">
+          <span class="micro-label">VOL. 01 — SIGNATURE BLENDS & MORNING BAKE</span>
+          <a href="#menu" class="arrow-link">Shop blends →</a>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="menu-filter-strip">
+          <button class="filter-pill active" data-filter="all">All Offerings</button>
+          <button class="filter-pill" data-filter="blends">Specialty Blends</button>
+          <button class="filter-pill" data-filter="single-origin">Single Origin</button>
+          <button class="filter-pill" data-filter="bakery">Scratch Bakery</button>
+          <button class="filter-pill" data-filter="plates">Brunch Plates</button>
+        </div>
+
+        <!-- Product Cards Grid: 25px radius, #f2f2f2 surface, 30px padding, NO shadows -->
+        <div class="products-grid" id="productGridContainer">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. BRAND STORY & CRAFT (ALTERNATING 50/50 SPLITS)
+         ======================================================================= -->
+    <section class="brand-story-section" id="story">
+      <div class="container-full">
+        <!-- Section Divider with Running Head -->
+        <div class="section-running-head">
+          <span class="micro-label">VOL. 02 — PHILOSOPHY & PROVENANCE</span>
+          <a href="#story" class="arrow-link">Read our journal →</a>
+        </div>
+
+        <!-- Split Row 1: Roastery & Sourdough -->
+        <div class="story-split-row">
+          <div class="lifestyle-image-block">
+            <img 
+              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" 
+              alt="Baker scoring heritage sourdough loaf on flour-dusted butcher bench" 
+              loading="lazy"
+            />
+          </div>
+          <div class="story-text-block">
+            <span class="micro-label" style="margin-bottom: var(--spacing-10);">SCRATCH FERMENTATION</span>
+            <h2 class="story-headline">Laminated dough. 48 hours.</h2>
+            <p>
+              Our country sourdough ferments through two full revolutions of the sun. We fold cultured Normandy butter twenty-seven times into stoneground flour before baking in a high-thermal hearth at 5:00 AM.
+            </p>
+            <div class="story-pillars-grid">
+              <div class="pillar-item">
+                <h4>Direct Trade</h4>
+                <p>Sourced from family estates in Huila, Colombia & Yirgacheffe, paying 180% above Fairtrade baseline.</p>
+              </div>
+              <div class="pillar-item">
+                <h4>Slow Ferment</h4>
+                <p>Wild levain culture nurtured for 7 years, delivering open crumb structure and deep caramelized crust.</p>
+              </div>
+              <div class="pillar-item">
+                <h4>Small Batches</h4>
+                <p>Roasted in 12kg increments on our custom Loring smart roaster to safeguard delicate floral aromatics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Row 2: Reversed Split for Ritual -->
+        <div class="story-split-row reversed">
+          <div class="lifestyle-image-block">
+            <img 
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" 
+              alt="Hands cupping single-origin roasted beans beside open notebook" 
+              loading="lazy"
+            />
+          </div>
+          <div class="story-text-block">
+            <span class="micro-label" style="margin-bottom: var(--spacing-10);">THE COFFEE RITUAL</span>
+            <h2 class="story-headline">Precision in every pour.</h2>
+            <p>
+              We dial in our espresso profiles every morning before sunrise, measuring water salinity, extraction yield, and grind micron distribution. The result is a cup with the clarity of print: no bitter astringency, just pure fruit, floral, and caramelized sugars.
+            </p>
+            <div style="margin-top: var(--spacing-20);">
+              <a href="#reservation" class="action-link-outlined">Experience the Parlour →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. CURATED AMBIANCE GALLERY (EDITORIAL MAGAZINE BENTO)
+         ======================================================================= -->
+    <section class="gallery-section" id="gallery">
+      <div class="container-full">
+        <!-- Section Divider with Running Head -->
+        <div class="section-running-head">
+          <span class="micro-label">VOL. 03 — ARCHITECTURE & ATMOSPHERE</span>
+          <a href="#gallery" class="arrow-link">View archive →</a>
+        </div>
+
+        <!-- Bento Grid: 25px radius, warm overhead lifestyle -->
+        <div class="gallery-editorial-grid">
+          <div class="gallery-tile gallery-col-6" data-gallery-id="0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Sunlit Oak Reading Bench" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>The Sunlit Oak Nook</h5>
+                <span>Morning light through arched glass</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+
+          <div class="gallery-tile gallery-col-6-single" data-gallery-id="1">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop" alt="Custom Terrazzo & Brass Bar" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>Terrazzo & Brass Slow Bar</h5>
+                <span>Dual-group Slayer espresso machine</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+
+          <div class="gallery-tile gallery-col-6-single" data-gallery-id="2">
+            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=1200&auto=format&fit=crop" alt="Hand-thrown Speckled Ceramics" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>Wheel-Thrown Tableware</h5>
+                <span>Custom stoneware by local ceramicist</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+
+          <div class="gallery-tile gallery-col-4" data-gallery-id="3">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop" alt="Cobblestone Garden Patio" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>Garden Courtyard</h5>
+                <span>Zinc bistro tables & jasmine</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+
+          <div class="gallery-tile gallery-col-4" data-gallery-id="4">
+            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?q=80&w=1200&auto=format&fit=crop" alt="Morning Bakery Rack" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>Fresh Bake Rack</h5>
+                <span>Kouign-amann cooling at 6:30 AM</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+
+          <div class="gallery-tile gallery-col-4" data-gallery-id="5">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=1200&auto=format&fit=crop" alt="Manual Pour-over Station" loading="lazy" />
+            <div class="gallery-tile-caption">
+              <div>
+                <h5>Pour-Over Slow Bar</h5>
+                <span>Origami drippers with floral lots</span>
+              </div>
+              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="redbrick-lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Photo Inspector">
+      <div class="lightbox-wrap">
+        <button class="lightbox-close" id="lightboxCloseBtn">Close [ESC]</button>
+        <div class="lightbox-frame">
+          <img id="lightboxImg" src="" alt="Enlarged view" />
+        </div>
+        <div class="lightbox-meta">
+          <h4 class="lightbox-title" id="lightboxTitle"></h4>
+          <p class="lightbox-desc" id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         7. TABLE RESERVATION (50/50 EDITORIAL BOOKING CARD)
+         ======================================================================= -->
+    <section class="reservation-editorial-section" id="reservation">
+      <div class="container-full">
+        <!-- Section Divider with Running Head -->
+        <div class="section-running-head">
+          <span class="micro-label">VOL. 04 — TABLE RESERVATION & PARLOUR</span>
+          <a href="#reservation" class="arrow-link">Reservation policies →</a>
+        </div>
+
+        <div class="reservation-split-card">
+          <!-- Left Column: Café Hours, Location & Seating Notes -->
+          <div class="reservation-info-pane">
+            <div>
+              <span class="micro-label" style="margin-bottom: var(--spacing-10);">THE PARLOUR & PATIO</span>
+              <h3>A table for your morning read.</h3>
+              <p style="font-size: var(--text-body-sm); color: #444444; margin-bottom: var(--spacing-20);">
+                We reserve half of our tables for walk-ins and half for scheduled morning bookings. Reservations are held for 15 minutes with complimentary single-origin cupping water upon arrival.
+              </p>
+
+              <div class="reservation-details-list">
+                <div class="res-detail-item">
+                  <h5>Location</h5>
+                  <p>42 Redbrick Lane, Old Roastery Quarter • East Entrance</p>
+                </div>
+                <div class="res-detail-item">
+                  <h5>Daily Service Hours</h5>
+                  <p>Monday – Friday: 07:00 – 18:00<br>Saturday – Sunday: 08:00 – 19:00</p>
+                </div>
+                <div class="res-detail-item">
+                  <h5>Seating Spaces</h5>
+                  <p>The Sunlit Window Bench (Soft light & books) • The Espresso Counter (Live dialogue with baristas) • The Garden Patio (Outdoor breeze & dogs welcome)</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-family: var(--font-gtstandard-m); font-size: var(--text-caption); letter-spacing: var(--tracking-caption); text-transform: uppercase; color: var(--color-brick-red);">
+              Instant Confirmation • No Booking Fees
+            </div>
+          </div>
+
+          <!-- Right Column: Clean Single-View Reservation Form -->
+          <div class="reservation-form-pane">
+            <div id="bookingFormWrapper">
+              <form id="reservationForm">
+                <!-- Date input -->
+                <div class="res-field-group">
+                  <label class="res-label" for="bookingDate">Select Date</label>
+                  <input type="date" id="bookingDate" class="res-input" required />
+                </div>
+
+                <!-- Party Size Selector Pills -->
+                <div class="res-field-group">
+                  <label class="res-label">Party Size</label>
+                  <div class="res-pill-row">
+                    <button type="button" class="res-choice-pill party-pill" data-party="1">1 Guest</button>
+                    <button type="button" class="res-choice-pill party-pill active" data-party="2">2 Guests</button>
+                    <button type="button" class="res-choice-pill party-pill" data-party="4">4 Guests</button>
+                    <button type="button" class="res-choice-pill party-pill" data-party="6">6 Guests</button>
+                    <button type="button" class="res-choice-pill party-pill" data-party="8">8+ Guests</button>
+                  </div>
+                </div>
+
+                <!-- Time Slot Pills -->
+                <div class="res-field-group">
+                  <label class="res-label">Preferred Time Slot</label>
+                  <div class="res-pill-row">
+                    <button type="button" class="res-choice-pill time-pill" data-time="08:00 AM">08:00 AM</button>
+                    <button type="button" class="res-choice-pill time-pill active" data-time="09:30 AM">09:30 AM</button>
+                    <button type="button" class="res-choice-pill time-pill" data-time="11:00 AM">11:00 AM</button>
+                    <button type="button" class="res-choice-pill time-pill" data-time="01:15 PM">01:15 PM</button>
+                    <button type="button" class="res-choice-pill time-pill" data-time="03:30 PM">03:30 PM</button>
+                  </div>
+                </div>
+
+                <!-- Seating Area Selection -->
+                <div class="res-field-group">
+                  <label class="res-label">Seating Atmosphere</label>
+                  <div class="seating-pills-row">
+                    <div class="seating-option active" data-area="Window Bench">
+                      <h6>Window Bench</h6>
+                      <small>Sunlight & reading nook</small>
+                    </div>
+                    <div class="seating-option" data-area="Garden Patio">
+                      <h6>Garden Patio</h6>
+                      <small>Outdoor jasmine courtyard</small>
+                    </div>
+                    <div class="seating-option" data-area="Espresso Counter">
+                      <h6>Espresso Bar</h6>
+                      <small>Interactive barista view</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guest Details -->
+                <div class="res-field-group">
+                  <label class="res-label" for="guestName">Full Name</label>
+                  <input type="text" id="guestName" class="res-input" placeholder="e.g. Julian Hayes" required />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: var(--spacing-20);">
+                  <div>
+                    <label class="res-label" for="guestEmail">Email Address</label>
+                    <input type="email" id="guestEmail" class="res-input" placeholder="julian@example.com" required />
+                  </div>
+                  <div>
+                    <label class="res-label" for="guestPhone">Phone Number</label>
+                    <input type="tel" id="guestPhone" class="res-input" placeholder="+1 (555) 019-2834" required />
+                  </div>
+                </div>
+
+                <!-- Outlined Action Link / Button (Primary Action - NO solid background) -->
+                <button type="submit" class="action-link-outlined" style="width: 100%;">
+                  Confirm Table Reservation ⟶
+                </button>
+              </form>
+            </div>
+
+            <!-- Instant Confirmation Voucher View -->
+            <div class="reservation-voucher-card" id="reservationVoucher">
+              <div class="voucher-header">
+                <div>
+                  <span class="micro-label">TABLE RESERVATION CONFIRMED</span>
+                  <h4 style="font-family: var(--font-editorial-old); font-size: 1.5rem; font-weight: 300; color: var(--color-press-black);">Hearth & Parlour Voucher</h4>
+                </div>
+                <span class="voucher-code" id="voucherCode">RB-84920</span>
+              </div>
+
+              <div class="voucher-details-grid">
+                <div class="voucher-field">
+                  <h6>Guest Name</h6>
+                  <p id="voucherGuestName">—</p>
+                </div>
+                <div class="voucher-field">
+                  <h6>Date & Time</h6>
+                  <p id="voucherDateTime">—</p>
+                </div>
+                <div class="voucher-field">
+                  <h6>Party Size</h6>
+                  <p id="voucherParty">—</p>
+                </div>
+                <div class="voucher-field">
+                  <h6>Seating Area</h6>
+                  <p id="voucherSeating">—</p>
+                </div>
+              </div>
+
+              <p style="font-size: 0.8125rem; color: #555555; line-height: 1.4; margin-bottom: 1.5rem;">
+                A confirmation has been dispatched to your email. Please arrive within 15 minutes of your booking time.
+              </p>
+
+              <button type="button" class="action-link-outlined rect" id="voucherResetBtn">
+                Book Another Table ⟶
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       8. FOOTER (CARBON #121212 PANEL)
+       ======================================================================= -->
+  <footer class="site-footer-carbon" id="footer">
+    <div class="container-full">
+      <div class="footer-top-spread">
+        <h2 class="footer-display-quote">Good coffee speaks quietly.</h2>
+
+        <!-- Horizontal Mini-Nav in 15px Surt #e82c2a -->
+        <ul class="footer-mini-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Coffee Coffee</a></li>
+          <li><a href="#menu">Scratch Bakery</a></li>
+          <li><a href="#reservation">Table Booking</a></li>
+          <li><a href="#menu">Wholesale Inquiries</a></li>
+          <li><a href="#story">Journal</a></li>
+          <li><a href="#story">Provenance</a></li>
+          <li><a href="#footer">Privacy & Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-sub-grid">
+        <div>
+          <h6 class="footer-col-caption">Roastery & Parlour Address</h6>
+          <p class="footer-text-muted">
+            42 Redbrick Lane, Old Roastery Quarter<br>
+            London & Brooklyn Branches<br>
+            Direct: +1 (555) 382-9100 • studio@redbrickcoffee.com
+          </p>
+        </div>
+
+        <div>
+          <h6 class="footer-col-caption">Daily Hours</h6>
+          <p class="footer-text-muted">
+            Weekdays: 07:00 – 18:00<br>
+            Weekends: 08:00 – 19:00<br>
+            Hearth warm at 05:00
+          </p>
+        </div>
+
+        <div>
+          <h6 class="footer-col-caption">Dispatch Newsletter</h6>
+          <p class="footer-text-muted" style="font-size: 0.875rem;">
+            Monthly notes on micro-lot arrivals and weekend viennoiserie drops.
+          </p>
+          <form class="newsletter-box" id="dispatchNewsletterForm">
+            <input type="email" class="newsletter-input" id="newsletterEmailInput" placeholder="Your email address" required />
+            <button type="submit" class="action-link-outlined rect" style="color: var(--color-brick-red); border-color: var(--color-brick-red);">Subscribe ⟶</button>
+          </form>
+          <span id="newsletterMsg" style="display: none; font-family: var(--font-gtstandard-m); font-size: 10px; color: #FFA4A2; margin-top: 6px;"></span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copy">
+        <span>© 2026 REDBRICK COFFEE ROASTERS LTD. ALL RIGHTS RESERVED.</span>
+        <span>SCARLET INK ON BUTCHER PAPER • PRINTED EDITION</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Stack for Interactive Feedback -->
+  <div class="toast-stack" id="toastContainer"></div>
+
+  <!-- JavaScript Application -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+
