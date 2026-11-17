@@ -1,15 +1,15 @@
 /**
  * MAGIC MASALA CAFE & RESTAURANT - CONTROLLER
- * Massal Chowk, near RGGEC Kangra, Nagrota Bagwan
- * Owner: Monika Rana | Pure Veg | Multi-Cuisine | Tiffin Service
- * All images taken directly from Magic Masala's restaurant photos & Google Maps listing!
+ * Inspired by UI/UX video: "Take a taste • Come join us • Life is so endlessly delicious"
+ * "What's on our Plate" • "Let's see what other says"
+ * STRICTLY CONTAINS ONLY ITEMS FROM THE OFFICIAL MENU CARD & TIFFIN SERVICE!
  */
 
 // ==========================================
-// 1. AUTHENTIC MENU DATASET (ALL PRICES ₹15 - ₹120, WITHIN ₹1-200 RANGE)
+// 1. STRICT MENU DATASET (ONLY OFFICIAL MENU ITEMS)
 // ==========================================
 const MAGIC_MENU = [
-  // --- Rice Delights (Ghar Ka Khana) ---
+  // --- 1. Rice Delights (Ghar Ka Khana) ---
   {
     id: 'rice-1',
     category: 'rice',
@@ -18,8 +18,8 @@ const MAGIC_MENU = [
     price: '₹80',
     priceNum: 80,
     tags: ['Pure Veg', 'College Favorite', 'Ghar Ka Khana'],
-    desc: 'Homestyle slow-simmered Kashmiri Rajma curry served with fragrant Basmati rice, fresh salad, and chilled boondi raita.',
-    serving: 'Served with Salad + Raita',
+    desc: 'Homestyle slow-simmered Kashmiri Rajma curry served with fragrant Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
+    serving: 'Rajma + Rice + Salad + Raita',
     image: 'assets/images/card-rice-thali.jpg'
   },
   {
@@ -31,7 +31,7 @@ const MAGIC_MENU = [
     priceNum: 80,
     tags: ['Pure Veg', 'Himachali Style'],
     desc: 'Traditional sour curd kadhi infused with fenugreek and soft besan pakodis, paired with hot steamed rice and sliced salad.',
-    serving: 'Served with Salad',
+    serving: 'Kadhi + Rice + Salad',
     image: 'assets/images/tiffin-dal-sabzi.jpg'
   },
   {
@@ -41,290 +41,272 @@ const MAGIC_MENU = [
     hindi: 'छोले चावल',
     price: '₹80',
     priceNum: 80,
-    tags: ['Pure Veg', 'Spiced Gravy'],
-    desc: 'Amritsari spiced chickpea gravy simmered in roasted garam masala, served hot with steamed rice, onion lachha, and raita.',
-    serving: 'Served with Salad + Raita',
+    tags: ['Pure Veg', 'Aromatic Spices'],
+    desc: 'Amritsari spiced chickpea gravy simmered in roasted garam masala, served hot with steamed rice, onion lachha, and cooling raita.',
+    serving: 'Chole + Rice + Salad + Raita',
     image: 'assets/images/google-paneer-curry.jpg'
   },
 
-  // --- Samosa & Chaat ---
+  // --- 2. Samosa & Chaat ---
   {
-    id: 'snack-1',
-    category: 'snacks',
-    title: 'Crispy Samosa (Per Pc)',
+    id: 'samosa-1',
+    category: 'chaat',
+    title: 'Crispy Samosa',
     hindi: 'समोसा',
     price: '₹15',
     priceNum: 15,
-    tags: ['Freshly Fried', 'Pocket Friendly (₹15)'],
+    tags: ['Fresh Daily', 'Pocket Friendly'],
     desc: 'Golden flaky crust stuffed with spiced potatoes, green peas, coriander seeds, and ginger. Served with tamarind & mint chutney.',
-    serving: 'Served with 2 Chutneys',
+    serving: 'Single Pc with 2 Chutneys',
     image: 'assets/images/card-samosa.jpg'
   },
   {
-    id: 'snack-2',
-    category: 'snacks',
+    id: 'samosa-2',
+    category: 'chaat',
     title: 'Samosa Chat',
     hindi: 'समोसा चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Bestseller', 'Street Style'],
+    tags: ['Bestseller', 'Chatpata'],
     desc: 'Crushed hot samosas topped with spicy chole gravy, fresh whisked curd, roasted jeera, saunth chutney, and crunchy sev.',
     serving: 'Generous Single Portion',
     image: 'assets/images/card-samosa.jpg'
   },
   {
-    id: 'snack-3',
-    category: 'snacks',
+    id: 'samosa-3',
+    category: 'chaat',
     title: 'Tikki Chat',
     hindi: 'टिक्की चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Crispy Golden', 'Chatpata'],
-    desc: 'Double shallow-fried spiced potato tikkis pressed crisp on tawa, smothered in warm chole, curd, and green mint chutney.',
-    serving: '2 Crispy Tikkis',
+    tags: ['Crispy Golden', 'Tawa Fried'],
+    desc: 'Double shallow-fried spiced potato tikkis pressed crisp on tawa, smothered in warm chole, sweet curd, and green mint chutney.',
+    serving: '2 Crispy Tikkis Portion',
     image: 'assets/images/card-samosa.jpg'
   },
   {
-    id: 'snack-4',
-    category: 'snacks',
-    title: 'Samosa + Tikki Chat Combo',
+    id: 'samosa-4',
+    category: 'chaat',
+    title: 'Samosa + Tikki Chat',
     hindi: 'समोसा + टिक्की चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Double Delight', 'Student Pick'],
+    tags: ['Signature Combo', 'Student Pick'],
     desc: 'One crunchy samosa and one potato tikki crushed together with rich dahi, chole masala, onions, and sweet-sour chutneys.',
-    serving: 'Combo Portion',
+    serving: 'Double Snack Combo',
     image: 'assets/images/card-samosa.jpg'
   },
   {
-    id: 'snack-5',
-    category: 'snacks',
-    title: 'Fresh Fruit Chat',
+    id: 'samosa-5',
+    category: 'chaat',
+    title: 'Fruit Chat',
     hindi: 'फ्रूट चाट',
     price: '₹80',
     priceNum: 80,
     tags: ['Healthy Choice', 'Fresh Cut'],
-    desc: 'A vibrant bowl of freshly chopped seasonal fruits tossed in lemon juice and signature Magic Masala rock salt spice blend.',
-    serving: 'Full Fresh Bowl',
+    desc: 'A refreshing bowl of freshly chopped seasonal fruits tossed in lemon juice and signature Magic Masala rock salt spice blend.',
+    serving: 'Fresh Fruit Bowl',
     image: 'assets/images/card-rice-thali.jpg'
   },
 
-  // --- Pakodas ---
+  // --- 3. Pakodas & Snacks ---
   {
     id: 'pakoda-1',
-    category: 'snacks',
-    title: 'Paneer Pakoda',
-    hindi: 'पनीर पकौड़ा',
-    price: '₹70',
-    priceNum: 70,
-    tags: ['Fresh Paneer', 'Chai Companion'],
-    desc: 'Thick slabs of fresh malai paneer sandwiched with tangy mint paste, dipped in ajwain besan batter and fried golden crisp.',
-    serving: 'Served with Mint Chutney',
+    category: 'pakodas',
+    title: 'Veg Pakoda',
+    hindi: 'वेज पकौड़ा',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Freshly Fried', 'Crispy Batter'],
+    desc: 'Fresh garden vegetables coated in seasoned ajwain gram flour batter and fried until crispy golden. Served with chutney.',
+    serving: 'Full Plate with Chutney',
     image: 'assets/images/card-pakoda.jpg'
   },
   {
     id: 'pakoda-2',
-    category: 'snacks',
-    title: 'Mix Pakoda Platter',
-    hindi: 'मिक्स पकौड़ा',
-    price: '₹80',
-    priceNum: 80,
-    tags: ['Rainy Day Favorite', 'Full Plate'],
-    desc: 'Assorted hot fritters including onion, potato, gobhi, and green chilli, sprinkled with chaat masala. Perfect with hot chai.',
-    serving: 'Sharing Plate',
+    category: 'pakodas',
+    title: 'Onion Pakoda',
+    hindi: 'प्याज पकौड़ा',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Super Crunch', 'Chai Partner'],
+    desc: 'Finely sliced red onions tossed with green chilies, coriander, and spiced besan batter, fried into crunchy golden fritters.',
+    serving: 'Full Plate with Chutney',
     image: 'assets/images/card-pakoda.jpg'
   },
   {
     id: 'pakoda-3',
-    category: 'snacks',
-    title: 'Onion / Veg Pakoda',
-    hindi: 'प्याज / वेज पकौड़ा',
-    price: '₹50',
-    priceNum: 50,
-    tags: ['Super Crunch', 'Budget Hit'],
-    desc: 'Finely sliced red onions and herbs mixed with spiced gram flour and fried to a deep amber crunch. Served with spicy dip.',
-    serving: 'Single Plate',
+    category: 'pakodas',
+    title: 'Paneer Pakoda',
+    hindi: 'पनीर पकौड़ा',
+    price: '₹70',
+    priceNum: 70,
+    tags: ['Fresh Dairy Paneer', 'Soft Inside'],
+    desc: 'Thick slabs of fresh malai paneer sandwiched with tangy mint paste, dipped in spiced besan batter and fried golden crisp.',
+    serving: 'Plate of Paneer Pakodas',
+    image: 'assets/images/card-pakoda.jpg'
+  },
+  {
+    id: 'pakoda-4',
+    category: 'pakodas',
+    title: 'Mix Pakoda',
+    hindi: 'मिक्स पकौड़ा',
+    price: '₹80',
+    priceNum: 80,
+    tags: ['Assorted Platter', 'Popular'],
+    desc: 'Assorted hot fritters including onion, potato, gobhi, paneer, and green chilli, sprinkled with chaat masala.',
+    serving: 'Full Sharing Platter',
     image: 'assets/images/card-pakoda.jpg'
   },
 
-  // --- Chinese & Fast Food (Direct from Magic Masala & Google listing photos) ---
-  {
-    id: 'fast-1',
-    category: 'chinese',
-    title: 'Paneer Hakka Noodles',
-    hindi: 'पनीर हक्का नूडल्स',
-    price: '₹90',
-    priceNum: 90,
-    tags: ['Real Cafe Photo', 'Wok Tossed'],
-    desc: 'Wok-tossed noodles loaded with fried cottage cheese cubes, colorful bell peppers, shredded cabbage, and garlic-soya sauce.',
-    serving: 'Full Plate',
-    image: 'assets/images/hakka-noodles.jpg'
-  },
-  {
-    id: 'fast-2',
-    category: 'chinese',
-    title: 'Magic Veg Burger',
-    hindi: 'वेज बर्गर',
-    price: '₹60',
-    priceNum: 60,
-    tags: ['Real Cafe Photo', 'Sesame Bun'],
-    desc: 'Toasted sesame seed bun packed with a crispy spiced vegetable patty, cucumber ribbons, tomato slices, mayo, and chili drizzle.',
-    serving: 'Served with Dipping Sauces',
-    image: 'assets/images/burger-plate.jpg'
-  },
-  {
-    id: 'fast-3',
-    category: 'chinese',
-    title: 'Paneer Kathi Roll / Frankie',
-    hindi: 'पनीर काठी रोल',
-    price: '₹70',
-    priceNum: 70,
-    tags: ['From Google Listing', 'Roll Special'],
-    desc: 'Flaky paratha wrap stuffed with marinated tandoori paneer, sliced bell peppers, crisp onions, and tangy mint mayo.',
-    serving: 'Cut in Halves with Dip',
-    image: 'assets/images/google-kathi-roll.jpg'
-  },
-  {
-    id: 'fast-4',
-    category: 'chinese',
-    title: 'Veg Steamed / Fried Momos',
-    hindi: 'मोमोज (स्टीम्ड / फ्राइड)',
-    price: '₹60 - ₹70',
-    priceNum: 60,
-    tags: ['From Restaurant Banner', 'Fiery Dip'],
-    desc: 'Thin dough dumplings filled with minced ginger, garlic, and cabbage. Served with our signature fiery red chili garlic chutney.',
-    serving: '8 Pieces',
-    image: 'assets/images/poster-momos.jpg'
-  },
-  {
-    id: 'fast-5',
-    category: 'chinese',
-    title: 'Cheesy Veg Farmhouse Pizza',
-    hindi: 'चीज वेज पिज्जा',
-    price: '₹120',
-    priceNum: 120,
-    tags: ['From Restaurant Banner', 'Fresh Baked'],
-    desc: 'Fresh pan pizza crust layered with spiced tomato sauce, mozzarella cheese, diced capsicum, onions, and sweet corn.',
-    serving: 'Personal 7" Pizza',
-    image: 'assets/images/poster-pizza.jpg'
-  },
-
-  // --- Shakes & Drinks ---
+  // --- 4. Thick Shakes ---
   {
     id: 'shake-1',
     category: 'shakes',
-    title: 'Chilled Chocolate Shake',
-    hindi: 'चॉकलेट शेक',
-    price: '₹70',
-    priceNum: 70,
-    tags: ['Real Cafe Photo', 'Thick & Frothy'],
-    desc: 'Creamy cold chocolate shake whipped with rich cocoa and chilled milk, crowned with dark chocolate shavings. Served tall with straw.',
+    title: 'Banana Shake',
+    hindi: 'केला शेक',
+    price: '₹60',
+    priceNum: 60,
+    tags: ['Energy Booster', 'Natural Fruit'],
+    desc: 'Fresh ripe bananas whipped smooth with chilled milk and a hint of green cardamom. Healthy campus energy booster.',
     serving: 'Tall Glass',
     image: 'assets/images/shakes-table.jpg'
   },
   {
     id: 'shake-2',
     category: 'shakes',
-    title: 'Oreo Thick Shake',
-    hindi: 'ओरियों शेक',
-    price: '₹80',
-    priceNum: 80,
-    tags: ['Student Favorite', 'Extra Thick'],
-    desc: 'Double crushed Oreo cookies blended with creamy vanilla ice cream and chilled milk, topped with crunchy cookie crumbs.',
+    title: 'Chocolate Shake',
+    hindi: 'चॉकलेट शेक',
+    price: '₹70',
+    priceNum: 70,
+    tags: ['Real Cafe Photo', 'Thick & Frothy'],
+    desc: 'Creamy cold chocolate shake whipped with rich cocoa and chilled milk, crowned with dark chocolate shavings. Served with straw.',
     serving: 'Tall Glass',
-    image: 'assets/images/card-shake.jpg'
+    image: 'assets/images/shakes-table.jpg'
   },
   {
     id: 'shake-3',
     category: 'shakes',
-    title: 'Vanilla / Banana Shake',
-    hindi: 'वैनिला / केला शेक',
-    price: '₹60 - ₹70',
-    priceNum: 60,
-    tags: ['Natural Fresh', 'Energy Booster'],
-    desc: 'Pure banana fruit and rich dairy goodness blended smooth. High energy nourishment between college lecture hours.',
+    title: 'Vanilla Shake',
+    hindi: 'वैनिला शेक',
+    price: '₹70',
+    priceNum: 70,
+    tags: ['Classic Smooth', 'Chilled'],
+    desc: 'Smooth and aromatic vanilla bean milkshake blended thick with full-cream milk and ice cream.',
     serving: 'Tall Glass',
     image: 'assets/images/shakes-table.jpg'
   },
   {
     id: 'shake-4',
     category: 'shakes',
-    title: 'Seasonal Mango Shake',
+    title: 'Oreo Shake',
+    hindi: 'ओरियों शेक',
+    price: '₹80',
+    priceNum: 80,
+    tags: ['Student Favorite', 'Extra Thick'],
+    desc: 'Crushed Oreo cookies blended with creamy vanilla ice cream and chilled milk, topped with crunchy cookie crumbs.',
+    serving: 'Tall Glass',
+    image: 'assets/images/card-shake.jpg'
+  },
+  {
+    id: 'shake-5',
+    category: 'shakes',
+    title: 'Mango Shake',
     hindi: 'मैंगो शेक',
     price: '₹70',
     priceNum: 70,
-    tags: ['Seasonal Special', 'Summer Hit'],
-    desc: 'Luscious ripe mango pulp blended with full-cream milk and chilled ice cubes, topped with chopped dry fruits.',
+    tags: ['Seasonal Special', 'Sweet Mango'],
+    desc: 'Luscious ripe mango pulp blended with rich milk and chilled cubes, topped with chopped nuts. (Available in season).',
     serving: 'Tall Glass (Seasonal)',
     image: 'assets/images/card-shake.jpg'
   },
 
-  // --- Desserts ---
+  // --- 5. Desserts ---
   {
     id: 'dessert-1',
     category: 'dessert',
-    title: 'Hot Gulab Jamun (2 Pcs)',
+    title: 'Gulab Jamun [2 Pcs]',
     hindi: 'गुलाब जामुन',
     price: '₹50',
     priceNum: 50,
-    tags: ['From Menu Card', 'Cardamom Syrup'],
-    desc: 'Two melt-in-mouth mawa spheres steeped in warm green cardamom and saffron rose syrup. The quintessential Indian sweet finish.',
-    serving: '2 Pieces (Hot)',
+    tags: ['Cardamom Syrup', 'Hot & Soft'],
+    desc: 'Two melt-in-mouth mawa spheres steeped in warm green cardamom and saffron rose syrup. The perfect sweet ending.',
+    serving: '2 Pieces (Served Hot)',
     image: 'assets/images/card-dessert-gulab.jpg'
   },
   {
     id: 'dessert-2',
     category: 'dessert',
-    title: 'Gajar Ka Halwa',
+    title: 'Gajak / Gajar Ka Halwa',
     hindi: 'गाजर का हलवा',
     price: '₹50',
     priceNum: 50,
-    tags: ['From Menu Card', 'Desi Ghee'],
-    desc: 'Grated mountain carrots slow-braised in full-cream milk and khoya, garnished with slivered almonds and cashews.',
-    serving: 'Single Bowl',
+    tags: ['Desi Ghee', 'Slow Cooked'],
+    desc: 'Grated mountain carrots slow-braised in full-cream milk, pure ghee, and khoya, garnished with roasted cashews and almonds.',
+    serving: 'Warm Dessert Bowl',
     image: 'assets/images/card-dessert-gulab.jpg'
+  },
+  {
+    id: 'dessert-3',
+    category: 'dessert',
+    title: 'Ice Cream & Pastries',
+    hindi: 'आइसक्रीम / पेस्ट्री',
+    price: 'M.R.P',
+    priceNum: 30,
+    tags: ['Chilled Delights', 'Standard Rates'],
+    desc: 'Assorted delightful ice cream cups and bakery pastries kept fresh in our display chiller.',
+    serving: 'Available at M.R.P',
+    image: 'assets/images/card-dessert-gulab.jpg'
+  },
+
+  // --- 6. Daily Tiffin Service ---
+  {
+    id: 'tiffin-1',
+    category: 'tiffin',
+    title: 'Ghar Ka Khana Tiffin Meal',
+    hindi: 'घर का खाना टिफिन',
+    price: '₹80',
+    priceNum: 80,
+    tags: ['Pure Veg', 'Freshly Cooked Daily', 'Student Plan'],
+    desc: 'Balanced nutritious homestyle meal: Dal Tadka / Rajma / Chole + Seasonal Sabzi + 4 Hot Wheat Phulkas + Steamed Rice + Fresh Salad.',
+    serving: 'Dal + Sabzi + 4 Roti + Rice + Salad',
+    image: 'assets/images/tiffin-stack.jpg'
   }
 ];
 
 // ==========================================
-// 2. REAL CAFE AMBIANCE GALLERY
+// 2. REAL CAFE GALLERY DATASET
 // ==========================================
 const CAFE_GALLERY = [
   {
-    title: 'Cozy Dining Hall & Geometric Lights',
-    desc: 'Our warm, clean seating space with overhead geometric wire pendant lamps, comfortable white benches, and checkered tiled floor.',
-    image: 'assets/images/dining-hall-1.jpg',
-    tag: 'Main Hall'
+    title: 'Dining Hall with Geometric Pendant Lights',
+    desc: 'Our warm, clean seating space with geometric wire pendant lamps, comfortable white benches, and checkered tiled floor.',
+    image: 'assets/images/dining-hall-1.jpg'
   },
   {
-    title: 'Fairy Light Wall & Indoor Greenery',
-    desc: 'Lush climbing creepers, warm fairy string lights, framed wall art, and ambient dining tables perfect for college groups & birthday celebrations.',
-    image: 'assets/images/dining-fairy-lights.jpg',
-    tag: 'Cozy Corner'
+    title: 'Fairy Light Wall & Creepers',
+    desc: 'Lush climbing creepers, warm fairy string lights, framed wall art, and ambient dining tables perfect for birthday celebrations.',
+    image: 'assets/images/dining-fairy-lights.jpg'
   },
   {
-    title: 'Night View & Welcome Entrance',
-    desc: 'Magic Masala front entrance lit up with colorful balloons, glowing fairy lights, and cheerful welcome vibe for visitors at Massal Chowk.',
-    image: 'assets/images/restaurant-exterior-night.jpg',
-    tag: 'Exterior'
+    title: 'Evening Entrance at Massal Chowk',
+    desc: 'Magic Masala front entrance lit up with colorful balloons, glowing fairy lights, and cheerful welcome vibe.',
+    image: 'assets/images/restaurant-exterior-night.jpg'
   },
   {
-    title: 'Fresh Paneer Hakka Noodles',
-    desc: 'Freshly tossed sizzling Hakka noodles with sautéed paneer cubes and colorful capsicum served piping hot from our kitchen.',
-    image: 'assets/images/hakka-noodles.jpg',
-    tag: 'Food Art'
+    title: 'Chilled Milkshakes on Cafe Table',
+    desc: 'Two tall chocolate milkshakes served cold with straws beside table palm for your afternoon college refresher.',
+    image: 'assets/images/shakes-table.jpg'
   },
   {
-    title: 'Chilled Milkshakes on Table',
-    desc: 'Two tall chocolate milkshakes served cold with straws beside potted table palm for your afternoon refresher.',
-    image: 'assets/images/shakes-table.jpg',
-    tag: 'Shakes'
+    title: 'Original Printed Menu Card',
+    desc: 'Our authentic kitchen rates and offerings printed on parchment banner.',
+    image: 'assets/images/menu-card-original.jpg'
   },
   {
-    title: 'Specialty Sesame Bun Burger',
-    desc: 'Handcrafted spiced veg burger served with artistically plated green mint and sweet tomato sauces.',
-    image: 'assets/images/burger-plate.jpg',
-    tag: 'Snacks'
+    title: 'Ghar Ka Khana Tiffin Service Poster',
+    desc: 'Official tiffin service poster detailing 100% vegetarian, hygienic homestyle meals for students.',
+    image: 'assets/images/tiffin-poster.jpg'
   }
 ];
 
@@ -339,10 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryLightbox();
   initTiffinCalculator();
   initTableReservation();
+  initNewsletterForm();
 });
 
 // ==========================================
-// 4. MENU RENDERING & FILTERING
+// 4. "WHAT'S ON OUR PLATE" MENU CONTROLLER
 // ==========================================
 function renderMenu(category, searchQuery = '') {
   const container = document.getElementById('menuGridContainer');
@@ -364,40 +347,40 @@ function renderMenu(category, searchQuery = '') {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--color-text-muted);">
-        <p style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">No dishes found matching "${searchQuery}"</p>
-        <p>Try searching for "Rajma", "Samosa", "Shake", or "Noodles"</p>
+        <p style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-title);">No dish found matching "${searchQuery}"</p>
+        <p>Try searching for "Rajma", "Samosa", "Pakoda", or "Shake"</p>
       </div>
     `;
     return;
   }
 
   container.innerHTML = filtered.map(item => `
-    <article class="menu-card" data-category="${item.category}">
-      <div class="menu-card-img-wrap">
+    <article class="dish-plate-card" data-category="${item.category}">
+      <!-- Floating Circular Plate Image (Video UI Style) -->
+      <div class="dish-round-media">
         <img src="${item.image}" alt="${item.title}" loading="lazy" />
-        <div class="menu-card-badge">
-          <span class="veg-badge"><span class="veg-icon"></span> 100% Veg</span>
-        </div>
       </div>
-      <div class="menu-card-body">
-        <div class="card-title-row">
-          <div>
-            <h3 class="card-item-title">${item.title}</h3>
-            <small style="color: var(--color-accent); font-weight: 600; font-size: 0.82rem;">${item.hindi}</small>
-          </div>
-          <span class="card-item-price">${item.price}</span>
+
+      <div class="dish-card-info">
+        <div class="dish-title-price-row">
+          <h3 class="dish-name-title">${item.title}</h3>
+          <span class="dish-price-pill">${item.price}</span>
         </div>
-        <p class="card-item-desc">${item.desc}</p>
-        <div class="card-action-bar">
-          <span class="card-serving-tag">${item.serving}</span>
+        <div class="dish-hindi-title">${item.hindi}</div>
+
+        <p class="dish-desc-text">${item.desc}</p>
+
+        <div class="dish-bottom-action-bar">
+          <span class="dish-serving-note">${item.serving}</span>
           <a 
             href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20I%20would%20like%20to%20order%20${encodeURIComponent(item.title)}%20(${encodeURIComponent(item.price)})%20from%20Magic%20Masala." 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="btn btn-whatsapp" 
-            style="min-height: 36px; padding: 0.35rem 0.85rem; font-size: 0.8rem;"
+            class="add-order-btn" 
+            title="Order this dish on WhatsApp"
           >
-            Order on WhatsApp
+            <span>Order</span>
+            <span>+</span>
           </a>
         </div>
       </div>
@@ -406,7 +389,7 @@ function renderMenu(category, searchQuery = '') {
 }
 
 function initCategoryFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.cat-tab-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -415,11 +398,15 @@ function initCategoryFilters() {
       const searchVal = document.getElementById('menuSearchInput').value;
       
       const container = document.getElementById('menuGridContainer');
-      container.style.opacity = '0.3';
+      container.style.opacity = '0.2';
+      container.style.transform = 'translateY(8px)';
+      
       setTimeout(() => {
         renderMenu(cat, searchVal);
         container.style.opacity = '1';
-      }, 120);
+        container.style.transform = 'translateY(0)';
+        container.style.transition = 'all 250ms ease';
+      }, 100);
     });
   });
 }
@@ -429,7 +416,7 @@ function initMenuSearch() {
   if (!searchInput) return;
 
   searchInput.addEventListener('input', (e) => {
-    const activeBtn = document.querySelector('.filter-btn.active');
+    const activeBtn = document.querySelector('.cat-tab-btn.active');
     const cat = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
     renderMenu(cat, e.target.value);
   });
@@ -440,8 +427,8 @@ function initMenuSearch() {
 // ==========================================
 function initMobileDrawer() {
   const toggle = document.getElementById('mobileNavToggle');
-  const drawer = document.getElementById('mobileNavDrawer');
-  const links = document.querySelectorAll('.mobile-link');
+  const drawer = document.getElementById('mobileNavPanel');
+  const links = document.querySelectorAll('.mobile-link-item');
 
   if (!toggle || !drawer) return;
 
@@ -460,7 +447,7 @@ function initMobileDrawer() {
 // 6. GALLERY LIGHTBOX
 // ==========================================
 function initGalleryLightbox() {
-  const cards = document.querySelectorAll('.gallery-card');
+  const cards = document.querySelectorAll('.bento-tile');
   const modal = document.getElementById('galleryModal');
   const closeBtn = document.getElementById('modalCloseBtn');
   const imgEl = document.getElementById('modalImage');
@@ -502,7 +489,7 @@ function initGalleryLightbox() {
 }
 
 // ==========================================
-// 7. TIFFIN SUBSCRIPTION CALCULATOR (STUDENT RATES WITHIN ₹1-200 PER MEAL)
+// 7. TIFFIN SUBSCRIPTION CALCULATOR
 // ==========================================
 function initTiffinCalculator() {
   const planSelect = document.getElementById('tiffinPlanSelect');
@@ -514,24 +501,24 @@ function initTiffinCalculator() {
   function calculate() {
     if (!planSelect || !mealSelect || !studentCount || !costDisplay) return;
 
-    const plan = planSelect.value; // 'daily', 'weekly', 'monthly'
-    const meals = mealSelect.value; // 'lunch', 'both'
+    const plan = planSelect.value;
+    const meals = mealSelect.value;
     const count = parseInt(studentCount.value, 10) || 1;
 
-    let costPerDayPerMeal = 80; // Exactly ₹80 per meal (well within ₹1-200 range)
-    if (plan === 'monthly') costPerDayPerMeal = 70; // Discounted monthly student rate (₹70 per meal)
+    let costPerMeal = 80; // Standard single meal rate
+    if (plan === 'monthly') costPerMeal = 70; // Discounted monthly student subscription
 
     let mealsPerDay = meals === 'both' ? 2 : 1;
     let days = 1;
     if (plan === 'weekly') days = 7;
     if (plan === 'monthly') days = 30;
 
-    const total = costPerDayPerMeal * mealsPerDay * days * count;
+    const total = costPerMeal * mealsPerDay * days * count;
     costDisplay.textContent = `₹${total.toLocaleString('en-IN')}`;
 
     if (whatsappTiffinBtn) {
-      const message = `Hello Monika Ji! I want to inquire about the Magic Masala Tiffin Service for ${count} person(s). Plan: ${plan.toUpperCase()}, Meals: ${meals.toUpperCase()} (${mealsPerDay}/day). Calculated Estimate: ₹${total}. Please share details!`;
-      whatsappTiffinBtn.href = `https://wa.me/918894616602?text=${encodeURIComponent(message)}`;
+      const msg = `Hello Monika Ji! I want to subscribe to Magic Masala Tiffin Service for ${count} person(s). Plan: ${plan.toUpperCase()}, Meals: ${meals.toUpperCase()} (${mealsPerDay}/day). Calculated Estimate: ₹${total}. Please confirm!`;
+      whatsappTiffinBtn.href = `https://wa.me/918894616602?text=${encodeURIComponent(msg)}`;
     }
   }
 
@@ -551,7 +538,6 @@ function initTableReservation() {
   const formWrap = document.getElementById('bookingFormWrap');
   const confirmCard = document.getElementById('bookingConfirmCard');
   const resetBtn = document.getElementById('bookAgainBtn');
-  const partyButtons = document.querySelectorAll('.party-btn');
   const dateInput = document.getElementById('resDate');
 
   if (dateInput) {
@@ -560,15 +546,6 @@ function initTableReservation() {
     dateInput.value = today;
   }
 
-  let selectedParty = '2-4 Friends';
-  partyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      partyButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedParty = btn.getAttribute('data-party');
-    });
-  });
-
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -576,6 +553,7 @@ function initTableReservation() {
       const name = document.getElementById('resName').value.trim();
       const phone = document.getElementById('resPhone').value.trim();
       const occasion = document.getElementById('resOccasion').value;
+      const guests = document.getElementById('resGuests').value;
       const time = document.getElementById('resTime').value;
       const date = dateInput.value;
 
@@ -589,9 +567,9 @@ function initTableReservation() {
       document.getElementById('confirmBookingId').textContent = randomBookingId;
       document.getElementById('confirmGuestName').textContent = name;
       document.getElementById('confirmDateTime').textContent = `${date} at ${time}`;
-      document.getElementById('confirmOccasion').textContent = `${occasion} (${selectedParty})`;
+      document.getElementById('confirmOccasion').textContent = `${occasion} (${guests} Guests)`;
 
-      const waText = `Hello Monika Ji! Table reservation request #${randomBookingId}: Name: ${name}, Phone: ${phone}, Date & Time: ${date} at ${time}, Occasion: ${occasion}, Party: ${selectedParty}.`;
+      const waText = `Hello Monika Ji! Table reservation request #${randomBookingId}: Name: ${name}, Phone: ${phone}, Date & Time: ${date} at ${time}, Occasion: ${occasion}, Guests: ${guests}.`;
       document.getElementById('confirmWhatsAppBtn').href = `https://wa.me/918894616602?text=${encodeURIComponent(waText)}`;
 
       formWrap.style.display = 'none';
@@ -611,7 +589,34 @@ function initTableReservation() {
 }
 
 // ==========================================
-// 9. TOAST NOTIFICATION UTILITY
+// 9. NEWSLETTER SUBSCRIPTION (FROM VIDEO: "EASY RECIPES SENT TO INBOX")
+// ==========================================
+function initNewsletterForm() {
+  const form = document.getElementById('inboxNewsletterForm');
+  const input = document.getElementById('newsletterEmailInput');
+  const feedback = document.getElementById('newsletterFeedbackMsg');
+
+  if (!form || !input) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const val = input.value.trim();
+    if (val && val.includes('@')) {
+      feedback.textContent = '🎉 You are subscribed to our daily specials and recipes dispatch!';
+      feedback.style.display = 'block';
+      feedback.style.color = '#86EFAC';
+      input.value = '';
+      showToast('Subscribed to Magic Masala daily menu updates!');
+    } else {
+      feedback.textContent = 'Please enter a valid email address.';
+      feedback.style.display = 'block';
+      feedback.style.color = '#FCA5A5';
+    }
+  });
+}
+
+// ==========================================
+// 10. TOAST NOTIFICATION UTILITY
 // ==========================================
 function showToast(message) {
   let container = document.getElementById('toastContainer');
@@ -629,8 +634,7 @@ function showToast(message) {
 
   setTimeout(() => {
     toast.style.opacity = '0';
-    toast.style.transform = 'translateY(10px)';
-    toast.style.transition = 'all 200ms ease';
+    toast.style.transition = 'opacity 200ms ease';
     setTimeout(() => toast.remove(), 200);
   }, 3500);
 }
