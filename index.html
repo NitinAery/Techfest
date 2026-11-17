@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REDBRICK — Scarlet Ink Editorial Coffee & Scratch Bakery</title>
+  <title>Magic Masala Cafe & Restaurant | Massal, Near RGGEC Kangra | Pure Veg & Tiffin Service</title>
   
-  <!-- Google Fonts: Editorial Old (Playfair Display 300) + Surt (Plus Jakarta Sans 400) + GTStandard-M (JetBrains Mono 400) -->
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Magic Masala Multi-Cuisine Restaurant near RGGEC College, Massal Chowk, Nagrota Bagwan, Kangra. Owned by Monika Rana. Delicious Samosa, Rajma Rice, Pakodas, Hakka Noodles, Shakes, and pure veg Daily Tiffin Service for college students." />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,300;1,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -16,285 +19,426 @@
 <body>
 
   <!-- =======================================================================
-       1. TOP ANNOUNCEMENT BAR (FULL-BLEED #e82c2a)
+       1. TOP CAMPUS NOTICE BAR
        ======================================================================= -->
-  <aside class="announcement-bar" role="region" aria-label="Announcement">
-    <div class="announcement-text">
-      FOR COFFEE DRINKERS • ROASTED IN SMALL BATCHES • DAILY BAKE FROM 7:00 AM
+  <aside class="top-notice-bar" role="region" aria-label="Campus Notice">
+    <div class="container top-notice-content">
+      <div class="top-notice-left">
+        <span class="notice-pill">RGGEC CAMPUS SPECIAL</span>
+        <span>📍 Massal Chowk, near Lokmittar Kendar (Just 2 mins from RGGEC Kangra)</span>
+      </div>
+      <div class="top-notice-right">
+        <span>⏰ Open Daily: 07:30 AM – 08:30 PM</span>
+        <span>•</span>
+        <span>📞 Order / Tiffin: <a href="tel:+918894616602" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">+91 88946 16602</a></span>
+      </div>
     </div>
-    <ul class="announcement-nav">
-      <li><a href="#story">About</a></li>
-      <li><a href="#menu">Wholesale</a></li>
-      <li><a href="#menu">Office Coffee</a></li>
-      <li><a href="#reservation">Table Booking</a></li>
-      <li><a href="#footer">Contact</a></li>
-    </ul>
   </aside>
 
   <!-- =======================================================================
-       2. PRIMARY & SECONDARY HEADER NAVIGATION
+       2. SITE HEADER & NAVIGATION
        ======================================================================= -->
   <header class="site-header">
-    <div class="primary-nav-strip">
-      <a href="#" class="brand-identity" aria-label="Redbrick Coffee Home">
-        <!-- 3D Brick Isometric Vector Icon in #e82c2a -->
-        <svg class="brand-brick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
-        <span class="brand-wordmark">REDBRICK</span>
+    <div class="container header-inner">
+      <a href="#" class="brand-wrapper" aria-label="Magic Masala Home">
+        <div class="brand-logo-icon">
+          <!-- Chef Hat / Spice Pot Icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 13.8V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9.8"/>
+            <path d="M3 10h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"/>
+            <path d="M12 2v4"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>MAGIC MASALA</h1>
+          <span>Flavours of Magic Worlds • Pure Veg</span>
+        </div>
       </a>
 
-      <nav aria-label="Primary Navigation">
-        <ul class="primary-nav-links">
-          <li><a href="#menu">Blends & Menu</a></li>
-          <li><a href="#story">Our Craft</a></li>
-          <li><a href="#gallery">Atmosphere</a></li>
-          <li><a href="#reservation">Reservations</a></li>
-          <li><a href="#journal">Editorial Journal</a></li>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#menu" class="nav-link active">Menu & Rates</a></li>
+          <li><a href="#tiffin" class="nav-link">Tiffin Service</a></li>
+          <li><a href="#gallery" class="nav-link">Cafe Ambiance</a></li>
+          <li><a href="#owner" class="nav-link">About Monika Rana</a></li>
+          <li><a href="#reservation" class="nav-link">Book a Table</a></li>
+          <li><a href="#location" class="nav-link">Location & Reviews</a></li>
         </ul>
       </nav>
 
-      <div class="header-actions">
-        <a href="#reservation" class="action-link-outlined rect">Book a Table →</a>
-        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle mobile menu">
+      <div class="header-action-group">
+        <a 
+          href="https://www.instagram.com/magicmasala_cafe?cplk=czdlNDI2Ymc3NHZp" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-instagram" 
+          style="min-height: 40px; padding: 0.4rem 0.95rem; font-size: 0.82rem;"
+          title="Follow Magic Masala on Instagram"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <a 
+          href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20I%20am%20from%20RGGEC%20college%20and%20would%20like%20to%20order/inquire%20about%20Magic%20Masala." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-whatsapp" 
+          style="min-height: 40px; padding: 0.4rem 1rem; font-size: 0.82rem;"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>Order Now</span>
+        </a>
+
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
     </div>
-
-    <!-- Secondary Nav Row: Sub-Category Navigation Strip separated by 1px #e82c2a rule -->
-    <div class="secondary-nav-strip">
-      <ul class="secondary-nav-list">
-        <li><a href="#menu" class="active">Coffee Coffee</a></li>
-        <li><a href="#menu">Good Day Blend</a></li>
-        <li><a href="#menu">Rogue Single Origin</a></li>
-        <li><a href="#menu">Dark Batch</a></li>
-        <li><a href="#menu">Decaf Coffee</a></li>
-        <li><a href="#menu">48-Hr Viennoiserie</a></li>
-        <li><a href="#menu">Heritage Sourdough</a></li>
-        <li><a href="#menu">Reserve Pour-Over</a></li>
-      </ul>
-    </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <ul class="mobile-drawer-links">
-      <li><a href="#menu" class="mobile-link">The Menu</a></li>
-      <li><a href="#story" class="mobile-link">Our Story</a></li>
-      <li><a href="#gallery" class="mobile-link">Atmosphere</a></li>
-      <li><a href="#reservation" class="mobile-link">Reserve Table</a></li>
-      <li><a href="#footer" class="mobile-link">Contact & Hours</a></li>
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#menu" class="mobile-link">Menu & Prices <span>→</span></a></li>
+      <li><a href="#tiffin" class="mobile-link">Ghar Ka Khana / Tiffin Service <span>→</span></a></li>
+      <li><a href="#gallery" class="mobile-link">Cafe Photo Gallery <span>→</span></a></li>
+      <li><a href="#owner" class="mobile-link">Meet Monika Rana (Owner) <span>→</span></a></li>
+      <li><a href="#reservation" class="mobile-link">Book a Table / Celebration <span>→</span></a></li>
+      <li><a href="#location" class="mobile-link">Location & Reviews <span>→</span></a></li>
+      <li style="padding-top: 1rem; border-top: 1px solid var(--color-border);">
+        <a href="tel:+918894616602" style="color: var(--color-primary); font-weight: 700;">📞 Call: 88946 16602</a>
+      </li>
     </ul>
-    <div style="margin-top: 2rem;">
-      <a href="#reservation" class="action-link-outlined mobile-link" style="width: 100%;">Book a Table ⟶</a>
-    </div>
   </div>
 
-  <main id="mainContent">
+  <main id="main">
 
     <!-- =======================================================================
-         3. HERO SECTION (50/50 EDITORIAL SPLIT)
+         3. HERO SECTION
          ======================================================================= -->
-    <section class="hero-editorial-split" id="hero">
-      <div class="container-full">
-        <div class="hero-grid-split">
-          <!-- Left Column: Editorial Display Headline in Weight 300 Serif -->
-          <div class="hero-text-block">
-            <span class="micro-label" style="margin-bottom: var(--spacing-20);">ISSUE NO. 09 • MORNING DISPATCH</span>
-            <h1 class="hero-headline">Morning ritual printed in scarlet.</h1>
-            <p class="hero-paragraph">
-              We treat specialty coffee and scratch baking like print journalism: honest, unhurried, and produced with uncompromising intention. Warm laminated pastries pulled at dawn, single-origin micro-lots dialed on brass, and a quiet table by the window.
-            </p>
-            <div class="hero-actions">
-              <a href="#reservation" class="action-link-outlined">Reserve a Table →</a>
-              <a href="#menu" class="action-link-outlined rect">Explore Offerings →</a>
-            </div>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-campus-pill">
+            <span class="veg-badge"><span class="veg-icon"></span> 100% PURE VEG</span>
+            <span>⭐ 4.7 Rated by RGGEC Students</span>
           </div>
 
-          <!-- Right Column: Rounded 25px Overhead Lifestyle Photography -->
-          <div class="lifestyle-image-block">
+          <h1 class="hero-headline">
+            Warm food, cozy vibes & <span class="highlight">Ghar Ka Khana</span> near RGGEC.
+          </h1>
+
+          <p class="hero-subheadline">
+            Welcome to <strong>Magic Masala</strong> in Massal, Nagrota Bagwan. Founded with love by <strong>Monika Rana</strong>, we serve mouthwatering samosas, comforting Rajma Chawal combos, sizzling noodles, creamy shakes, and daily student tiffin service with authentic home flavors.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#menu" class="btn btn-primary">
+              <span>View Full Menu & Rates</span>
+              <span>↓</span>
+            </a>
+            <a href="#tiffin" class="btn btn-secondary">
+              <span>Tiffin Service (घर का खाना)</span>
+            </a>
+            <a 
+              href="https://wa.me/918894616602?text=Hello%20Monika%20Ji,%20I%20would%20like%20to%20order%20from%20Magic%20Masala!" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp"
+            >
+              <span>Quick WhatsApp Order</span>
+            </a>
+          </div>
+
+          <!-- Highlight strip -->
+          <div class="hero-highlights-strip">
+            <div class="highlight-stat">
+              <h4>₹15 – ₹80</h4>
+              <p>Pocket-Friendly Prices</p>
+            </div>
+            <div class="highlight-stat">
+              <h4>2 Mins</h4>
+              <p>Walk from RGGEC Campus</p>
+            </div>
+            <div class="highlight-stat">
+              <h4>4.7 ★</h4>
+              <p>Google Rating (48+ Reviews)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Card with Real Restaurant Photography -->
+        <div class="hero-visual-card">
+          <div class="hero-main-frame">
             <img 
-              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop" 
-              alt="Overhead lifestyle view of hand-poured latte art and flaky croissant on wooden cafe table"
+              src="assets/images/dining-hall-1.jpg" 
+              alt="Magic Masala modern cozy dining room with pendant lighting and booths"
               loading="eager"
             />
           </div>
+
+          <!-- Floating Badges -->
+          <div class="hero-floating-tag hero-tag-top">
+            <div class="hero-tag-icon">🍱</div>
+            <div class="hero-tag-text">
+              <h5>Tiffin Service Active</h5>
+              <p>Lunch & Dinner for Hostellers</p>
+            </div>
+          </div>
+
+          <div class="hero-floating-tag hero-tag-bottom">
+            <div class="hero-tag-icon">🍲</div>
+            <div class="hero-tag-text">
+              <h5>Rajma & Kadhi Rice</h5>
+              <p>Only ₹80 with Raita & Salad</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         4. SIGNATURE MENU & BLENDS (PRODUCT CARD GRID ON #f2f2f2)
+         4. TIFFIN SERVICE FEATURE (CAMPUS SPECIAL)
          ======================================================================= -->
-    <section class="menu-showcase-section" id="menu">
-      <div class="container-full">
-        <!-- Section Divider with Running Head -->
-        <div class="section-running-head">
-          <span class="micro-label">VOL. 01 — SIGNATURE BLENDS & MORNING BAKE</span>
-          <a href="#menu" class="arrow-link">Shop blends →</a>
+    <section class="tiffin-section" id="tiffin">
+      <div class="container">
+        <div class="tiffin-card-wrapper">
+          <!-- Real Poster Photo of Tiffin Service -->
+          <div class="tiffin-visual-col">
+            <img 
+              src="assets/images/tiffin-poster.jpg" 
+              alt="Magic Masala Tiffin Service Available Poster - Ghar Jaisa Khana" 
+              loading="lazy"
+            />
+            <div class="tiffin-badge-overlay">
+              <span>Daily Student Service</span>
+            </div>
+          </div>
+
+          <div class="tiffin-info-col">
+            <span class="tiffin-eyebrow">College Students & Hostellers Relief</span>
+            <h2 class="tiffin-title">Missing Mom's Cooking? We Bring "Ghar Ka Khana" to Your Room.</h2>
+            <p class="tiffin-desc">
+              Staying in hostels or PGs around Rajiv Gandhi Engineering College? Monika Rana and the Magic Masala team prepare fresh, 100% vegetarian, non-oily, homestyle meals daily with utmost hygiene and care.
+            </p>
+
+            <div class="tiffin-perks-grid">
+              <div class="tiffin-perk-item">
+                <span class="perk-check-icon">✓</span>
+                <div>
+                  <h5>100% Pure Vegetarian</h5>
+                  <p>Clean separate kitchen with fresh market vegetables and spices.</p>
+                </div>
+              </div>
+
+              <div class="tiffin-perk-item">
+                <span class="perk-check-icon">✓</span>
+                <div>
+                  <h5>Freshly Cooked Daily</h5>
+                  <p>Prepared hot just before lunch and dinner timings.</p>
+                </div>
+              </div>
+
+              <div class="tiffin-perk-item">
+                <span class="perk-check-icon">✓</span>
+                <div>
+                  <h5>Balanced Meal Combo</h5>
+                  <p>Rich Dal/Rajma/Chole + Seasonal Sabzi + 4 Phulkas + Rice + Salad.</p>
+                </div>
+              </div>
+
+              <div class="tiffin-perk-item">
+                <span class="perk-check-icon">✓</span>
+                <div>
+                  <h5>Student Friendly & Negotiable</h5>
+                  <p>Flexible daily, weekly, or monthly subscription plans tailored for college budgets.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Mini Tiffin Price Estimator -->
+            <div style="background: var(--color-bg-base); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
+              <h5 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text-main);">
+                💡 Quick Tiffin Estimate Calculator:
+              </h5>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted);">Duration</label>
+                  <select id="tiffinPlanSelect" class="form-input" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;">
+                    <option value="monthly" selected>Monthly (30 Days)</option>
+                    <option value="weekly">Weekly (7 Days)</option>
+                    <option value="daily">Daily Trial (1 Day)</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted);">Meals/Day</label>
+                  <select id="tiffinMealType" class="form-input" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;">
+                    <option value="both" selected>Lunch & Dinner (Both)</option>
+                    <option value="lunch">Lunch Only</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted);">Students</label>
+                  <input type="number" id="tiffinStudents" class="form-input" value="1" min="1" max="10" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;" />
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Estimated Student Rate:</span>
+                <span id="tiffinEstimateDisplay" style="font-size: 1.35rem; font-weight: 800; color: var(--color-primary);">₹4,200</span>
+              </div>
+            </div>
+
+            <div class="tiffin-cta-box">
+              <a 
+                id="whatsappTiffinBtn" 
+                href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20I%20would%20like%20to%20subscribe%20to%20the%20Magic%20Masala%20Tiffin%20Service%20near%20RGGEC." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-whatsapp"
+              >
+                <span>Book Tiffin on WhatsApp</span>
+              </a>
+              <a href="tel:+918894616602" class="btn btn-secondary">
+                <span>Call Monika Rana: 88946 16602</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. FULL MENU & RATES SECTION
+         ======================================================================= -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Straight from Our Kitchen</span>
+          <h2 class="section-title">The Magic Masala Menu</h2>
+          <p class="section-desc">
+            Affordable, hygienic, and prepared with authentic spices. Browse our student specials below:
+          </p>
         </div>
 
-        <!-- Category Filter Pills -->
-        <div class="menu-filter-strip">
-          <button class="filter-pill active" data-filter="all">All Offerings</button>
-          <button class="filter-pill" data-filter="blends">Specialty Blends</button>
-          <button class="filter-pill" data-filter="single-origin">Single Origin</button>
-          <button class="filter-pill" data-filter="bakery">Scratch Bakery</button>
-          <button class="filter-pill" data-filter="plates">Brunch Plates</button>
+        <!-- Category Filters -->
+        <div class="menu-filter-container">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="rice">Rice Delights (राजमा / कढ़ी)</button>
+          <button class="filter-btn" data-filter="snacks">Samosa, Chaat & Pakodas</button>
+          <button class="filter-btn" data-filter="chinese">Chinese & Fast Food</button>
+          <button class="filter-btn" data-filter="shakes">Thick Shakes</button>
+          <button class="filter-btn" data-filter="dessert">Desserts</button>
         </div>
 
-        <!-- Product Cards Grid: 25px radius, #f2f2f2 surface, 30px padding, NO shadows -->
-        <div class="products-grid" id="productGridContainer">
+        <!-- Search Bar -->
+        <div class="menu-search-wrapper">
+          <svg class="menu-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="menuSearchInput" 
+            class="menu-search-input" 
+            placeholder="Search dish (e.g., Samosa, Rajma, Shake, Momos)..." 
+          />
+        </div>
+
+        <!-- Dishes Grid -->
+        <div class="menu-grid" id="menuGridContainer">
           <!-- Dynamically populated via JS -->
         </div>
-      </div>
-    </section>
 
-    <!-- =======================================================================
-         5. BRAND STORY & CRAFT (ALTERNATING 50/50 SPLITS)
-         ======================================================================= -->
-    <section class="brand-story-section" id="story">
-      <div class="container-full">
-        <!-- Section Divider with Running Head -->
-        <div class="section-running-head">
-          <span class="micro-label">VOL. 02 — PHILOSOPHY & PROVENANCE</span>
-          <a href="#story" class="arrow-link">Read our journal →</a>
-        </div>
-
-        <!-- Split Row 1: Roastery & Sourdough -->
-        <div class="story-split-row">
-          <div class="lifestyle-image-block">
-            <img 
-              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" 
-              alt="Baker scoring heritage sourdough loaf on flour-dusted butcher bench" 
-              loading="lazy"
-            />
-          </div>
-          <div class="story-text-block">
-            <span class="micro-label" style="margin-bottom: var(--spacing-10);">SCRATCH FERMENTATION</span>
-            <h2 class="story-headline">Laminated dough. 48 hours.</h2>
-            <p>
-              Our country sourdough ferments through two full revolutions of the sun. We fold cultured Normandy butter twenty-seven times into stoneground flour before baking in a high-thermal hearth at 5:00 AM.
-            </p>
-            <div class="story-pillars-grid">
-              <div class="pillar-item">
-                <h4>Direct Trade</h4>
-                <p>Sourced from family estates in Huila, Colombia & Yirgacheffe, paying 180% above Fairtrade baseline.</p>
-              </div>
-              <div class="pillar-item">
-                <h4>Slow Ferment</h4>
-                <p>Wild levain culture nurtured for 7 years, delivering open crumb structure and deep caramelized crust.</p>
-              </div>
-              <div class="pillar-item">
-                <h4>Small Batches</h4>
-                <p>Roasted in 12kg increments on our custom Loring smart roaster to safeguard delicate floral aromatics.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Split Row 2: Reversed Split for Ritual -->
-        <div class="story-split-row reversed">
-          <div class="lifestyle-image-block">
-            <img 
-              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" 
-              alt="Hands cupping single-origin roasted beans beside open notebook" 
-              loading="lazy"
-            />
-          </div>
-          <div class="story-text-block">
-            <span class="micro-label" style="margin-bottom: var(--spacing-10);">THE COFFEE RITUAL</span>
-            <h2 class="story-headline">Precision in every pour.</h2>
-            <p>
-              We dial in our espresso profiles every morning before sunrise, measuring water salinity, extraction yield, and grind micron distribution. The result is a cup with the clarity of print: no bitter astringency, just pure fruit, floral, and caramelized sugars.
-            </p>
-            <div style="margin-top: var(--spacing-20);">
-              <a href="#reservation" class="action-link-outlined">Experience the Parlour →</a>
-            </div>
+        <!-- Authentic Menu Card Viewer -->
+        <div style="margin-top: 3.5rem; text-align: center; background: #FFFFFF; padding: 2.5rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
+          <h4 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--color-text-main);">Looking for the Printed Kitchen Menu?</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            You can inspect the original printed menu card with exact items and rates directly:
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="assets/images/menu-card-original.jpg" target="_blank" class="btn btn-secondary">
+              <span>View Original Menu Card Photo 📄</span>
+            </a>
+            <a 
+              href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20Please%20send%20today%27s%20specials%20menu%20from%20Magic%20Masala." 
+              target="_blank" 
+              class="btn btn-whatsapp"
+            >
+              <span>Ask for Today's Specials on WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         6. CURATED AMBIANCE GALLERY (EDITORIAL MAGAZINE BENTO)
+         6. CAFE AMBIANCE & PHOTO GALLERY
          ======================================================================= -->
     <section class="gallery-section" id="gallery">
-      <div class="container-full">
-        <!-- Section Divider with Running Head -->
-        <div class="section-running-head">
-          <span class="micro-label">VOL. 03 — ARCHITECTURE & ATMOSPHERE</span>
-          <a href="#gallery" class="arrow-link">View archive →</a>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Real Photos from the Cafe</span>
+          <h2 class="section-title">Cozy Seating, Fairy Lights & Warm Food</h2>
+          <p class="section-desc">
+            Take a look inside our dining space in Massal. Clean tables, warm ambient lighting, and welcoming decor made for memories:
+          </p>
         </div>
 
-        <!-- Bento Grid: 25px radius, warm overhead lifestyle -->
-        <div class="gallery-editorial-grid">
-          <div class="gallery-tile gallery-col-6" data-gallery-id="0">
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Sunlit Oak Reading Bench" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>The Sunlit Oak Nook</h5>
-                <span>Morning light through arched glass</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+        <div class="gallery-grid">
+          <div class="gallery-card gallery-card-1" data-index="0">
+            <img src="assets/images/dining-hall-1.jpg" alt="Dining Hall with geometric lights" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Dining Hall & Booths</h4>
+              <p>Overhead geometric wire lamps & comfortable white benches</p>
             </div>
           </div>
 
-          <div class="gallery-tile gallery-col-6-single" data-gallery-id="1">
-            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop" alt="Custom Terrazzo & Brass Bar" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>Terrazzo & Brass Slow Bar</h5>
-                <span>Dual-group Slayer espresso machine</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+          <div class="gallery-card gallery-card-2" data-index="1">
+            <img src="assets/images/dining-fairy-lights.jpg" alt="Fairy Light Wall & Plants" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Fairy Light Wall</h4>
+              <p>Lush creepers and twinkling fairy lights for birthday celebrations</p>
             </div>
           </div>
 
-          <div class="gallery-tile gallery-col-6-single" data-gallery-id="2">
-            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=1200&auto=format&fit=crop" alt="Hand-thrown Speckled Ceramics" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>Wheel-Thrown Tableware</h5>
-                <span>Custom stoneware by local ceramicist</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+          <div class="gallery-card gallery-card-3" data-index="2">
+            <img src="assets/images/restaurant-exterior-night.jpg" alt="Night View & Entrance" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Evening Entrance</h4>
+              <p>Bright welcoming entrance at Massal Chowk</p>
             </div>
           </div>
 
-          <div class="gallery-tile gallery-col-4" data-gallery-id="3">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop" alt="Cobblestone Garden Patio" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>Garden Courtyard</h5>
-                <span>Zinc bistro tables & jasmine</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+          <div class="gallery-card gallery-card-4" data-index="3">
+            <img src="assets/images/hakka-noodles.jpg" alt="Paneer Hakka Noodles" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Sizzling Paneer Noodles</h4>
+              <p>Wok-tossed fresh with capsicum and fried paneer cubes</p>
             </div>
           </div>
 
-          <div class="gallery-tile gallery-col-4" data-gallery-id="4">
-            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?q=80&w=1200&auto=format&fit=crop" alt="Morning Bakery Rack" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>Fresh Bake Rack</h5>
-                <span>Kouign-amann cooling at 6:30 AM</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+          <div class="gallery-card gallery-card-5" data-index="4">
+            <img src="assets/images/shakes-table.jpg" alt="Tall Chocolate Shakes" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Chilled Chocolate Shakes</h4>
+              <p>Thick, frothy and garnished with chocolate shavings</p>
             </div>
           </div>
 
-          <div class="gallery-tile gallery-col-4" data-gallery-id="5">
-            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=1200&auto=format&fit=crop" alt="Manual Pour-over Station" loading="lazy" />
-            <div class="gallery-tile-caption">
-              <div>
-                <h5>Pour-Over Slow Bar</h5>
-                <span>Origami drippers with floral lots</span>
-              </div>
-              <span class="arrow-link" style="color: #FFFFFF;">Enlarge ↗</span>
+          <div class="gallery-card gallery-card-6" data-index="5">
+            <img src="assets/images/burger-plate.jpg" alt="Artisan plated veg burger" loading="lazy" />
+            <div class="gallery-overlay">
+              <h4>Classic Veg Burger</h4>
+              <p>Toasted sesame bun with spiced vegetable patty and dips</p>
             </div>
           </div>
         </div>
@@ -302,175 +446,279 @@
     </section>
 
     <!-- Lightbox Modal -->
-    <div class="redbrick-lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Photo Inspector">
+    <div class="lightbox-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
       <div class="lightbox-wrap">
-        <button class="lightbox-close" id="lightboxCloseBtn">Close [ESC]</button>
+        <button class="lightbox-close-btn" id="modalCloseBtn">Close [ESC]</button>
         <div class="lightbox-frame">
-          <img id="lightboxImg" src="" alt="Enlarged view" />
+          <img id="modalImage" src="" alt="Enlarged view" />
         </div>
         <div class="lightbox-meta">
-          <h4 class="lightbox-title" id="lightboxTitle"></h4>
-          <p class="lightbox-desc" id="lightboxDesc"></p>
+          <h4 id="modalTitle" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;"></h4>
+          <p id="modalDesc" style="font-size: 0.85rem; color: #D6D3D1;"></p>
         </div>
       </div>
     </div>
 
     <!-- =======================================================================
-         7. TABLE RESERVATION (50/50 EDITORIAL BOOKING CARD)
+         7. MEET THE OWNER (MONIKA RANA)
          ======================================================================= -->
-    <section class="reservation-editorial-section" id="reservation">
-      <div class="container-full">
-        <!-- Section Divider with Running Head -->
-        <div class="section-running-head">
-          <span class="micro-label">VOL. 04 — TABLE RESERVATION & PARLOUR</span>
-          <a href="#reservation" class="arrow-link">Reservation policies →</a>
+    <section class="owner-section" id="owner">
+      <div class="container owner-grid">
+        <div class="owner-poster-card">
+          <img 
+            src="assets/images/magic-masala-poster.jpg" 
+            alt="Magic Masala official banner with owner Monika Rana" 
+            loading="lazy"
+          />
         </div>
 
+        <div class="owner-content">
+          <span class="section-eyebrow">Heart & Soul Behind Magic Masala</span>
+          <h3>"Every student who walks through our door deserves fresh, nutritious, and caring food."</h3>
+          <p class="owner-lead">Monika Rana • Founder & Owner, Magic Masala</p>
+
+          <div class="owner-quote">
+            "When students come to RGGEC from distant districts of Himachal and other states, they often struggle with quality food and miss their homes. Magic Masala was built to feel like home: a clean, pure-vegetarian kitchen where you can enjoy hearty Rajma Rice, relax with friends over samosas and shakes, or subscribe to a reliable, clean daily tiffin."
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+            Under Monika Rana's supervision, ingredients are procured fresh daily, hygiene standards are rigorously kept, and pricing is kept pocket-friendly specifically for college students and local families in Massal & Nagrota Bagwan.
+          </p>
+
+          <div class="owner-badges">
+            <span class="tag-badge tag-primary">100% Homestyle Care</span>
+            <span class="tag-badge tag-gold">Student-Centric Rates</span>
+            <span class="tag-badge tag-primary">Hygienic Kitchen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. TABLE & CELEBRATION RESERVATIONS
+         ======================================================================= -->
+    <section class="reservation-section" id="reservation">
+      <div class="container">
         <div class="reservation-split-card">
-          <!-- Left Column: Café Hours, Location & Seating Notes -->
+          <!-- Left Info Pane -->
           <div class="reservation-info-pane">
-            <div>
-              <span class="micro-label" style="margin-bottom: var(--spacing-10);">THE PARLOUR & PATIO</span>
-              <h3>A table for your morning read.</h3>
-              <p style="font-size: var(--text-body-sm); color: #444444; margin-bottom: var(--spacing-20);">
-                We reserve half of our tables for walk-ins and half for scheduled morning bookings. Reservations are held for 15 minutes with complimentary single-origin cupping water upon arrival.
+            <div class="res-info-head">
+              <span class="section-eyebrow">Plan a Visit or Birthday Party</span>
+              <h3>Book a Table or Celebrate with Friends</h3>
+              <p>
+                Have a college birthday treat, placement party, or project group dinner? Reserve your booth in advance with fairy light decoration!
               </p>
 
-              <div class="reservation-details-list">
-                <div class="res-detail-item">
-                  <h5>Location</h5>
-                  <p>42 Redbrick Lane, Old Roastery Quarter • East Entrance</p>
+              <div class="res-features-list">
+                <div class="res-feature-item">
+                  <div class="res-feature-icon">🎉</div>
+                  <div>
+                    <h5>Birthday & Celebration Setup</h5>
+                    <p>Fairy lights, balloons, and cake space available on request.</p>
+                  </div>
                 </div>
-                <div class="res-detail-item">
-                  <h5>Daily Service Hours</h5>
-                  <p>Monday – Friday: 07:00 – 18:00<br>Saturday – Sunday: 08:00 – 19:00</p>
+
+                <div class="res-feature-item">
+                  <div class="res-feature-icon">👥</div>
+                  <div>
+                    <h5>Group Booths & Fast Service</h5>
+                    <p>Spacious seating for groups of 2 up to 15+ students together.</p>
+                  </div>
                 </div>
-                <div class="res-detail-item">
-                  <h5>Seating Spaces</h5>
-                  <p>The Sunlit Window Bench (Soft light & books) • The Espresso Counter (Live dialogue with baristas) • The Garden Patio (Outdoor breeze & dogs welcome)</p>
+
+                <div class="res-feature-item">
+                  <div class="res-feature-icon">⚡</div>
+                  <div>
+                    <h5>Direct Confirmation via WhatsApp</h5>
+                    <p>Instant table reservation hold with no advance booking fee.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div style="font-family: var(--font-gtstandard-m); font-size: var(--text-caption); letter-spacing: var(--tracking-caption); text-transform: uppercase; color: var(--color-brick-red);">
-              Instant Confirmation • No Booking Fees
+            <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-primary); padding-top: 1.5rem;">
+              Walk-ins always welcome! Questions? Call 088946 16602
             </div>
           </div>
 
-          <!-- Right Column: Clean Single-View Reservation Form -->
+          <!-- Right Booking Form -->
           <div class="reservation-form-pane">
-            <div id="bookingFormWrapper">
+            <div id="bookingFormWrap">
               <form id="reservationForm">
-                <!-- Date input -->
-                <div class="res-field-group">
-                  <label class="res-label" for="bookingDate">Select Date</label>
-                  <input type="date" id="bookingDate" class="res-input" required />
+                <div class="form-group">
+                  <label class="form-label">Occasion / Visit Type</label>
+                  <select id="resOccasion" class="form-input">
+                    <option value="Casual College Dining">Casual Hangout / Meal</option>
+                    <option value="Birthday Celebration">Birthday Celebration 🎂</option>
+                    <option value="Project Group Discussion">Project Group Meetup 💻</option>
+                    <option value="Family Dining">Family Dining</option>
+                  </select>
                 </div>
 
-                <!-- Party Size Selector Pills -->
-                <div class="res-field-group">
-                  <label class="res-label">Party Size</label>
-                  <div class="res-pill-row">
-                    <button type="button" class="res-choice-pill party-pill" data-party="1">1 Guest</button>
-                    <button type="button" class="res-choice-pill party-pill active" data-party="2">2 Guests</button>
-                    <button type="button" class="res-choice-pill party-pill" data-party="4">4 Guests</button>
-                    <button type="button" class="res-choice-pill party-pill" data-party="6">6 Guests</button>
-                    <button type="button" class="res-choice-pill party-pill" data-party="8">8+ Guests</button>
+                <div class="form-group">
+                  <label class="form-label">Party Size</label>
+                  <div class="party-picker">
+                    <button type="button" class="party-btn" data-party="1-2 People">1-2</button>
+                    <button type="button" class="party-btn active" data-party="2-4 Friends">2-4</button>
+                    <button type="button" class="party-btn" data-party="5-8 Group">5-8</button>
+                    <button type="button" class="party-btn" data-party="10+ Big Group">10+</button>
                   </div>
                 </div>
 
-                <!-- Time Slot Pills -->
-                <div class="res-field-group">
-                  <label class="res-label">Preferred Time Slot</label>
-                  <div class="res-pill-row">
-                    <button type="button" class="res-choice-pill time-pill" data-time="08:00 AM">08:00 AM</button>
-                    <button type="button" class="res-choice-pill time-pill active" data-time="09:30 AM">09:30 AM</button>
-                    <button type="button" class="res-choice-pill time-pill" data-time="11:00 AM">11:00 AM</button>
-                    <button type="button" class="res-choice-pill time-pill" data-time="01:15 PM">01:15 PM</button>
-                    <button type="button" class="res-choice-pill time-pill" data-time="03:30 PM">03:30 PM</button>
-                  </div>
-                </div>
-
-                <!-- Seating Area Selection -->
-                <div class="res-field-group">
-                  <label class="res-label">Seating Atmosphere</label>
-                  <div class="seating-pills-row">
-                    <div class="seating-option active" data-area="Window Bench">
-                      <h6>Window Bench</h6>
-                      <small>Sunlight & reading nook</small>
-                    </div>
-                    <div class="seating-option" data-area="Garden Patio">
-                      <h6>Garden Patio</h6>
-                      <small>Outdoor jasmine courtyard</small>
-                    </div>
-                    <div class="seating-option" data-area="Espresso Counter">
-                      <h6>Espresso Bar</h6>
-                      <small>Interactive barista view</small>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Guest Details -->
-                <div class="res-field-group">
-                  <label class="res-label" for="guestName">Full Name</label>
-                  <input type="text" id="guestName" class="res-input" placeholder="e.g. Julian Hayes" required />
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: var(--spacing-20);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-group">
                   <div>
-                    <label class="res-label" for="guestEmail">Email Address</label>
-                    <input type="email" id="guestEmail" class="res-input" placeholder="julian@example.com" required />
+                    <label class="form-label" for="resDate">Preferred Date</label>
+                    <input type="date" id="resDate" class="form-input" required />
                   </div>
                   <div>
-                    <label class="res-label" for="guestPhone">Phone Number</label>
-                    <input type="tel" id="guestPhone" class="res-input" placeholder="+1 (555) 019-2834" required />
+                    <label class="form-label" for="resTime">Preferred Time</label>
+                    <select id="resTime" class="form-input">
+                      <option value="12:30 PM (Lunch)">12:30 PM (Lunch)</option>
+                      <option value="01:30 PM (Lunch)">01:30 PM (Lunch)</option>
+                      <option value="04:30 PM (Evening Snacks)">04:30 PM (Snacks)</option>
+                      <option value="06:30 PM (Evening)">06:30 PM (Evening)</option>
+                      <option value="07:45 PM (Dinner)">07:45 PM (Dinner)</option>
+                    </select>
                   </div>
                 </div>
 
-                <!-- Outlined Action Link / Button (Primary Action - NO solid background) -->
-                <button type="submit" class="action-link-outlined" style="width: 100%;">
-                  Confirm Table Reservation ⟶
+                <div class="form-group">
+                  <label class="form-label" for="resName">Your Full Name</label>
+                  <input type="text" id="resName" class="form-input" placeholder="e.g. Rahul Sharma (RGGEC)" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="resPhone">WhatsApp / Phone Number</label>
+                  <input type="tel" id="resPhone" class="form-input" placeholder="+91 98765 43210" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Reserve Table & Confirm on WhatsApp ⟶
                 </button>
               </form>
             </div>
 
-            <!-- Instant Confirmation Voucher View -->
-            <div class="reservation-voucher-card" id="reservationVoucher">
-              <div class="voucher-header">
-                <div>
-                  <span class="micro-label">TABLE RESERVATION CONFIRMED</span>
-                  <h4 style="font-family: var(--font-editorial-old); font-size: 1.5rem; font-weight: 300; color: var(--color-press-black);">Hearth & Parlour Voucher</h4>
-                </div>
-                <span class="voucher-code" id="voucherCode">RB-84920</span>
-              </div>
-
-              <div class="voucher-details-grid">
-                <div class="voucher-field">
-                  <h6>Guest Name</h6>
-                  <p id="voucherGuestName">—</p>
-                </div>
-                <div class="voucher-field">
-                  <h6>Date & Time</h6>
-                  <p id="voucherDateTime">—</p>
-                </div>
-                <div class="voucher-field">
-                  <h6>Party Size</h6>
-                  <p id="voucherParty">—</p>
-                </div>
-                <div class="voucher-field">
-                  <h6>Seating Area</h6>
-                  <p id="voucherSeating">—</p>
-                </div>
-              </div>
-
-              <p style="font-size: 0.8125rem; color: #555555; line-height: 1.4; margin-bottom: 1.5rem;">
-                A confirmation has been dispatched to your email. Please arrive within 15 minutes of your booking time.
+            <!-- Booking Success Receipt -->
+            <div class="booking-confirm-card" id="bookingConfirmCard">
+              <div class="confirm-icon">✓</div>
+              <h4 style="font-size: 1.5rem; margin-bottom: 0.35rem;">Table Reserved!</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+                Booking Code: <strong id="confirmBookingId" style="color: var(--color-primary);">MM-4829</strong>
               </p>
 
-              <button type="button" class="action-link-outlined rect" id="voucherResetBtn">
-                Book Another Table ⟶
-              </button>
+              <div style="background: var(--color-bg-base); padding: 1.25rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1.5rem; font-size: 0.85rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span style="color: var(--color-text-muted);">Guest Name:</span>
+                  <strong id="confirmGuestName">—</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span style="color: var(--color-text-muted);">Slot:</span>
+                  <strong id="confirmDateTime">—</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--color-text-muted);">Details:</span>
+                  <strong id="confirmOccasion">—</strong>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <a id="confirmWhatsAppBtn" href="#" target="_blank" class="btn btn-whatsapp">
+                  <span>Send Confirmation to Monika Ji on WhatsApp</span>
+                </a>
+                <button type="button" id="bookAgainBtn" class="btn btn-secondary" style="font-size: 0.85rem; min-height: 40px;">
+                  Book Another Table
+                </button>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. LOCATION & GOOGLE REVIEWS (4.7 STARS)
+         ======================================================================= -->
+    <section class="location-section" id="location">
+      <div class="container location-grid">
+        <!-- Review Highlight Card -->
+        <div class="review-card-highlight">
+          <div class="review-score-row">
+            <div class="score-big">4.7</div>
+            <div>
+              <div class="stars-row">★★★★★</div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 2px;">Google Maps Rating</h4>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted);">Based on 48+ Verified Reviews • RGGEC Kangra Area</p>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid #F59E0B;">
+              <p style="font-size: 0.88rem; font-style: italic; color: var(--color-text-main); margin-bottom: 4px;">
+                "Best place for Rajma Chawal and Samosa Chat near college! Clean dining and Monika ma'am is very polite. Tiffin is really ghar jaisa khana."
+              </p>
+              <small style="color: var(--color-text-light); font-weight: 600;">— Engineering Student Review</small>
+            </div>
+
+            <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid #15803D;">
+              <p style="font-size: 0.88rem; font-style: italic; color: var(--color-text-main); margin-bottom: 4px;">
+                "Pocket friendly, nice ambient lights for birthday celebration, and fast service. Chocolate shake is awesome!"
+              </p>
+              <small style="color: var(--color-text-light); font-weight: 600;">— Local Visitor Review</small>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span class="tag-badge tag-primary">₹1–200 Per Person</span>
+            <span class="tag-badge tag-gold">Cash & UPI Accepted</span>
+            <span class="tag-badge tag-primary">Takeaway & Dine-in</span>
+          </div>
+        </div>
+
+        <!-- Location & Landmark Details -->
+        <div>
+          <span class="section-eyebrow">Find Us Easily</span>
+          <h3 style="font-size: 2.2rem; margin-bottom: 1rem;">Massal Chowk, Nagrota Bagwan</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.75rem;">
+            Located right at Massal Chowk, near Lokmittar Kendar, Massal, Gujrehra, Nagrota Bagwan, Himachal Pradesh 176047. Just a short 2-minute stroll from the main gate of Rajiv Gandhi Government Engineering College (RGGEC).
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 1.25rem;">📍</span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Address:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-text-muted);">Near Lokmittar Kendar, Massal, Nagrota Bagwan, Kangra, HP 176047</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 1.25rem;">📞</span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Contact Numbers:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-text-muted);">+91 88946 16602 / +91 78339 80030</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 1.25rem;">📸</span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Instagram:</strong>
+                <a href="https://www.instagram.com/magicmasala_cafe?cplk=czdlNDI2Ymc3NHZp" target="_blank" style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">@magicmasala_cafe</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a 
+              href="https://maps.google.com/?q=Rajiv+Gandhi+Engineering+College,+near+Lokmittar+Kendar,+Masal,+Gujrehra,+Himachal+Pradesh+176047" 
+              target="_blank" 
+              class="btn btn-primary"
+            >
+              <span>Get Directions on Google Maps 🗺️</span>
+            </a>
+            <a href="tel:+918894616602" class="btn btn-secondary">
+              <span>Call Monika Rana 📞</span>
+            </a>
           </div>
         </div>
       </div>
@@ -479,70 +727,97 @@
   </main>
 
   <!-- =======================================================================
-       8. FOOTER (CARBON #121212 PANEL)
+       10. SITE FOOTER
        ======================================================================= -->
-  <footer class="site-footer-carbon" id="footer">
-    <div class="container-full">
-      <div class="footer-top-spread">
-        <h2 class="footer-display-quote">Good coffee speaks quietly.</h2>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>MAGIC MASALA</h3>
+          <p>
+            Multi-Cuisine Cafe & Homestyle Tiffin Service near Rajiv Gandhi Government Engineering College (RGGEC), Massal Chowk, Nagrota Bagwan, Kangra.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a 
+              href="https://www.instagram.com/magicmasala_cafe?cplk=czdlNDI2Ymc3NHZp" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-instagram" 
+              style="min-height: 38px; padding: 0.35rem 0.85rem; font-size: 0.8rem;"
+            >
+              Instagram @magicmasala_cafe
+            </a>
+            <a 
+              href="https://wa.me/918894616602" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp" 
+              style="min-height: 38px; padding: 0.35rem 0.85rem; font-size: 0.8rem;"
+            >
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
 
-        <!-- Horizontal Mini-Nav in 15px Surt #e82c2a -->
-        <ul class="footer-mini-nav">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#menu">Coffee Coffee</a></li>
-          <li><a href="#menu">Scratch Bakery</a></li>
-          <li><a href="#reservation">Table Booking</a></li>
-          <li><a href="#menu">Wholesale Inquiries</a></li>
-          <li><a href="#story">Journal</a></li>
-          <li><a href="#story">Provenance</a></li>
-          <li><a href="#footer">Privacy & Terms</a></li>
-        </ul>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-list">
+            <li><a href="#menu">Full Menu & Prices</a></li>
+            <li><a href="#tiffin">Ghar Ka Khana / Tiffin Service</a></li>
+            <li><a href="#gallery">Cafe Photo Gallery</a></li>
+            <li><a href="#owner">About Monika Rana</a></li>
+            <li><a href="#reservation">Table Booking</a></li>
+            <li><a href="#location">Google Maps Directions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Popular Items</h4>
+          <ul class="footer-list">
+            <li><a href="#menu">Rajma Rice Combo (₹80)</a></li>
+            <li><a href="#menu">Crispy Samosa (₹15)</a></li>
+            <li><a href="#menu">Samosa + Tikki Chaat (₹60)</a></li>
+            <li><a href="#menu">Paneer Hakka Noodles (₹90)</a></li>
+            <li><a href="#menu">Chocolate & Oreo Shakes (₹70-80)</a></li>
+            <li><a href="#tiffin">Monthly Student Tiffin</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Owner & Contact</h4>
+          <p style="font-size: 0.88rem; color: #D6D3D1; margin-bottom: 0.75rem;">
+            <strong>Owner:</strong> Monika Rana<br>
+            <strong>Phone:</strong> +91 88946 16602<br>
+            <strong>Alt:</strong> +91 78339 80030<br>
+            <strong>Hours:</strong> 7:30 AM – 8:30 PM (Daily)
+          </p>
+          <div style="font-size: 0.8rem; color: #A8A29E;">
+            Pure Vegetarian • Student-Friendly Pricing • Clean & Hygienic
+          </div>
+        </div>
       </div>
 
-      <div class="footer-sub-grid">
-        <div>
-          <h6 class="footer-col-caption">Roastery & Parlour Address</h6>
-          <p class="footer-text-muted">
-            42 Redbrick Lane, Old Roastery Quarter<br>
-            London & Brooklyn Branches<br>
-            Direct: +1 (555) 382-9100 • studio@redbrickcoffee.com
-          </p>
-        </div>
-
-        <div>
-          <h6 class="footer-col-caption">Daily Hours</h6>
-          <p class="footer-text-muted">
-            Weekdays: 07:00 – 18:00<br>
-            Weekends: 08:00 – 19:00<br>
-            Hearth warm at 05:00
-          </p>
-        </div>
-
-        <div>
-          <h6 class="footer-col-caption">Dispatch Newsletter</h6>
-          <p class="footer-text-muted" style="font-size: 0.875rem;">
-            Monthly notes on micro-lot arrivals and weekend viennoiserie drops.
-          </p>
-          <form class="newsletter-box" id="dispatchNewsletterForm">
-            <input type="email" class="newsletter-input" id="newsletterEmailInput" placeholder="Your email address" required />
-            <button type="submit" class="action-link-outlined rect" style="color: var(--color-brick-red); border-color: var(--color-brick-red);">Subscribe ⟶</button>
-          </form>
-          <span id="newsletterMsg" style="display: none; font-family: var(--font-gtstandard-m); font-size: 10px; color: #FFA4A2; margin-top: 6px;"></span>
-        </div>
-      </div>
-
-      <div class="footer-bottom-copy">
-        <span>© 2026 REDBRICK COFFEE ROASTERS LTD. ALL RIGHTS RESERVED.</span>
-        <span>SCARLET INK ON BUTCHER PAPER • PRINTED EDITION</span>
+      <div class="footer-bottom">
+        <span>© 2026 Magic Masala Cafe & Restaurant. All Rights Reserved. Massal Chowk, Nagrota Bagwan, Kangra.</span>
+        <span>Crafted for RGGEC Students & Food Lovers ❤️</span>
       </div>
     </div>
   </footer>
 
-  <!-- Toast Stack for Interactive Feedback -->
-  <div class="toast-stack" id="toastContainer"></div>
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="floating-actions">
+    <a href="tel:+918894616602" class="floating-btn btn-primary">
+      <span>📞 Call Now</span>
+    </a>
+    <a href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20I%20would%20like%20to%20order%20from%20Magic%20Masala." target="_blank" class="floating-btn btn-whatsapp">
+      <span>💬 WhatsApp</span>
+    </a>
+  </div>
 
-  <!-- JavaScript Application -->
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- App Script -->
   <script src="js/app.js"></script>
 </body>
 </html>
-
