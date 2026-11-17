@@ -12,53 +12,28 @@ A modern, responsive, and student-friendly website built for **Magic Masala**, l
 - **Instagram:** [@magicmasala_cafe](https://www.instagram.com/magicmasala_cafe?cplk=czdlNDI2Ymc3NHZp)
 - **Cuisine:** 100% Pure Vegetarian • Indian • Chinese • Italian • Fast Food
 - **Google Reviews:** 4.7 ★ (48+ verified reviews)
-- **Average Cost:** ₹1–200 per person (Specially pocket-friendly for college students)
+- **Official Price Tier:** **₹1–200 per person** (Reported by 14 people on Google Search/Maps; all individual dishes range between ₹15 and ₹120)
 - **Operating Hours:** Open Daily 07:30 AM – 08:30 PM
 
 ---
 
-## ✨ Website Features & Highlights
+## 📸 100% Authentic Photos & Dish Matching
 
-1. **Top Campus Notice Bar**:
-   - Location callout next to RGGEC Kangra, live daily service hours, and instant call link.
-
-2. **Hero Section with Real Cafe Photography**:
-   - Highlighting the cozy dining hall, pure-veg guarantee, 4.7 Google rating, and direct actions to Menu, Tiffin Service, and WhatsApp Order.
-
-3. **Ghar Jaisa Khana & Tiffin Service (Hosteller Relief)**:
-   - Dedicated service for RGGEC engineering students & hostellers.
-   - 100% Pure Vegetarian, freshly cooked daily, hygienic, homestyle balanced meal (Dal/Rajma/Chole + Sabzi + 4 Phulkas + Rice + Salad).
-   - **Interactive Tiffin Subscription Calculator** (Daily / Weekly / Monthly plan estimation).
-   - Instant WhatsApp booking button with pre-filled order text!
-
-4. **Interactive Full Menu with Search & Category Filters**:
-   - **Rice Delights (₹80):** Rajma Rice, Kadhi Rice, Chole Rice (with Raita & Salad).
-   - **Samosa & Chaat (₹15–₹80):** Crispy Samosa (₹15), Samosa Chaat (₹60), Tikki Chaat (₹60), Samosa + Tikki Chaat (₹60), Fresh Fruit Chaat (₹80).
-   - **Hot Pakodas (₹50–₹80):** Veg Pakoda (₹50), Onion Pakoda (₹50), Paneer Pakoda (₹70), Mix Pakoda (₹80).
-   - **Chinese & Fast Food:** Paneer Hakka Noodles (₹90), Magic Veg Burger (₹60), Steamed/Fried Momos (₹60–₹70), Cheesy Pizza (₹120).
-   - **Thick Shakes (₹60–₹80):** Chocolate Shake (₹70), Oreo Thick Shake (₹80), Vanilla/Banana Shake (₹60–₹70), Seasonal Mango Shake (₹70).
-   - **Desserts (₹50):** Warm Gulab Jamun (2 pcs ₹50), Gajar Ka Halwa (₹50), Pastries & Ice Cream.
-   - Real-time search filter and one-click WhatsApp order buttons for each dish.
-
-5. **Curated Ambiance Gallery with Lightbox**:
-   - Featuring real photographs of Magic Masala:
-     - Geometric lamp dining hall & comfortable booth seating
-     - Fairy light wall & climbing green vines
-     - Festive evening entrance at Massal Chowk
-     - Hot paneer noodles, tall chocolate shakes, and plated burger
-   - Click-to-enlarge full-screen lightbox viewer.
-
-6. **Meet the Owner: Monika Rana**:
-   - Story and philosophy behind Magic Masala, ensuring students living away from home get fresh, caring, and nutritious homestyle meals every single day.
-
-7. **Table & Birthday Party Reservation**:
-   - Bookings for college birthday celebrations, project group meetups, or lunch gatherings with instant confirmation voucher (`MM-XXXX`) and WhatsApp verification.
-
-8. **Location & Google Reviews (4.7 Stars)**:
-   - Google ratings highlight, genuine student reviews, directions link, and contact details.
-
-9. **Sticky Mobile Action Bar**:
-   - Direct Call and WhatsApp buttons fixed for mobile users.
+All dish photos in the menu and gallery are directly taken from Magic Masala's actual restaurant, physical menu card, and Google listing:
+1. **Rajma Rice Combo (₹80):** Authentic rice, rajma curry, raita, and salad thali from Magic Masala's menu card (`card-rice-thali.jpg`).
+2. **Kadhi Rice Combo (₹80):** Traditional yellow kadhi pakodi and steamed rice combo from the tiffin banner (`tiffin-dal-sabzi.jpg`).
+3. **Chole Rice Combo (₹80):** Rich Punjabi chole in stainless steel handi from customer photos on Google listing (`google-paneer-curry.jpg`).
+4. **Crispy Samosa & Chaat (₹15 / ₹60):** Authentic golden samosas with chutneys from the physical menu card (`card-samosa.jpg`).
+5. **Paneer / Mix Pakoda (₹50–₹80):** Traditional besan pakoda platter from the menu card (`card-pakoda.jpg`).
+6. **Paneer Hakka Noodles (₹90):** High-resolution actual dish photo from the cafe with paneer cubes and bell peppers (`hakka-noodles.jpg`).
+7. **Magic Veg Burger (₹60):** High-resolution actual dish photo from the cafe with toasted sesame bun and plated sauces (`burger-plate.jpg`).
+8. **Paneer Kathi Roll (₹70):** Authentic cut roll with dip from the Google Maps listing (`google-kathi-roll.jpg`).
+9. **Veg Steamed Momos (₹60–₹70):** Tibetan steamed momos from the restaurant banner (`poster-momos.jpg`).
+10. **Farmhouse Veg Pizza (₹120):** Fresh baked cheese pizza from the restaurant banner (`poster-pizza.jpg`).
+11. **Chilled Chocolate Shake (₹70):** Tall glasses with yellow straws from the real cafe photo (`shakes-table.jpg`).
+12. **Oreo / Mango Shake (₹70–₹80):** Thick shake from the menu card (`card-shake.jpg`).
+13. **Gulab Jamun & Gajar Halwa (₹50):** Authentic dessert platter from the menu card (`card-dessert-gulab.jpg`).
+14. **Daily Tiffin Service:** 4-tier stainless steel tiffin dabba from the tiffin banner (`tiffin-stack.jpg`).
 
 ---
 
@@ -77,4 +52,4 @@ Open [http://127.0.0.1:4321](http://127.0.0.1:4321) in any browser.
 ---
 
 ## 📦 GitHub Repository
-Changes can be tracked and pushed to [https://github.com/NitinAery/Techfest](https://github.com/NitinAery/Techfest).
+All updates are tracked and pushed to [https://github.com/NitinAery/Techfest](https://github.com/NitinAery/Techfest).
