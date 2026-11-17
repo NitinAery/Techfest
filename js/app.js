@@ -20,7 +20,7 @@ const MAGIC_MENU = [
     tags: ['Pure Veg', 'College Favorite', 'Ghar Ka Khana'],
     desc: 'Homestyle slow-simmered Kashmiri Rajma curry served with fragrant Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
     serving: 'Rajma + Rice + Salad + Raita',
-    image: 'assets/images/card-rice-thali.jpg'
+    image: 'assets/images/real-thali-plate.jpg'
   },
   {
     id: 'rice-2',
@@ -106,7 +106,7 @@ const MAGIC_MENU = [
     tags: ['Healthy Choice', 'Fresh Cut'],
     desc: 'A refreshing bowl of freshly chopped seasonal fruits tossed in lemon juice and signature Magic Masala rock salt spice blend.',
     serving: 'Fresh Fruit Bowl',
-    image: 'assets/images/card-rice-thali.jpg'
+    image: 'assets/images/real-samosa-plate.jpg'
   },
 
   // --- 3. Pakodas & Snacks ---
