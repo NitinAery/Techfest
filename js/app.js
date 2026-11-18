@@ -641,6 +641,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
   initScrollReveals();
   initNavScrollSpy();
+  initCatalogueScrollController();
+  initWeeklyDayTabs();
 });
 
 // ==========================================
@@ -694,6 +696,7 @@ function initShowcaseTransformationEngine() {
   track.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => `
     <div class="carousel-slide-item" data-index="${idx}" role="listitem" aria-label="${item.title}">
       <div class="carousel-plate-disc" title="Click to view full recipe & options">
+        <div class="dish-3d-glare" aria-hidden="true"></div>
         <img src="${item.image}" alt="${item.title}" class="carousel-plate-img" loading="${idx === 0 ? 'eager' : 'lazy'}" />
         <div class="carousel-plate-price-tag">${item.price}</div>
       </div>
@@ -709,6 +712,34 @@ function initShowcaseTransformationEngine() {
 
   const slideElements = Array.from(track.querySelectorAll('.carousel-slide-item'));
   const dotElements = dotsRail ? Array.from(dotsRail.querySelectorAll('.carousel-dot')) : [];
+
+  // Attach 3D tilt physics to carousel discs
+  slideElements.forEach(slide => {
+    const disc = slide.querySelector('.carousel-plate-disc');
+    if (!disc) return;
+    disc.addEventListener('mousemove', (e) => {
+      if (!slide.classList.contains('is-active')) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const rect = disc.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+      disc.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale(1.04)`;
+      const glare = disc.querySelector('.dish-3d-glare');
+      if (glare) {
+        glare.style.opacity = '1';
+        glare.style.background = `radial-gradient(circle at ${((x/rect.width)*100).toFixed(1)}% ${((y/rect.height)*100).toFixed(1)}%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.08) 45%, transparent 75%)`;
+      }
+    }, { passive: true });
+    disc.addEventListener('mouseleave', () => {
+      disc.style.transform = '';
+      const glare = disc.querySelector('.dish-3d-glare');
+      if (glare) glare.style.opacity = '0';
+    });
+  });
 
   // 3. Render Compact List View Items
   function renderCompactListView() {
@@ -828,19 +859,37 @@ function initShowcaseTransformationEngine() {
       track.classList.remove('no-transition');
     }
 
-    // Update Slide Classes
+    // Update Slide Classes with 3D Dynamic Culinary Effects
     slideElements.forEach((slide, i) => {
       slide.classList.remove('is-active', 'is-adjacent', 'is-distant');
       const dist = Math.abs(i - ShowcaseState.currentIndex);
+      const disc = slide.querySelector('.carousel-plate-disc');
       if (dist === 0) {
         slide.classList.add('is-active');
         slide.setAttribute('aria-selected', 'true');
+        if (disc) {
+          disc.querySelectorAll('.dish-steam-effect, .dish-frost-effect, .dish-spark-effect').forEach(el => el.remove());
+          const { effectHTML } = getDishEffectHTML(currentItem);
+          if (effectHTML) {
+            const dummy = document.createElement('div');
+            dummy.innerHTML = effectHTML.trim();
+            if (dummy.firstElementChild) {
+              disc.appendChild(dummy.firstElementChild);
+            }
+          }
+        }
       } else if (dist === 1) {
         slide.classList.add('is-adjacent');
         slide.setAttribute('aria-selected', 'false');
+        if (disc) {
+          disc.querySelectorAll('.dish-steam-effect, .dish-frost-effect, .dish-spark-effect').forEach(el => el.remove());
+        }
       } else {
         slide.classList.add('is-distant');
         slide.setAttribute('aria-selected', 'false');
+        if (disc) {
+          disc.querySelectorAll('.dish-steam-effect, .dish-frost-effect, .dish-spark-effect').forEach(el => el.remove());
+        }
       }
     });
 
@@ -970,7 +1019,7 @@ function initShowcaseTransformationEngine() {
       `).join('');
     }
 
-    // Visual Continuity Hero Plate
+    // Visual Continuity Hero Plate with 3D Effects
     if (detailPlateImg) {
       detailPlateImg.src = item.image;
       detailPlateImg.alt = item.title;
@@ -980,6 +1029,55 @@ function initShowcaseTransformationEngine() {
     }
     if (detailHeroGlow) {
       detailHeroGlow.style.background = `radial-gradient(circle, ${item.glow} 0%, rgba(245, 158, 11, 0.15) 50%, transparent 75%)`;
+    }
+
+    // Dynamic 3D Culinary Micro-Effects & Specular Glare on Detail Plate
+    const detailDisc = document.getElementById('detailPlateDisc');
+    if (detailDisc) {
+      // Remove any existing micro-effects
+      detailDisc.querySelectorAll('.dish-steam-effect, .dish-frost-effect, .dish-spark-effect, .dish-3d-glare').forEach(el => el.remove());
+
+      // Add specular glare
+      const glare = document.createElement('div');
+      glare.className = 'dish-3d-glare';
+      glare.setAttribute('aria-hidden', 'true');
+      detailDisc.appendChild(glare);
+
+      // Add matching culinary effect (steam, frost, sparkle)
+      const { effectHTML } = getDishEffectHTML(item);
+      if (effectHTML) {
+        const dummy = document.createElement('div');
+        dummy.innerHTML = effectHTML.trim();
+        if (dummy.firstElementChild) {
+          detailDisc.appendChild(dummy.firstElementChild);
+        }
+      }
+
+      // Add interactive 3D tilt physics to detail plate
+      if (!detailDisc.dataset.tiltBound) {
+        detailDisc.dataset.tiltBound = 'true';
+        detailDisc.addEventListener('mousemove', (e) => {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const rect = detailDisc.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -12;
+          const rotateY = ((x - centerX) / centerX) * 12;
+          detailDisc.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale(1.04)`;
+          const g = detailDisc.querySelector('.dish-3d-glare');
+          if (g) {
+            g.style.opacity = '1';
+            g.style.background = `radial-gradient(circle at ${((x/rect.width)*100).toFixed(1)}% ${((y/rect.height)*100).toFixed(1)}%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.08) 45%, transparent 75%)`;
+          }
+        }, { passive: true });
+        detailDisc.addEventListener('mouseleave', () => {
+          detailDisc.style.transform = '';
+          const g = detailDisc.querySelector('.dish-3d-glare');
+          if (g) g.style.opacity = '0';
+        });
+      }
     }
 
     // Render Options & Accompaniment Selector (Section E)
@@ -1239,6 +1337,51 @@ function initShowcaseTransformationEngine() {
 }
 
 // ==========================================
+// 3B. CULINARY MICRO-EFFECTS HELPER (3D FX)
+// ==========================================
+function getDishEffectHTML(item) {
+  let effectHTML = '';
+  let badgeHTML = '';
+
+  if (item.category === 'shakes' || item.id === 'dessert-2') {
+    // Chilled Thick Shake or Ice Cream
+    effectHTML = `
+      <div class="dish-frost-effect" aria-hidden="true">
+        <span class="frost-gleam"></span>
+      </div>
+    `;
+    badgeHTML = `<span class="dish-mini-tag tag-cold">❄ Chilled</span>`;
+  } else if (
+    item.category === 'rice' || 
+    item.category === 'tiffin' || 
+    item.id === 'cafe-4' || /* Veg Momos */
+    item.id === 'cafe-3' || /* Hakka Chowmein */
+    item.id === 'dessert-1' /* Hot Gulab Jamun */
+  ) {
+    // Steaming Hot Curry / Rice / Momos
+    effectHTML = `
+      <div class="dish-steam-effect" aria-hidden="true">
+        <span class="steam-wisp wisp-1"></span>
+        <span class="steam-wisp wisp-2"></span>
+        <span class="steam-wisp wisp-3"></span>
+      </div>
+    `;
+    badgeHTML = `<span class="dish-mini-tag tag-hot">♨ Piping Hot</span>`;
+  } else {
+    // Fresh Golden Snacks / Pakodas / Samosas / Fries / Burger / Pizza
+    effectHTML = `
+      <div class="dish-spark-effect" aria-hidden="true">
+        <span class="sparkle sparkle-1">✨</span>
+        <span class="sparkle sparkle-2">★</span>
+      </div>
+    `;
+    badgeHTML = `<span class="dish-mini-tag tag-crisp">⚡ Fresh Crisp</span>`;
+  }
+
+  return { effectHTML, badgeHTML };
+}
+
+// ==========================================
 // 4. "WHAT'S ON OUR PLATE" MENU CONTROLLER
 // ==========================================
 function renderMenu(category, searchQuery = '') {
@@ -1258,6 +1401,12 @@ function renderMenu(category, searchQuery = '') {
     );
   }
 
+  // Update live items count pill
+  const countPill = document.getElementById('menuItemsCountPill');
+  if (countPill) {
+    countPill.textContent = `Showing ${filtered.length} of ${MAGIC_MENU.length} Pure-Veg Dishes`;
+  }
+
   if (filtered.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--color-text-muted);">
@@ -1268,16 +1417,24 @@ function renderMenu(category, searchQuery = '') {
     return;
   }
 
-  container.innerHTML = filtered.map(item => `
-    <article class="dish-plate-card" data-category="${item.category}">
-      <!-- Floating Circular Plate Image -->
+  container.innerHTML = filtered.map(item => {
+    const { effectHTML, badgeHTML } = getDishEffectHTML(item);
+    return `
+    <article class="dish-plate-card" data-category="${item.category}" tabindex="0">
+      <!-- 3D Depth Shadow under plate -->
+      <div class="dish-depth-shadow" aria-hidden="true"></div>
+
+      <!-- Floating 3D Plate Media with Specular Glare & Culinary Effect -->
       <div class="dish-round-media">
+        <div class="dish-3d-glare" aria-hidden="true"></div>
+        ${effectHTML}
         <img src="${item.image}" alt="${item.title}" loading="lazy" />
       </div>
 
       <div class="dish-card-info">
         <div class="dish-tags-row">
-          ${item.tags ? item.tags.slice(0, 2).map(tag => `<span class="dish-mini-tag">${tag}</span>`).join('') : ''}
+          ${badgeHTML}
+          ${item.tags ? item.tags.slice(0, 1).map(tag => `<span class="dish-mini-tag">${tag}</span>`).join('') : ''}
         </div>
 
         <div class="dish-title-price-row">
@@ -1303,7 +1460,11 @@ function renderMenu(category, searchQuery = '') {
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
+
+  // Re-bind high-performance 3D tilt physics to new cards
+  init3DTiltPhysics();
 }
 
 function initCategoryFilters() {
@@ -1316,6 +1477,7 @@ function initCategoryFilters() {
       const searchVal = document.getElementById('menuSearchInput').value;
       
       const container = document.getElementById('menuGridContainer');
+      const scrollContainer = document.getElementById('menuScrollContainer');
       container.style.opacity = '0.2';
       container.style.transform = 'translateY(8px)';
       
@@ -1324,6 +1486,9 @@ function initCategoryFilters() {
         container.style.opacity = '1';
         container.style.transform = 'translateY(0)';
         container.style.transition = 'all 250ms ease';
+        if (scrollContainer) {
+          scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }, 100);
     });
   });
@@ -1331,12 +1496,158 @@ function initCategoryFilters() {
 
 function initMenuSearch() {
   const searchInput = document.getElementById('menuSearchInput');
+  const scrollContainer = document.getElementById('menuScrollContainer');
   if (!searchInput) return;
 
   searchInput.addEventListener('input', (e) => {
     const activeBtn = document.querySelector('.cat-tab-btn.active');
     const cat = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
     renderMenu(cat, e.target.value);
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+}
+
+// ==========================================
+// 4B. CATALOGUE SCROLL VIEWPORT CONTROLLER
+// ==========================================
+function initCatalogueScrollController() {
+  const toggleBtn = document.getElementById('toggleCatalogueHeightBtn');
+  const scrollContainer = document.getElementById('menuScrollContainer');
+  if (!toggleBtn || !scrollContainer) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = scrollContainer.classList.toggle('is-expanded-view');
+    toggleBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    
+    if (isExpanded) {
+      toggleBtn.innerHTML = `<span>Concise View</span> <span class="expand-icon" aria-hidden="true">⤢</span>`;
+      toggleBtn.setAttribute('title', 'Collapse back to concise scrollable viewport');
+    } else {
+      toggleBtn.innerHTML = `<span>Expand All</span> <span class="expand-icon" aria-hidden="true">⤡</span>`;
+      toggleBtn.setAttribute('title', 'Expand full catalogue view without scrollbar');
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+}
+
+// ==========================================
+// 4C. TIFFIN WEEKLY DAY TABS & CONCISE SCROLLER
+// ==========================================
+function initWeeklyDayTabs() {
+  const dayBtns = document.querySelectorAll('.weekly-day-nav-btn');
+  const scrollContainer = document.getElementById('weeklyDaysScrollContainer');
+  const dayCards = document.querySelectorAll('.weekly-day-card');
+  if (!dayBtns || dayBtns.length === 0 || !dayCards) return;
+
+  dayBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      dayBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const targetDay = btn.getAttribute('data-day');
+
+      if (targetDay === 'all') {
+        dayCards.forEach(card => {
+          card.style.display = '';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+        if (scrollContainer) {
+          scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } else {
+        dayCards.forEach(card => {
+          const cardDay = card.getAttribute('data-day');
+          if (cardDay === targetDay) {
+            card.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(6px)';
+            card.style.transition = 'opacity 250ms ease, transform 250ms ease';
+            requestAnimationFrame(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (scrollContainer) {
+          scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+}
+
+// ==========================================
+// 4D. 3D TILT & PARALLAX PHYSICS CONTROLLER
+// ==========================================
+function init3DTiltPhysics() {
+  const cards = document.querySelectorAll('.dish-plate-card:not([data-tilt-bound="true"])');
+
+  cards.forEach(card => {
+    card.dataset.tiltBound = 'true';
+    const plate = card.querySelector('.dish-round-media');
+    const glare = card.querySelector('.dish-3d-glare');
+    const shadow = card.querySelector('.dish-depth-shadow');
+    let rafId = null;
+
+    function handleMove(e) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+      const rect = card.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Range -10 to +10 degrees
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-5px)`;
+
+        if (plate) {
+          plate.style.transform = `translateZ(26px) rotateX(${(rotateX * 0.7).toFixed(2)}deg) rotateY(${(rotateY * 0.7).toFixed(2)}deg) scale(1.04)`;
+        }
+
+        if (glare) {
+          glare.style.opacity = '1';
+          const px = ((x / rect.width) * 100).toFixed(1);
+          const py = ((y / rect.height) * 100).toFixed(1);
+          glare.style.background = `radial-gradient(circle at ${px}% ${py}%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.08) 45%, transparent 75%)`;
+        }
+
+        if (shadow) {
+          shadow.style.transform = `translateX(${(-rotateY * 1.5).toFixed(1)}px) translateY(${(rotateX * 1.5).toFixed(1)}px) scale(1.08)`;
+        }
+      });
+    }
+
+    function handleLeave() {
+      if (rafId) cancelAnimationFrame(rafId);
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      if (plate) plate.style.transform = '';
+      if (glare) glare.style.opacity = '0';
+      if (shadow) shadow.style.transform = '';
+    }
+
+    card.addEventListener('mousemove', handleMove, { passive: true });
+    card.addEventListener('mouseleave', handleLeave, { passive: true });
+    card.addEventListener('touchstart', (e) => handleMove(e), { passive: true });
+    card.addEventListener('touchend', handleLeave, { passive: true });
   });
 }
 

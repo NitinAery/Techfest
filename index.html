@@ -555,9 +555,26 @@
           />
         </div>
 
-        <!-- Dish Plates Grid (Circular Plate Presentation) -->
-        <div class="plate-dish-grid" id="menuGridContainer">
-          <!-- Dynamically populated via JS with exact menu card items -->
+        <!-- Dish Plates Grid with Concise Vertical Scroll Viewport -->
+        <div class="menu-catalogue-viewport-wrap">
+          <div class="catalogue-scroll-notice">
+            <div class="catalogue-count-info">
+              <span class="scroll-count-pill" id="menuItemsCountPill">Showing 28 Pure-Veg Dishes</span>
+              <span class="catalogue-cuisine-tags">Indian • Italian • Chinese</span>
+            </div>
+            <div class="catalogue-view-actions">
+              <span class="scroll-cue-text">↕ Scroll Catalogue Vertically</span>
+              <button type="button" class="expand-catalogue-btn" id="toggleCatalogueHeightBtn" title="Toggle between concise vertical scroll and full expanded grid">
+                <span>Expand All</span>
+                <span>↕</span>
+              </button>
+            </div>
+          </div>
+          <div class="plate-dish-scroll-container" id="menuScrollContainer">
+            <div class="plate-dish-grid" id="menuGridContainer">
+              <!-- Dynamically populated via JS with exact menu card items -->
+            </div>
+          </div>
         </div>
 
         <!-- Authentic Printed Menu Card Callout -->
@@ -633,117 +650,131 @@
             </div>
           </div>
 
-          <!-- 7-Day Grid Cards -->
-          <div class="weekly-days-grid">
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">MONDAY</span>
-                <span class="day-tag">Campus Favorite</span>
-              </div>
-              <div class="day-dish-item">
-                <strong>Main Dal:</strong> Kashmiri Rajma Masala
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Hot Tawa Rotis + Steamed Basmati Rice
-              </div>
-              <div class="day-dish-item">
-                <strong>Accompaniments:</strong> Fresh Cucumber-Onion Salad + Boondi Raita
-              </div>
-            </div>
+          <!-- Concise Day Navigation Tabs -->
+          <div class="weekly-day-nav-bar" role="tablist" aria-label="Select Day of the Week">
+            <button type="button" class="weekly-day-nav-btn active" data-day="all" role="tab" aria-selected="true">All 7 Days</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="monday" role="tab" aria-selected="false">Mon</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="tuesday" role="tab" aria-selected="false">Tue</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="wednesday" role="tab" aria-selected="false">Wed</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="thursday" role="tab" aria-selected="false">Thu</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="friday" role="tab" aria-selected="false">Fri</button>
+            <button type="button" class="weekly-day-nav-btn highlight-special" data-day="saturday" role="tab" aria-selected="false">Sat (Feast 🎉)</button>
+            <button type="button" class="weekly-day-nav-btn" data-day="sunday" role="tab" aria-selected="false">Sun</button>
+          </div>
 
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">TUESDAY</span>
-                <span class="day-tag">Homestyle Tadka</span>
+          <!-- Concise Vertical Scroll Schedule -->
+          <div class="weekly-days-scroll-container" id="weeklyDaysScrollContainer">
+            <div class="weekly-days-grid" id="weeklyDaysGrid">
+              <div class="weekly-day-card" data-day="monday">
+                <div class="day-card-header">
+                  <span class="day-name">MONDAY</span>
+                  <span class="day-tag">Campus Favorite</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Main Dal:</strong> Kashmiri Rajma Masala
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Hot Tawa Rotis + Steamed Basmati Rice
+                </div>
+                <div class="day-dish-item">
+                  <strong>Accompaniments:</strong> Fresh Cucumber-Onion Salad + Boondi Raita
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Main Dal:</strong> Dal Makhani / Panchmel Dal Tadka
-              </div>
-              <div class="day-dish-item">
-                <strong>Sabzi:</strong> Seasonal Aloo Gobhi / Bhindi Masala
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Tawa Phulkas + Jeera Rice + Green Salad
-              </div>
-            </div>
 
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">WEDNESDAY</span>
-                <span class="day-tag">Aromatic Spices</span>
+              <div class="weekly-day-card" data-day="tuesday">
+                <div class="day-card-header">
+                  <span class="day-name">TUESDAY</span>
+                  <span class="day-tag">Homestyle Tadka</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Main Dal:</strong> Dal Makhani / Panchmel Dal Tadka
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sabzi:</strong> Seasonal Aloo Gobhi / Bhindi Masala
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Tawa Phulkas + Jeera Rice + Green Salad
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Main Curry:</strong> Amritsari Chole Masala Gravy
-              </div>
-              <div class="day-dish-item">
-                <strong>Sabzi:</strong> Sukhi Seasonal Sabzi (Aloo Matar / Beans)
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Tawa Phulkas + Steamed Rice + Raita
-              </div>
-            </div>
 
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">THURSDAY</span>
-                <span class="day-tag">Himachali Heritage</span>
+              <div class="weekly-day-card" data-day="wednesday">
+                <div class="day-card-header">
+                  <span class="day-name">WEDNESDAY</span>
+                  <span class="day-tag">Aromatic Spices</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Main Curry:</strong> Amritsari Chole Masala Gravy
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sabzi:</strong> Sukhi Seasonal Sabzi (Aloo Matar / Beans)
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Tawa Phulkas + Steamed Rice + Raita
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Special Curry:</strong> Kangri Kadhi with Besan Pakodis
-              </div>
-              <div class="day-dish-item">
-                <strong>Sabzi:</strong> Jeera Aloo / Lauki Kofta Curry
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Soft Phulkas + Long-Grain Rice + Sliced Salad
-              </div>
-            </div>
 
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">FRIDAY</span>
-                <span class="day-tag">Desi Ghee Aroma</span>
+              <div class="weekly-day-card" data-day="thursday">
+                <div class="day-card-header">
+                  <span class="day-name">THURSDAY</span>
+                  <span class="day-tag">Himachali Heritage</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Special Curry:</strong> Kangri Kadhi with Besan Pakodis
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sabzi:</strong> Jeera Aloo / Lauki Kofta Curry
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Soft Phulkas + Long-Grain Rice + Sliced Salad
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Main Dal:</strong> Golden Moong Dal Fry with Ghee Tadka
-              </div>
-              <div class="day-dish-item">
-                <strong>Sabzi:</strong> Mix Vegetable (Carrot, Peas, Beans, Potato)
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Hot Tawa Rotis + Steamed Rice + Roasted Papad
-              </div>
-            </div>
 
-            <div class="weekly-day-card highlight-weekend">
-              <div class="day-card-header">
-                <span class="day-name">SATURDAY</span>
-                <span class="day-tag special">Weekend Feast 🎉</span>
+              <div class="weekly-day-card" data-day="friday">
+                <div class="day-card-header">
+                  <span class="day-name">FRIDAY</span>
+                  <span class="day-tag">Desi Ghee Aroma</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Main Dal:</strong> Golden Moong Dal Fry with Ghee Tadka
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sabzi:</strong> Mix Vegetable (Carrot, Peas, Beans, Potato)
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Hot Tawa Rotis + Steamed Rice + Roasted Papad
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Special Paneer:</strong> Shahi Matar Paneer in rich gravy
-              </div>
-              <div class="day-dish-item">
-                <strong>Bread & Rice:</strong> 4 Butter Tawa Phulkas + Fragrant Veg Pulao
-              </div>
-              <div class="day-dish-item">
-                <strong>Sweet Delight:</strong> 1 Warm Shahi Gulab Jamun Sweet!
-              </div>
-            </div>
 
-            <div class="weekly-day-card">
-              <div class="day-card-header">
-                <span class="day-name">SUNDAY</span>
-                <span class="day-tag">Comfort Special</span>
+              <div class="weekly-day-card highlight-weekend" data-day="saturday">
+                <div class="day-card-header">
+                  <span class="day-name">SATURDAY</span>
+                  <span class="day-tag special">Weekend Feast 🎉</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Special Paneer:</strong> Shahi Matar Paneer in rich gravy
+                </div>
+                <div class="day-dish-item">
+                  <strong>Bread & Rice:</strong> 4 Butter Tawa Phulkas + Fragrant Veg Pulao
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sweet Delight:</strong> 1 Warm Shahi Gulab Jamun Sweet!
+                </div>
               </div>
-              <div class="day-dish-item">
-                <strong>Special Feast:</strong> Sunday Chef's Thali / Nutritious Moong Khichdi
-              </div>
-              <div class="day-dish-item">
-                <strong>Sabzi:</strong> Paneer Bhurji / Seasonal Masala Veg
-              </div>
-              <div class="day-dish-item">
-                <strong>Sides:</strong> Tawa Rotis, Curd, Homemade Chutney & Pickle
+
+              <div class="weekly-day-card" data-day="sunday">
+                <div class="day-card-header">
+                  <span class="day-name">SUNDAY</span>
+                  <span class="day-tag">Comfort Special</span>
+                </div>
+                <div class="day-dish-item">
+                  <strong>Special Feast:</strong> Sunday Chef's Thali / Nutritious Moong Khichdi
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sabzi:</strong> Paneer Bhurji / Seasonal Masala Veg
+                </div>
+                <div class="day-dish-item">
+                  <strong>Sides:</strong> Tawa Rotis, Curd, Homemade Chutney & Pickle
+                </div>
               </div>
             </div>
           </div>
@@ -1135,7 +1166,7 @@
         <div class="booking-split-box reveal-on-scroll">
           <div class="booking-info-pane">
             <span class="section-eyebrow">COLLEGE CELEBRATIONS & VISITS</span>
-            <h3 style="font-size: 2rem; margin-bottom: 0.75rem; color: var(--color-text-title);">Reserve a Booth or Celebrate</h3>
+            <h2 class="section-main-title" style="font-size: 2rem; margin-bottom: 0.75rem; color: var(--color-text-title);">Reserve a Booth or Celebrate</h2>
             <p style="font-size: 0.95rem; color: var(--color-text-body); margin-bottom: 2rem;">
               Planning a college birthday treat, placement celebration, or group study meal? Reserve in advance with fairy light decoration!
             </p>
