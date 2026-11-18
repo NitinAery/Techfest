@@ -20,7 +20,7 @@ const MAGIC_MENU = [
     tags: ['Pure Veg', 'College Favorite', 'Ghar Ka Khana'],
     desc: 'Homestyle slow-simmered Kashmiri Rajma curry served with fragrant Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
     serving: 'Rajma + Rice + Salad + Raita',
-    image: 'assets/images/real-thali-plate.jpg'
+    image: 'assets/images/item-rajma-rice.jpg'
   },
   {
     id: 'rice-2',
@@ -29,10 +29,10 @@ const MAGIC_MENU = [
     hindi: 'कढ़ी चावल',
     price: '₹80',
     priceNum: 80,
-    tags: ['Pure Veg', 'Himachali Style'],
+    tags: ['Pure Veg', 'Himachali Style', 'Comfort Food'],
     desc: 'Traditional sour curd kadhi infused with fenugreek and soft besan pakodis, paired with hot steamed rice and sliced salad.',
     serving: 'Kadhi + Rice + Salad',
-    image: 'assets/images/tiffin-dal-sabzi.jpg'
+    image: 'assets/images/item-kadhi-rice.jpg'
   },
   {
     id: 'rice-3',
@@ -41,10 +41,10 @@ const MAGIC_MENU = [
     hindi: 'छोले चावल',
     price: '₹80',
     priceNum: 80,
-    tags: ['Pure Veg', 'Aromatic Spices'],
+    tags: ['Pure Veg', 'Aromatic Spices', 'North Indian'],
     desc: 'Amritsari spiced chickpea gravy simmered in roasted garam masala, served hot with steamed rice, onion lachha, and cooling raita.',
     serving: 'Chole + Rice + Salad + Raita',
-    image: 'assets/images/google-paneer-curry.jpg'
+    image: 'assets/images/item-chole-rice.jpg'
   },
 
   // --- 2. Samosa & Chaat ---
@@ -55,10 +55,10 @@ const MAGIC_MENU = [
     hindi: 'समोसा',
     price: '₹15',
     priceNum: 15,
-    tags: ['Fresh Daily', 'Pocket Friendly'],
+    tags: ['Fresh Daily', 'Pocket Friendly', 'Golden Crust'],
     desc: 'Golden flaky crust stuffed with spiced potatoes, green peas, coriander seeds, and ginger. Served with tamarind & mint chutney.',
     serving: 'Single Pc with 2 Chutneys',
-    image: 'assets/images/card-samosa.jpg'
+    image: 'assets/images/item-samosa.jpg'
   },
   {
     id: 'samosa-2',
@@ -67,10 +67,10 @@ const MAGIC_MENU = [
     hindi: 'समोसा चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Bestseller', 'Chatpata'],
+    tags: ['Bestseller', 'Chatpata', 'Street Style'],
     desc: 'Crushed hot samosas topped with spicy chole gravy, fresh whisked curd, roasted jeera, saunth chutney, and crunchy sev.',
     serving: 'Generous Single Portion',
-    image: 'assets/images/card-samosa.jpg'
+    image: 'assets/images/item-samosa-chat.jpg'
   },
   {
     id: 'samosa-3',
@@ -79,10 +79,10 @@ const MAGIC_MENU = [
     hindi: 'टिक्की चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Crispy Golden', 'Tawa Fried'],
+    tags: ['Crispy Golden', 'Tawa Fried', 'Dahi Chutney'],
     desc: 'Double shallow-fried spiced potato tikkis pressed crisp on tawa, smothered in warm chole, sweet curd, and green mint chutney.',
     serving: '2 Crispy Tikkis Portion',
-    image: 'assets/images/card-samosa.jpg'
+    image: 'assets/images/item-tikki-chat.jpg'
   },
   {
     id: 'samosa-4',
@@ -91,10 +91,10 @@ const MAGIC_MENU = [
     hindi: 'समोसा + टिक्की चाट',
     price: '₹60',
     priceNum: 60,
-    tags: ['Signature Combo', 'Student Pick'],
+    tags: ['Signature Combo', 'Student Pick', 'Double Delight'],
     desc: 'One crunchy samosa and one potato tikki crushed together with rich dahi, chole masala, onions, and sweet-sour chutneys.',
     serving: 'Double Snack Combo',
-    image: 'assets/images/card-samosa.jpg'
+    image: 'assets/images/item-samosa-tikki-chat.jpg'
   },
   {
     id: 'samosa-5',
@@ -103,10 +103,10 @@ const MAGIC_MENU = [
     hindi: 'फ्रूट चाट',
     price: '₹80',
     priceNum: 80,
-    tags: ['Healthy Choice', 'Fresh Cut'],
+    tags: ['Healthy Choice', 'Fresh Cut', 'Zero Oil'],
     desc: 'A refreshing bowl of freshly chopped seasonal fruits tossed in lemon juice and signature Magic Masala rock salt spice blend.',
     serving: 'Fresh Fruit Bowl',
-    image: 'assets/images/real-samosa-plate.jpg'
+    image: 'assets/images/item-fruit-chat.jpg'
   },
 
   // --- 3. Pakodas & Snacks ---
@@ -117,10 +117,10 @@ const MAGIC_MENU = [
     hindi: 'वेज पकौड़ा',
     price: '₹50',
     priceNum: 50,
-    tags: ['Freshly Fried', 'Crispy Batter'],
+    tags: ['Freshly Fried', 'Crispy Batter', 'Monsoon Favorite'],
     desc: 'Fresh garden vegetables coated in seasoned ajwain gram flour batter and fried until crispy golden. Served with chutney.',
     serving: 'Full Plate with Chutney',
-    image: 'assets/images/card-pakoda.jpg'
+    image: 'assets/images/item-veg-pakoda.jpg'
   },
   {
     id: 'pakoda-2',
@@ -129,10 +129,10 @@ const MAGIC_MENU = [
     hindi: 'प्याज पकौड़ा',
     price: '₹50',
     priceNum: 50,
-    tags: ['Super Crunch', 'Chai Partner'],
+    tags: ['Super Crunch', 'Chai Partner', 'Kanda Bhaji'],
     desc: 'Finely sliced red onions tossed with green chilies, coriander, and spiced besan batter, fried into crunchy golden fritters.',
     serving: 'Full Plate with Chutney',
-    image: 'assets/images/card-pakoda.jpg'
+    image: 'assets/images/item-onion-pakoda.jpg'
   },
   {
     id: 'pakoda-3',
@@ -141,10 +141,10 @@ const MAGIC_MENU = [
     hindi: 'पनीर पकौड़ा',
     price: '₹70',
     priceNum: 70,
-    tags: ['Fresh Dairy Paneer', 'Soft Inside'],
+    tags: ['Fresh Dairy Paneer', 'Soft Inside', 'Rich Snack'],
     desc: 'Thick slabs of fresh malai paneer sandwiched with tangy mint paste, dipped in spiced besan batter and fried golden crisp.',
     serving: 'Plate of Paneer Pakodas',
-    image: 'assets/images/card-pakoda.jpg'
+    image: 'assets/images/item-paneer-pakoda.jpg'
   },
   {
     id: 'pakoda-4',
@@ -153,10 +153,10 @@ const MAGIC_MENU = [
     hindi: 'मिक्स पकौड़ा',
     price: '₹80',
     priceNum: 80,
-    tags: ['Assorted Platter', 'Popular'],
+    tags: ['Assorted Platter', 'Popular', 'Group Sharing'],
     desc: 'Assorted hot fritters including onion, potato, gobhi, paneer, and green chilli, sprinkled with chaat masala.',
     serving: 'Full Sharing Platter',
-    image: 'assets/images/card-pakoda.jpg'
+    image: 'assets/images/item-mix-pakoda.jpg'
   },
 
   // --- 4. Thick Shakes ---
@@ -167,10 +167,10 @@ const MAGIC_MENU = [
     hindi: 'केला शेक',
     price: '₹60',
     priceNum: 60,
-    tags: ['Energy Booster', 'Natural Fruit'],
+    tags: ['Energy Booster', 'Natural Fruit', 'Fresh Milk'],
     desc: 'Fresh ripe bananas whipped smooth with chilled milk and a hint of green cardamom. Healthy campus energy booster.',
-    serving: 'Tall Glass',
-    image: 'assets/images/shakes-table.jpg'
+    serving: 'Tall Frosted Glass',
+    image: 'assets/images/item-banana-shake.jpg'
   },
   {
     id: 'shake-2',
@@ -179,10 +179,10 @@ const MAGIC_MENU = [
     hindi: 'चॉकलेट शेक',
     price: '₹70',
     priceNum: 70,
-    tags: ['Real Cafe Photo', 'Thick & Frothy'],
+    tags: ['Real Cafe Special', 'Thick & Frothy', 'Cocoa Rich'],
     desc: 'Creamy cold chocolate shake whipped with rich cocoa and chilled milk, crowned with dark chocolate shavings. Served with straw.',
-    serving: 'Tall Glass',
-    image: 'assets/images/shakes-table.jpg'
+    serving: 'Tall Frosted Glass',
+    image: 'assets/images/item-chocolate-shake.jpg'
   },
   {
     id: 'shake-3',
@@ -191,10 +191,10 @@ const MAGIC_MENU = [
     hindi: 'वैनिला शेक',
     price: '₹70',
     priceNum: 70,
-    tags: ['Classic Smooth', 'Chilled'],
+    tags: ['Classic Smooth', 'Chilled', 'Creamy Vanilla'],
     desc: 'Smooth and aromatic vanilla bean milkshake blended thick with full-cream milk and ice cream.',
-    serving: 'Tall Glass',
-    image: 'assets/images/shakes-table.jpg'
+    serving: 'Tall Frosted Glass',
+    image: 'assets/images/item-vanilla-shake.jpg'
   },
   {
     id: 'shake-4',
@@ -203,10 +203,10 @@ const MAGIC_MENU = [
     hindi: 'ओरियों शेक',
     price: '₹80',
     priceNum: 80,
-    tags: ['Student Favorite', 'Extra Thick'],
+    tags: ['Student Favorite', 'Extra Thick', 'Cookie Crumble'],
     desc: 'Crushed Oreo cookies blended with creamy vanilla ice cream and chilled milk, topped with crunchy cookie crumbs.',
-    serving: 'Tall Glass',
-    image: 'assets/images/card-shake.jpg'
+    serving: 'Tall Frosted Glass',
+    image: 'assets/images/item-oreo-shake.jpg'
   },
   {
     id: 'shake-5',
@@ -215,13 +215,13 @@ const MAGIC_MENU = [
     hindi: 'मैंगो शेक',
     price: '₹70',
     priceNum: 70,
-    tags: ['Seasonal Special', 'Sweet Mango'],
+    tags: ['Seasonal Special', 'Sweet Mango', 'Summer Favorite'],
     desc: 'Luscious ripe mango pulp blended with rich milk and chilled cubes, topped with chopped nuts. (Available in season).',
     serving: 'Tall Glass (Seasonal)',
-    image: 'assets/images/card-shake.jpg'
+    image: 'assets/images/item-mango-shake.jpg'
   },
 
-  // --- 5. Desserts ---
+  // --- 5. Desserts & Sweets ---
   {
     id: 'dessert-1',
     category: 'dessert',
@@ -229,10 +229,10 @@ const MAGIC_MENU = [
     hindi: 'गुलाब जामुन',
     price: '₹50',
     priceNum: 50,
-    tags: ['Cardamom Syrup', 'Hot & Soft'],
+    tags: ['Cardamom Syrup', 'Hot & Soft', 'Desi Sweet'],
     desc: 'Two melt-in-mouth mawa spheres steeped in warm green cardamom and saffron rose syrup. The perfect sweet ending.',
     serving: '2 Pieces (Served Hot)',
-    image: 'assets/images/card-dessert-gulab.jpg'
+    image: 'assets/images/item-gulab-jamun.jpg'
   },
   {
     id: 'dessert-2',
@@ -241,25 +241,111 @@ const MAGIC_MENU = [
     hindi: 'गाजर का हलवा',
     price: '₹50',
     priceNum: 50,
-    tags: ['Desi Ghee', 'Slow Cooked'],
+    tags: ['Desi Ghee', 'Slow Cooked', 'Winter Classic'],
     desc: 'Grated mountain carrots slow-braised in full-cream milk, pure ghee, and khoya, garnished with roasted cashews and almonds.',
     serving: 'Warm Dessert Bowl',
-    image: 'assets/images/card-dessert-gulab.jpg'
+    image: 'assets/images/item-gajar-halwa.jpg'
   },
   {
     id: 'dessert-3',
     category: 'dessert',
-    title: 'Ice Cream & Pastries',
-    hindi: 'आइसक्रीम / पेस्ट्री',
-    price: 'M.R.P',
-    priceNum: 30,
-    tags: ['Chilled Delights', 'Standard Rates'],
-    desc: 'Assorted delightful ice cream cups and bakery pastries kept fresh in our display chiller.',
-    serving: 'Available at M.R.P',
-    image: 'assets/images/card-dessert-gulab.jpg'
+    title: 'Pastries',
+    hindi: 'पेस्ट्री',
+    price: 'M.R.P (₹40)',
+    priceNum: 40,
+    tags: ['Chilled Bakery', 'Chocolate Layered'],
+    desc: 'Freshly baked chocolate sponge pastry with smooth cocoa frosting kept chilled in our dessert display chiller.',
+    serving: '1 Chilled Pastry Slice',
+    image: 'assets/images/item-pastries.jpg'
+  },
+  {
+    id: 'dessert-4',
+    category: 'dessert',
+    title: 'Ice Cream Scoops',
+    hindi: 'आइसक्रीम',
+    price: 'M.R.P (₹40)',
+    priceNum: 40,
+    tags: ['Chilled Sundae', 'Student Treat'],
+    desc: 'Assorted delightful ice cream scoops (Butterscotch, Chocolate, Vanilla) served chilled with sweet sauce.',
+    serving: 'Chilled Dessert Cup',
+    image: 'assets/images/item-ice-cream.jpg'
   },
 
-  // --- 6. Daily Tiffin Service ---
+  // --- 6. Cafe Specials (From Front Signboard: Indian • Italian • Chinese) ---
+  {
+    id: 'cafe-1',
+    category: 'cafe',
+    title: 'Crispy French Fries',
+    hindi: 'फ्रेंच फ्राइज',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Peri-Peri Seasoned', 'Golden Crisp', 'Cafe Classic'],
+    desc: 'Crispy golden potato fingers tossed in aromatic peri-peri spices and sea salt. Served hot with tangy tomato dip and mayo.',
+    serving: 'Full Golden Basket',
+    image: 'assets/images/item-french-fries.jpg'
+  },
+  {
+    id: 'cafe-2',
+    category: 'cafe',
+    title: 'Veg Steamed Momos',
+    hindi: 'वेज मोमोज',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Himachali Favorite', 'Fiery Chutney', 'Steamed Fresh'],
+    desc: 'Thin-skinned dumplings stuffed with finely minced cabbage, carrots, onions, and mountain herbs. Served with fiery red chili-garlic chutney.',
+    serving: 'Plate of 6 Pcs with Dip',
+    image: 'assets/images/item-veg-momos.jpg'
+  },
+  {
+    id: 'cafe-3',
+    category: 'cafe',
+    title: 'Veg Hakka Noodles / Chowmein',
+    hindi: 'वेज हक्का नूडल्स',
+    price: '₹60',
+    priceNum: 60,
+    tags: ['Wok Tossed', 'Indo-Chinese', 'Crunchy Veggies'],
+    desc: 'Fresh wheat noodles tossed in smoking wok with julienned bell peppers, shredded cabbage, spring onions, and light soy sauce.',
+    serving: 'Full Wok-Plated Portion',
+    image: 'assets/images/item-hakka-noodles.jpg'
+  },
+  {
+    id: 'cafe-4',
+    category: 'cafe',
+    title: 'Mini Italian Veg Pizza',
+    hindi: 'मिनी वेज पिज्जा',
+    price: '₹80',
+    priceNum: 80,
+    tags: ['Cheese Loaded', 'Freshly Baked', 'Italian Style'],
+    desc: 'Hand-tossed mini pizza crust brushed with herbed tomato sauce, topped with sweet corn, crisp capsicum, onions, and melted mozzarella cheese.',
+    serving: 'Single Mini 6-Inch Pizza',
+    image: 'assets/images/item-mini-pizza.jpg'
+  },
+  {
+    id: 'cafe-5',
+    category: 'cafe',
+    title: 'Veg Grilled Sandwich',
+    hindi: 'वेज ग्रिल्ड सैंडविच',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Crispy Grill', 'Mint Chutney', 'Quick Snack'],
+    desc: 'Golden toasted bread stuffed with spiced potato filling, sliced cucumbers, tomatoes, and spicy green chutney, grilled with butter.',
+    serving: '2 Slices Grilled & Cut in Triangles',
+    image: 'assets/images/item-veg-sandwich.jpg'
+  },
+  {
+    id: 'cafe-6',
+    category: 'cafe',
+    title: 'Crispy Veg Burger',
+    hindi: 'वेज बर्गर',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Aloo Patty', 'Sesame Bun', 'Student Favorite'],
+    desc: 'Golden crisp spiced vegetable-potato patty layered with fresh onion rings, juicy tomatoes, crunchy lettuce, and tangy burger mayo in a toasted bun.',
+    serving: 'Freshly Assembled Burger',
+    image: 'assets/images/item-veg-burger.jpg'
+  },
+
+  // --- 7. Daily Tiffin Service ---
   {
     id: 'tiffin-1',
     category: 'tiffin',
@@ -268,9 +354,9 @@ const MAGIC_MENU = [
     price: '₹80',
     priceNum: 80,
     tags: ['Pure Veg', 'Freshly Cooked Daily', 'Student Plan'],
-    desc: 'Balanced nutritious homestyle meal: Dal Tadka / Rajma / Chole + Seasonal Sabzi + 4 Hot Wheat Phulkas + Steamed Rice + Fresh Salad.',
+    desc: 'Balanced nutritious homestyle meal: Dal Tadka / Rajma / Chole + Seasonal Sabzi + 4 Hot Wheat Phulkas + Steamed Rice + Fresh Salad + Raita.',
     serving: 'Dal + Sabzi + 4 Roti + Rice + Salad',
-    image: 'assets/images/tiffin-stack.jpg'
+    image: 'assets/images/item-tiffin-thali.jpg'
   }
 ];
 
@@ -324,7 +410,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['Pure Veg', 'College Favorite', 'Desi Ghee Tadka', 'Kangri Taste'],
     desc: 'Homestyle slow-simmered Kashmiri Rajma in fragrant aromatic spices, paired with hot steamed Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
     serving: 'Rajma + Basmati Rice + Salad + Boondi Raita',
-    image: 'assets/images/real-thali-plate.jpg',
+    image: 'assets/images/item-rajma-rice.jpg',
     glow: 'rgba(16, 185, 129, 0.42)', // Emerald
     specs: [
       { label: 'Kitchen Special', value: 'Monika Rana Recipe' },
@@ -348,7 +434,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['Fresh Daily', 'Pocket Friendly', 'Golden Crust', 'Ajwain Infused'],
     desc: 'Crisp, golden flaky pastry crust stuffed with spiced potatoes, green peas, whole coriander, and ginger. Served piping hot with signature tamarind & mint chutneys.',
     serving: 'Single Samosa with 2 Chutneys',
-    image: 'assets/images/card-samosa.jpg',
+    image: 'assets/images/item-samosa.jpg',
     glow: 'rgba(245, 158, 11, 0.42)', // Amber/Gold
     specs: [
       { label: 'Freshness', value: 'Fried fresh every 30 mins' },
@@ -363,6 +449,54 @@ const FEATURED_CAROUSEL_ITEMS = [
     ]
   },
   {
+    id: 'cafe-2',
+    category: 'cafe',
+    title: 'Veg Steamed Momos',
+    hindi: 'वेज स्टीम्ड मोमोज',
+    price: '₹50',
+    priceNum: 50,
+    tags: ['Himachali Street Favorite', 'Fiery Red Dip', 'Thin Translucent Skin', 'Steamed Fresh'],
+    desc: 'Delicate handmade dumplings packed with garden-fresh cabbage, grated carrots, garlic, and mountain herbs. Served with Monika Ji’s signature fiery red momo chutney.',
+    serving: 'Plate of 6 Hot Momos with Dip',
+    image: 'assets/images/item-veg-momos.jpg',
+    glow: 'rgba(239, 68, 68, 0.42)', // Fiery Crimson
+    specs: [
+      { label: 'Stuffing', value: '100% Fresh Vegetable & Herbs' },
+      { label: 'Cooking Style', value: 'Freshly Steamed to Order' },
+      { label: 'Signature Sauce', value: 'Fiery Garlic-Tomato Chutney' },
+      { label: 'Student Rating', value: 'Campus Evening Craving' }
+    ],
+    options: [
+      { name: 'Steamed Momos (6 Pcs)', price: '₹50', priceNum: 50, desc: '6 delicate steamed vegetable momos with red dip', icon: '🥟' },
+      { name: 'Crispy Fried Momos', price: '₹60', priceNum: 60, desc: 'Golden crunchy shallow-fried momos', icon: '✨' },
+      { name: 'Double Sharing Plate (12 Pcs)', price: '₹95', priceNum: 95, desc: '12 hot momos for study group cravings', icon: '🎉' }
+    ]
+  },
+  {
+    id: 'cafe-3',
+    category: 'cafe',
+    title: 'Veg Hakka Chowmein',
+    hindi: 'वेज हक्का चाउमीन',
+    price: '₹60',
+    priceNum: 60,
+    tags: ['Wok Tossed', 'Indo-Chinese', 'Crunchy Peppers', 'Street Style'],
+    desc: 'High-flame wok-tossed noodles loaded with crunchy bell peppers, shredded cabbage, spring onions, and a splash of aromatic soy-garlic seasoning.',
+    serving: 'Full Wok-Plated Serving',
+    image: 'assets/images/item-hakka-noodles.jpg',
+    glow: 'rgba(245, 158, 11, 0.42)', // Amber
+    specs: [
+      { label: 'Wok Technique', value: 'High-Heat Smoking Wok' },
+      { label: 'Veggies', value: 'Fresh Capsicum, Cabbage, Carrot' },
+      { label: 'Seasoning', value: 'Natural Soy, Garlic & Pepper' },
+      { label: 'Portion', value: 'Substantial Sharing Plate' }
+    ],
+    options: [
+      { name: 'Classic Veg Chowmein', price: '₹60', priceNum: 60, desc: 'Standard wok-tossed noodles with crunchy veggies', icon: '🥢' },
+      { name: 'Extra Spicy Schezwan', price: '₹70', priceNum: 70, desc: 'Tossed in fiery homemade Schezwan sauce', icon: '🌶️' },
+      { name: 'Chowmein + Manchurian Combo', price: '₹95', priceNum: 95, desc: 'Hot chowmein served with rich veg Manchurian gravy', icon: '🍲' }
+    ]
+  },
+  {
     id: 'pakoda-2',
     category: 'pakodas',
     title: 'Paneer Pakoda Platter',
@@ -372,7 +506,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['Melt In Mouth', 'Evening Snack', 'Piping Hot', 'Ajwain Batter'],
     desc: 'Generous cubes of fresh paneer coated in a spiced carom-seed besan batter, fried crisp outside and succulent within. Served with spicy green mint chutney.',
     serving: 'Generous Snack Portion with Chutney',
-    image: 'assets/images/card-pakoda.jpg',
+    image: 'assets/images/item-paneer-pakoda.jpg',
     glow: 'rgba(16, 185, 129, 0.42)', // Emerald
     specs: [
       { label: 'Paneer Quality', value: 'Fresh Malai Paneer Cubes' },
@@ -394,9 +528,9 @@ const FEATURED_CAROUSEL_ITEMS = [
     price: '₹70',
     priceNum: 70,
     tags: ['Thick & Creamy', 'Student Craving', 'Chilled', 'Rich Cocoa'],
-    desc: 'Velvety blend of rich cocoa, chilled dairy milk, and chocolate swirl, crowned with crushed chocolate flakes. Served chilled in a tall frosted glass.',
+    desc: 'Velvety blend of rich cocoa, chilled dairy milk, and chocolate swirl, crowned with dark chocolate shavings. Served chilled in a tall frosted glass.',
     serving: 'Tall Frosted Glass Serving',
-    image: 'assets/images/real-shake-cup.jpg',
+    image: 'assets/images/item-chocolate-shake.jpg',
     glow: 'rgba(217, 119, 6, 0.42)', // Warm Gold
     specs: [
       { label: 'Base', value: 'Chilled Full-Cream Milk & Cocoa' },
@@ -420,7 +554,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['Pure Veg', 'Himachali Style', 'Comfort Food', 'Methi Tadka'],
     desc: 'Authentic sour curd kadhi simmered with fenugreek seeds, mustard seeds, and soft besan pakodis, ladled generously over hot steamed rice with crisp salad.',
     serving: 'Kadhi + Rice + Crisp Salad',
-    image: 'assets/images/tiffin-dal-sabzi.jpg',
+    image: 'assets/images/item-kadhi-rice.jpg',
     glow: 'rgba(234, 88, 12, 0.42)', // Saffron
     specs: [
       { label: 'Kadhi Style', value: 'Authentic Kangri Sour Curd' },
@@ -444,7 +578,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['Warm & Soft', 'Sweet Tooth', 'Desi Ghee', 'Cardamom Rose'],
     desc: 'Soft mawa dumplings fried to a warm mahogany hue and drenched in cardamom-saffron sugar syrup. Served delightfully warm.',
     serving: '2 Warm Pieces with Rose Syrup',
-    image: 'assets/images/real-gulab-jamun.jpg',
+    image: 'assets/images/item-gulab-jamun.jpg',
     glow: 'rgba(245, 158, 11, 0.42)', // Amber Glow
     specs: [
       { label: 'Mawa Quality', value: 'Fresh Pure Khoya Dumplings' },
@@ -468,7 +602,7 @@ const FEATURED_CAROUSEL_ITEMS = [
     tags: ['RGGEC Delivery', '100% Homestyle', 'Monika Rana Special', 'Freshly Packed'],
     desc: 'Wholesome student tiffin prepared with homestyle love: Dal Tadka, Seasonal Vegetable, 4 Soft Phulkas, Rice, and Salad delivered straight to college gates.',
     serving: 'Complete 5-Item Balanced Meal',
-    image: 'assets/images/tiffin-stack.jpg',
+    image: 'assets/images/item-tiffin-thali.jpg',
     glow: 'rgba(16, 185, 129, 0.42)', // Emerald
     specs: [
       { label: 'Daily Delivery', value: 'Massal & RGGEC Hostel Gates' },
@@ -1455,8 +1589,8 @@ function initScrollReveals() {
 // 12. NAVIGATION ACTIVE SCROLL-SPY (PHASE 5)
 // ==========================================
 function initNavScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id], div[id="gallery"]');
+  const navLinks = document.querySelectorAll('.nav-link-item, .mobile-link-item');
   if (!sections || sections.length === 0 || !navLinks) return;
 
   function onScroll() {
@@ -1469,9 +1603,9 @@ function initNavScrollSpy() {
       if (scrollPos >= top && scrollPos < top + height) {
         navLinks.forEach(link => {
           if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active-nav');
+            link.classList.add('active');
           } else {
-            link.classList.remove('active-nav');
+            link.classList.remove('active');
           }
         });
       }
