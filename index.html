@@ -243,20 +243,19 @@
         </div>
 
         <!-- Authentic Printed Menu Card Callout -->
-        <div style="margin-top: 3.5rem; text-align: center; background: var(--color-bg); padding: 2.5rem; border-radius: var(--radius-card); border: 1px solid var(--color-border);">
-          <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-text-title);">Need to verify the physical kitchen menu?</h4>
-          <p style="font-size: 0.9rem; color: var(--color-text-body); margin-bottom: 1.5rem;">
+        <div class="menu-verify-banner">
+          <h4 class="menu-verify-title">Need to verify the physical kitchen menu?</h4>
+          <p class="menu-verify-subtext">
             Inspect our original printed menu card with exact items and rates directly:
           </p>
-          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="assets/images/menu-card-original.jpg" target="_blank" class="btn-pill btn-outline-pill" style="min-height: 42px; font-size: 0.85rem;">
+          <div class="menu-verify-actions">
+            <a href="assets/images/menu-card-original.jpg" target="_blank" class="btn-pill btn-outline-pill">
               <span>View Original Printed Menu Card 📄</span>
             </a>
             <a 
               href="https://wa.me/918894616602?text=Hello%20Monika%20Ji!%20Please%20send%20today%27s%20fresh%20menu%20from%20Magic%20Masala." 
               target="_blank" 
               class="btn-pill btn-whatsapp-pill"
-              style="min-height: 42px; font-size: 0.85rem;"
             >
               <span>Ask for Today's Specials on WhatsApp</span>
             </a>
@@ -288,70 +287,70 @@
               Staying away from family for your engineering studies? Monika Rana and the Magic Masala team prepare fresh, 100% vegetarian, wholesome meals daily with strict cleanliness and authentic homestyle taste.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-              <div style="display: flex; gap: 0.65rem;">
-                <span style="color: var(--color-veg); font-weight: 800; font-size: 1.1rem;">✓</span>
+            <div class="tiffin-features-grid">
+              <div class="tiffin-feature-card">
+                <span class="feature-tick-badge">✓</span>
                 <div>
-                  <h5 style="font-size: 0.95rem; font-weight: 700;">100% Pure Vegetarian</h5>
-                  <p style="font-size: 0.8rem; color: var(--color-text-muted);">Fresh market produce & natural spices.</p>
+                  <h5>100% Pure Vegetarian</h5>
+                  <p>Fresh market produce & natural spices.</p>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 0.65rem;">
-                <span style="color: var(--color-veg); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <div class="tiffin-feature-card">
+                <span class="feature-tick-badge">✓</span>
                 <div>
-                  <h5 style="font-size: 0.95rem; font-weight: 700;">Complete Balanced Meal</h5>
-                  <p style="font-size: 0.8rem; color: var(--color-text-muted);">Dal + Sabzi + 4 Phulkas + Rice + Salad.</p>
+                  <h5>Complete Balanced Meal</h5>
+                  <p>Dal + Sabzi + 4 Phulkas + Rice + Salad.</p>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 0.65rem;">
-                <span style="color: var(--color-veg); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <div class="tiffin-feature-card">
+                <span class="feature-tick-badge">✓</span>
                 <div>
-                  <h5 style="font-size: 0.95rem; font-weight: 700;">Cooked Fresh Twice Daily</h5>
-                  <p style="font-size: 0.8rem; color: var(--color-text-muted);">Hot lunch and dinner on schedule.</p>
+                  <h5>Cooked Fresh Twice Daily</h5>
+                  <p>Hot lunch and dinner on schedule.</p>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 0.65rem;">
-                <span style="color: var(--color-veg); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <div class="tiffin-feature-card">
+                <span class="feature-tick-badge">✓</span>
                 <div>
-                  <h5 style="font-size: 0.95rem; font-weight: 700;">Student Rates (Negotiable)</h5>
-                  <p style="font-size: 0.8rem; color: var(--color-text-muted);">Under ₹200 budget; semester discounts.</p>
+                  <h5>Student Rates (Negotiable)</h5>
+                  <p>Under ₹200 budget; semester discounts.</p>
                 </div>
               </div>
             </div>
 
             <!-- Interactive Tiffin Calculator -->
-            <div style="background: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.75rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <h5 style="font-size: 0.92rem; font-weight: 700;">🍱 Tiffin Subscription Estimator:</h5>
-                <span style="font-size: 0.75rem; background: var(--color-veg-light); color: var(--color-veg); padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">Best Student Price</span>
+            <div class="tiffin-calc-box">
+              <div class="tiffin-calc-header">
+                <h5>🍱 Tiffin Subscription Estimator:</h5>
+                <span class="tiffin-badge-pill">Best Student Price</span>
               </div>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">
+              <div class="tiffin-calc-inputs">
                 <div>
-                  <label style="font-size: 0.72rem; font-weight: 700; color: var(--color-text-muted);">Plan Duration</label>
-                  <select id="tiffinPlanSelect" class="form-input-ctrl" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;">
+                  <label for="tiffinPlanSelect">Plan Duration</label>
+                  <select id="tiffinPlanSelect" class="form-input-ctrl">
                     <option value="monthly" selected>Monthly (30 Days)</option>
                     <option value="weekly">Weekly (7 Days)</option>
                     <option value="daily">Daily Trial (1 Day)</option>
                   </select>
                 </div>
                 <div>
-                  <label style="font-size: 0.72rem; font-weight: 700; color: var(--color-text-muted);">Meals/Day</label>
-                  <select id="tiffinMealType" class="form-input-ctrl" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;">
+                  <label for="tiffinMealType">Meals/Day</label>
+                  <select id="tiffinMealType" class="form-input-ctrl">
                     <option value="both" selected>Lunch & Dinner (Both)</option>
                     <option value="lunch">Lunch Only</option>
                   </select>
                 </div>
                 <div>
-                  <label style="font-size: 0.72rem; font-weight: 700; color: var(--color-text-muted);">Students</label>
-                  <input type="number" id="tiffinStudents" class="form-input-ctrl" value="1" min="1" max="10" style="height: 38px; font-size: 0.85rem; padding: 0 0.5rem;" />
+                  <label for="tiffinStudents">Students</label>
+                  <input type="number" id="tiffinStudents" class="form-input-ctrl" value="1" min="1" max="10" />
                 </div>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Calculated Monthly Total (₹70/meal):</span>
-                <span id="tiffinEstimateDisplay" style="font-size: 1.35rem; font-weight: 800; color: var(--color-primary);">₹4,200</span>
+              <div class="tiffin-calc-total-row">
+                <span class="calc-total-label">Calculated Monthly Total (₹70/meal):</span>
+                <span id="tiffinEstimateDisplay" class="calc-total-val">₹4,200</span>
               </div>
             </div>
 
@@ -405,8 +404,9 @@
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="review-modern-card">
+          <!-- Card 2 (Featured Spotlight Card) -->
+          <div class="review-modern-card review-card-featured">
+            <span class="review-featured-tag">⭐ Student Favorite</span>
             <div>
               <div class="review-stars-row">★★★★★</div>
               <p class="review-quote-text">
@@ -441,19 +441,18 @@
         </div>
 
         <!-- Google Official Rating Badge Bar -->
-        <div style="margin-top: 3rem; background: var(--color-bg); padding: 1.5rem 2rem; border-radius: var(--radius-card); border: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem;">
-          <div style="display: flex; align-items: center; gap: 1.25rem;">
-            <span style="font-size: 2.25rem; font-weight: 800; color: var(--color-primary);">4.7 ★</span>
+        <div class="google-rating-banner">
+          <div class="google-rating-info">
+            <span class="google-rating-score">4.7 ★</span>
             <div>
-              <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-text-title); margin-bottom: 2px;">Google Maps Official Rating</h5>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Verified by 48+ Reviews • Price Tier Reported: <strong>₹1–200 per person</strong></p>
+              <h5 class="google-rating-title">Google Maps Official Rating</h5>
+              <p class="google-rating-meta">Verified by 48+ Reviews • Price Tier Reported: <strong>₹1–200 per person</strong></p>
             </div>
           </div>
           <a 
             href="https://maps.google.com/?q=Rajiv+Gandhi+Engineering+College,+near+Lokmittar+Kendar,+Masal,+Gujrehra,+Himachal+Pradesh+176047" 
             target="_blank" 
             class="btn-pill btn-outline-pill"
-            style="min-height: 40px; font-size: 0.82rem;"
           >
             <span>View on Google Maps ↗</span>
           </a>
@@ -493,26 +492,24 @@
     <section class="ambiance-gallery-section" id="owner">
       <div class="container">
         <!-- Owner Section -->
-        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
-          <div style="background: var(--color-bg); padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius-card); border: 1px solid var(--color-border); display: grid; grid-template-columns: 1fr; gap: 2.5rem;">
-            <div>
-              <span class="section-eyebrow">HEART & SOUL BEHIND MAGIC MASALA</span>
-              <h3 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 0.85rem; color: var(--color-text-title);">
-                "Every student who walks through our door deserves fresh, nutritious, and caring food."
-              </h3>
-              <p style="font-size: 1.1rem; color: var(--color-primary); font-weight: 700; margin-bottom: 1.25rem;">
-                Monika Rana • Founder & Owner, Magic Masala
-              </p>
+        <div class="owner-showcase-box">
+          <div class="owner-content-grid">
+            <span class="section-eyebrow">HEART & SOUL BEHIND MAGIC MASALA</span>
+            <h3 class="owner-quote-heading">
+              "Every student who walks through our door deserves fresh, nutritious, and caring food."
+            </h3>
+            <p class="owner-signature-name">
+              Monika Rana • Founder & Owner, Magic Masala
+            </p>
 
-              <div style="padding: 1.25rem 1.5rem; background: var(--color-card-surface-elevated); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); border-radius: var(--radius-sm); font-style: italic; font-size: 0.95rem; color: var(--color-text-title); margin-bottom: 1.5rem;">
-                "When students arrive at RGGEC from other districts of Himachal Pradesh and states across India, staying in PGs and hostels, food is their biggest concern. We built Magic Masala to feel like home: a clean, pure-vegetarian kitchen where you can enjoy hearty Rajma Rice, relax with friends over samosas and shakes, or subscribe to a reliable, clean daily tiffin."
-              </div>
+            <blockquote class="owner-quote-card">
+              "When students arrive at RGGEC from other districts of Himachal Pradesh and states across India, staying in PGs and hostels, food is their biggest concern. We built Magic Masala to feel like home: a clean, pure-vegetarian kitchen where you can enjoy hearty Rajma Rice, relax with friends over samosas and shakes, or subscribe to a reliable, clean daily tiffin."
+            </blockquote>
 
-              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <span class="pure-veg-tag"><span class="veg-dot-icon"></span> 100% Homestyle Care</span>
-                <span style="background: var(--color-primary-light); color: var(--color-primary-hover); padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Pocket-Friendly: ₹1–200 Range</span>
-                <span style="background: var(--color-surface-soft); color: var(--color-text-title); padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Hygienic Kitchen</span>
-              </div>
+            <div class="owner-badges-row">
+              <span class="pure-veg-tag"><span class="veg-dot-icon"></span> 100% Homestyle Care</span>
+              <span class="owner-pill-badge badge-primary">Pocket-Friendly: ₹1–200 Range</span>
+              <span class="owner-pill-badge badge-soft">Hygienic Kitchen</span>
             </div>
           </div>
         </div>

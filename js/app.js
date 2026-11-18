@@ -356,12 +356,16 @@ function renderMenu(category, searchQuery = '') {
 
   container.innerHTML = filtered.map(item => `
     <article class="dish-plate-card" data-category="${item.category}">
-      <!-- Floating Circular Plate Image (Video UI Style) -->
+      <!-- Floating Circular Plate Image -->
       <div class="dish-round-media">
         <img src="${item.image}" alt="${item.title}" loading="lazy" />
       </div>
 
       <div class="dish-card-info">
+        <div class="dish-tags-row">
+          ${item.tags ? item.tags.slice(0, 2).map(tag => `<span class="dish-mini-tag">${tag}</span>`).join('') : ''}
+        </div>
+
         <div class="dish-title-price-row">
           <h3 class="dish-name-title">${item.title}</h3>
           <span class="dish-price-pill">${item.price}</span>
