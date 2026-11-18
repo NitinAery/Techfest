@@ -213,6 +213,73 @@
           </p>
         </div>
 
+        <!-- =======================================================================
+             4A. SIGNATURE DYNAMIC HORIZONTAL CAROUSEL (FROM REFERENCE VIDEO)
+             ======================================================================= -->
+        <div class="signature-carousel-wrapper" id="featuredCarouselSection" role="region" aria-roledescription="carousel" aria-label="Signature Homestyle Specials Showcase" tabindex="0">
+          
+          <!-- Top Badge Pill -->
+          <div class="carousel-eyebrow-pill">
+            <span class="carousel-eyebrow-spark">✨</span>
+            <span class="carousel-eyebrow-text">SIGNATURE SPECIALS SHOWCASE</span>
+            <span class="carousel-eyebrow-badge" id="carouselSlideCounter">1 / 7</span>
+          </div>
+
+          <!-- Dynamic Ambient Backlight Glow -->
+          <div class="carousel-ambient-glow" id="carouselAmbientGlow" aria-hidden="true"></div>
+
+          <!-- Carousel Stage Viewport -->
+          <div class="carousel-stage-container" id="carouselStageContainer">
+            <!-- Left Prev Control Glass Button -->
+            <button type="button" class="carousel-arrow-btn arrow-prev" id="carouselPrevBtn" aria-label="Previous signature dish" title="Previous dish">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Horizontal Viewport Window -->
+            <div class="carousel-viewport-window" id="carouselViewportWindow">
+              <div class="carousel-track-strip" id="carouselTrackStrip" role="list">
+                <!-- Dynamically rendered slides -->
+              </div>
+            </div>
+
+            <!-- Right Next Control Glass Button -->
+            <button type="button" class="carousel-arrow-btn arrow-next" id="carouselNextBtn" aria-label="Next signature dish" title="Next dish">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Synchronized Active Dish Detail Panel -->
+          <div class="carousel-dish-meta-panel" id="carouselDishMetaPanel" aria-live="polite">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Interactive Pagination Dots Rail -->
+          <div class="carousel-dots-rail" id="carouselDotsRail" role="tablist" aria-label="Select signature dish">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Subtle gesture & keyboard interaction indicator -->
+          <div class="carousel-gesture-hint">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8L22 12L18 16"/>
+              <path d="M6 8L2 12L6 16"/>
+              <path d="M2 12H22"/>
+            </svg>
+            <span>Click any side plate, swipe/drag, or use Arrow keys to browse</span>
+          </div>
+        </div>
+
+        <!-- Catalogue Divider -->
+        <div class="menu-catalogue-divider">
+          <span class="divider-line"></span>
+          <span class="divider-label">OR BROWSE ALL MENU ITEMS BY CATEGORY</span>
+          <span class="divider-line"></span>
+        </div>
+
         <!-- Category Filter Tabs -->
         <div class="plate-category-tabs">
           <button class="cat-tab-btn active" data-filter="all">All Items</button>

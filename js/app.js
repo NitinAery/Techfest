@@ -311,9 +311,100 @@ const CAFE_GALLERY = [
 ];
 
 // ==========================================
+// 2B. SIGNATURE CAROUSEL DATASET (FROM REFERENCE VIDEO)
+// ==========================================
+const FEATURED_CAROUSEL_ITEMS = [
+  {
+    id: 'rice-1',
+    category: 'rice',
+    title: 'Rajma Rice Special Combo',
+    hindi: 'राजमा चावल कॉम्बो',
+    price: '₹80',
+    tags: ['Pure Veg', 'College Favorite', 'Desi Ghee Tadka'],
+    desc: 'Homestyle slow-simmered Kashmiri Rajma in aromatic spices, paired with hot Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
+    serving: 'Rajma + Basmati Rice + Salad + Boondi Raita',
+    image: 'assets/images/real-thali-plate.jpg',
+    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+  },
+  {
+    id: 'samosa-1',
+    category: 'chaat',
+    title: 'Golden Crispy Samosa',
+    hindi: 'कुरकुरा समोसा',
+    price: '₹15',
+    tags: ['Fresh Daily', 'Pocket Friendly', 'Golden Crust'],
+    desc: 'Crisp, golden flaky pastry crust stuffed with spiced potatoes, green peas, whole coriander, and ginger. Served piping hot with signature tamarind & mint chutneys.',
+    serving: 'Single Samosa with 2 Chutneys',
+    image: 'assets/images/card-samosa.jpg',
+    glow: 'rgba(245, 158, 11, 0.4)' // Amber/Gold
+  },
+  {
+    id: 'pakoda-2',
+    category: 'pakodas',
+    title: 'Paneer Pakoda Platter',
+    hindi: 'पनीर पकौड़ा',
+    price: '₹70',
+    tags: ['Melt In Mouth', 'Evening Snack', 'Piping Hot'],
+    desc: 'Generous cubes of fresh paneer coated in a spiced carom-seed besan batter, fried crisp outside and succulent within. Served with spicy green mint chutney.',
+    serving: 'Generous Snack Portion with Chutney',
+    image: 'assets/images/card-pakoda.jpg',
+    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+  },
+  {
+    id: 'shake-2',
+    category: 'shakes',
+    title: 'Rich Chocolate Thick Shake',
+    hindi: 'चॉकलेट थिक शेक',
+    price: '₹70',
+    tags: ['Thick & Creamy', 'Student Craving', 'Chilled'],
+    desc: 'Velvety blend of rich cocoa, creamy dairy milk, and chocolate swirl, crowned with crushed chocolate flakes. Served chilled in a frosted glass.',
+    serving: 'Tall Frosted Glass Serving',
+    image: 'assets/images/real-shake-cup.jpg',
+    glow: 'rgba(217, 119, 6, 0.4)' // Warm Gold
+  },
+  {
+    id: 'rice-2',
+    category: 'rice',
+    title: 'Himachali Kadhi Rice Combo',
+    hindi: 'कढ़ी चावल कॉम्बो',
+    price: '₹80',
+    tags: ['Pure Veg', 'Himachali Style', 'Comfort Food'],
+    desc: 'Authentic curd kadhi simmered with fenugreek seeds, mustard seeds, and soft besan pakodis, ladled generously over hot steamed rice with crisp salad.',
+    serving: 'Kadhi + Rice + Crisp Salad',
+    image: 'assets/images/tiffin-dal-sabzi.jpg',
+    glow: 'rgba(234, 88, 12, 0.4)' // Saffron
+  },
+  {
+    id: 'dessert-3',
+    category: 'dessert',
+    title: 'Shahi Gulab Jamun [2 Pcs]',
+    hindi: 'शाही गुलाब जामुन',
+    price: '₹50',
+    tags: ['Warm & Soft', 'Sweet Tooth', 'Desi Ghee'],
+    desc: 'Mawa dumplings fried to a warm mahogany hue and drenched in cardamom-saffron sugar syrup. Served delightfully warm.',
+    serving: '2 Warm Pieces with Rose Syrup',
+    image: 'assets/images/real-gulab-jamun.jpg',
+    glow: 'rgba(245, 158, 11, 0.4)' // Amber Glow
+  },
+  {
+    id: 'tiffin-service',
+    category: 'tiffin',
+    title: 'Ghar Ka Khana Daily Tiffin',
+    hindi: 'घर जैसा शुद्ध टिफिन',
+    price: '₹80 / meal',
+    tags: ['RGGEC Delivery', '100% Homestyle', 'Monika Rana Special'],
+    desc: 'Wholesome student tiffin prepared with homestyle love: Dal Tadka, Seasonal Vegetable, 4 Soft Phulkas, Rice, and Salad delivered straight to college gates.',
+    serving: 'Complete 5-Item Balanced Meal',
+    image: 'assets/images/tiffin-stack.jpg',
+    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+  }
+];
+
+// ==========================================
 // 3. INITIALIZATION
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+  initSignatureCarousel();
   renderMenu('all');
   initCategoryFilters();
   initMenuSearch();
@@ -323,6 +414,311 @@ document.addEventListener('DOMContentLoaded', () => {
   initTableReservation();
   initNewsletterForm();
 });
+
+// ==========================================
+// 3A. SIGNATURE DYNAMIC HORIZONTAL CAROUSEL CONTROLLER
+// ==========================================
+function initSignatureCarousel() {
+  const section = document.getElementById('featuredCarouselSection');
+  const viewport = document.getElementById('carouselViewportWindow');
+  const track = document.getElementById('carouselTrackStrip');
+  const prevBtn = document.getElementById('carouselPrevBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const ambientGlow = document.getElementById('carouselAmbientGlow');
+  const metaPanel = document.getElementById('carouselDishMetaPanel');
+  const dotsRail = document.getElementById('carouselDotsRail');
+  const counter = document.getElementById('carouselSlideCounter');
+
+  if (!section || !viewport || !track) return;
+
+  let currentIndex = 0;
+  const totalSlides = FEATURED_CAROUSEL_ITEMS.length;
+
+  // Render Slides
+  track.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => `
+    <div class="carousel-slide-item" data-index="${idx}" role="listitem" aria-label="${item.title}">
+      <div class="carousel-plate-disc">
+        <img src="${item.image}" alt="${item.title}" class="carousel-plate-img" loading="${idx === 0 ? 'eager' : 'lazy'}" />
+        <div class="carousel-plate-price-tag">${item.price}</div>
+      </div>
+    </div>
+  `).join('');
+
+  // Render Dots
+  if (dotsRail) {
+    dotsRail.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => `
+      <button type="button" class="carousel-dot ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Select ${item.title}"></button>
+    `).join('');
+  }
+
+  const slideElements = Array.from(track.querySelectorAll('.carousel-slide-item'));
+  const dotElements = dotsRail ? Array.from(dotsRail.querySelectorAll('.carousel-dot')) : [];
+
+  function calculateTranslateX(targetIdx) {
+    if (!slideElements[targetIdx]) return 0;
+    const targetSlide = slideElements[targetIdx];
+    const viewportWidth = viewport.clientWidth;
+    // Calculate slide center relative to track
+    const slideCenter = targetSlide.offsetLeft + (targetSlide.offsetWidth / 2);
+    return (viewportWidth / 2) - slideCenter;
+  }
+
+  function updateMetaPanel(item) {
+    if (!metaPanel) return;
+    metaPanel.classList.add('is-animating');
+
+    setTimeout(() => {
+      metaPanel.innerHTML = `
+        <h3 class="active-dish-title">${item.title}</h3>
+        <div class="active-dish-hindi">${item.hindi}</div>
+        <div class="active-dish-tags">
+          ${item.tags.map((tag, i) => `<span class="active-dish-tag ${i === 0 ? 'tag-accent' : ''}">• ${tag}</span>`).join('')}
+        </div>
+        <p class="active-dish-desc">${item.desc}</p>
+        <div class="active-dish-serving-pill">🍱 Serving: ${item.serving}</div>
+        <div class="active-dish-actions">
+          <div class="active-dish-price-bubble">${item.price} <span>All-Inclusive</span></div>
+          <a 
+            href="https://wa.me/918894616602?text=${encodeURIComponent('Hello Monika Ji! I would like to order ' + item.title + ' (' + item.price + ') from Magic Masala.')}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-pill btn-whatsapp-pill"
+          >
+            <span>Order on WhatsApp</span>
+            <span>↗</span>
+          </a>
+          <button type="button" class="btn-pill btn-outline-pill" id="carouselHighlightInGridBtn">
+            <span>Find in Menu Grid ↓</span>
+          </button>
+        </div>
+      `;
+
+      // Hook up highlight in grid button
+      const highlightBtn = metaPanel.querySelector('#carouselHighlightInGridBtn');
+      if (highlightBtn) {
+        highlightBtn.addEventListener('click', () => {
+          const filterBtn = document.querySelector(`.cat-tab-btn[data-filter="${item.category}"]`) ||
+                            document.querySelector('.cat-tab-btn[data-filter="all"]');
+          if (filterBtn) filterBtn.click();
+
+          const gridEl = document.getElementById('menuGridContainer');
+          if (gridEl) {
+            gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          showToast(`Showing ${item.title} in Menu Card below!`);
+        });
+      }
+
+      metaPanel.classList.remove('is-animating');
+    }, 140);
+  }
+
+  function goToSlide(targetIdx, animate = true) {
+    if (targetIdx < 0) targetIdx = 0;
+    if (targetIdx >= totalSlides) targetIdx = totalSlides - 1;
+
+    currentIndex = targetIdx;
+    const currentItem = FEATURED_CAROUSEL_ITEMS[currentIndex];
+
+    if (!animate) {
+      track.classList.add('no-transition');
+    } else {
+      track.classList.remove('no-transition');
+    }
+
+    const tx = calculateTranslateX(currentIndex);
+    track.style.transform = `translate3d(${tx}px, 0, 0)`;
+
+    if (!animate) {
+      void track.offsetHeight;
+      track.classList.remove('no-transition');
+    }
+
+    // Update Slide Classes
+    slideElements.forEach((slide, i) => {
+      slide.classList.remove('is-active', 'is-adjacent', 'is-distant');
+      const dist = Math.abs(i - currentIndex);
+      if (dist === 0) {
+        slide.classList.add('is-active');
+        slide.setAttribute('aria-selected', 'true');
+      } else if (dist === 1) {
+        slide.classList.add('is-adjacent');
+        slide.setAttribute('aria-selected', 'false');
+      } else {
+        slide.classList.add('is-distant');
+        slide.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    // Update Dots
+    dotElements.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+      dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+    });
+
+    // Update Counter
+    if (counter) {
+      counter.textContent = `${currentIndex + 1} / ${totalSlides}`;
+    }
+
+    // Update Buttons
+    if (prevBtn) prevBtn.disabled = currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+
+    // Update Ambient Glow
+    if (ambientGlow) {
+      ambientGlow.style.background = `radial-gradient(circle, ${currentItem.glow} 0%, rgba(245, 158, 11, 0.12) 50%, transparent 75%)`;
+    }
+
+    // Update Meta Panel
+    updateMetaPanel(currentItem);
+  }
+
+  // Prev / Next Controls
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentIndex > 0) goToSlide(currentIndex - 1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1);
+    });
+  }
+
+  // Dots Interaction
+  dotElements.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-index'), 10);
+      goToSlide(idx);
+    });
+  });
+
+  // Slide Direct Click & Drag
+  let isDragging = false;
+  let startX = 0;
+  let currentTranslateX = 0;
+  let dragOffset = 0;
+  let hasMoved = false;
+
+  slideElements.forEach((slide, idx) => {
+    slide.addEventListener('click', () => {
+      if (hasMoved) return;
+      if (currentIndex !== idx) {
+        goToSlide(idx);
+      }
+    });
+  });
+
+  // Touch & Mouse Drag Handlers
+  function startDrag(clientX) {
+    isDragging = true;
+    hasMoved = false;
+    startX = clientX;
+    dragOffset = 0;
+    currentTranslateX = calculateTranslateX(currentIndex);
+    track.classList.add('no-transition');
+    viewport.classList.add('is-dragging');
+  }
+
+  function moveDrag(clientX) {
+    if (!isDragging) return;
+    const diff = clientX - startX;
+    if (Math.abs(diff) > 6) {
+      hasMoved = true;
+    }
+
+    // Boundary resistance
+    let effectiveDiff = diff;
+    if ((currentIndex === 0 && diff > 0) || (currentIndex === totalSlides - 1 && diff < 0)) {
+      effectiveDiff = diff * 0.28;
+    }
+
+    dragOffset = effectiveDiff;
+    track.style.transform = `translate3d(${currentTranslateX + dragOffset}px, 0, 0)`;
+  }
+
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    viewport.classList.remove('is-dragging');
+    track.classList.remove('no-transition');
+
+    const threshold = 45;
+    if (dragOffset < -threshold && currentIndex < totalSlides - 1) {
+      goToSlide(currentIndex + 1);
+    } else if (dragOffset > threshold && currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    } else {
+      goToSlide(currentIndex);
+    }
+
+    setTimeout(() => {
+      hasMoved = false;
+    }, 60);
+  }
+
+  // Touch Events
+  viewport.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      startDrag(e.touches[0].clientX);
+    }
+  }, { passive: true });
+
+  viewport.addEventListener('touchmove', (e) => {
+    if (isDragging && e.touches.length === 1) {
+      moveDrag(e.touches[0].clientX);
+    }
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', endDrag);
+  viewport.addEventListener('touchcancel', endDrag);
+
+  // Mouse Events
+  viewport.addEventListener('mousedown', (e) => {
+    startDrag(e.clientX);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      moveDrag(e.clientX);
+    }
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging) endDrag();
+  });
+
+  // Keyboard Navigation
+  section.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      if (currentIndex > 0) goToSlide(currentIndex - 1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1);
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      goToSlide(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      goToSlide(totalSlides - 1);
+    }
+  });
+
+  // Window Resize
+  window.addEventListener('resize', () => {
+    goToSlide(currentIndex, false);
+  });
+
+  // Initial Placement
+  requestAnimationFrame(() => {
+    goToSlide(0, false);
+  });
+}
 
 // ==========================================
 // 4. "WHAT'S ON OUR PLATE" MENU CONTROLLER
