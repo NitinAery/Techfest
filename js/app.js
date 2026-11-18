@@ -505,6 +505,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTiffinCalculator();
   initTableReservation();
   initNewsletterForm();
+  initScrollReveals();
+  initNavScrollSpy();
 });
 
 // ==========================================
@@ -1419,4 +1421,63 @@ function showToast(message) {
     toast.style.transition = 'opacity 200ms ease';
     setTimeout(() => toast.remove(), 200);
   }, 3500);
+}
+
+// ==========================================
+// 11. SCROLL-TRIGGERED REVEAL OBSERVER (PHASE 5)
+// ==========================================
+function initScrollReveals() {
+  const elements = document.querySelectorAll('.reveal-on-scroll');
+  if (!elements || elements.length === 0) return;
+
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// ==========================================
+// 12. NAVIGATION ACTIVE SCROLL-SPY (PHASE 5)
+// ==========================================
+function initNavScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections || sections.length === 0 || !navLinks) return;
+
+  function onScroll() {
+    const scrollPos = window.scrollY + 140;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active-nav');
+          } else {
+            link.classList.remove('active-nav');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
