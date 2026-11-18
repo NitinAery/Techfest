@@ -142,6 +142,21 @@ button {
   user-select: none;
 }
 
+/* Accessible Focus States (Phase 6 QA) */
+:focus-visible {
+  outline: 2px solid var(--color-accent-emerald) !important;
+  outline-offset: 3px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.compact-dish-row:focus-visible {
+  outline: 2px solid var(--color-accent-emerald);
+  outline-offset: 2px;
+}
+
 /* Container */
 .container {
   width: 100%;
@@ -1973,6 +1988,66 @@ button {
   }
 }
 
+/* Small Mobile Responsiveness (360px - 375px) */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 0.85rem;
+  }
+
+  .signature-carousel-wrapper {
+    padding: 1.75rem 0.65rem 1.5rem;
+  }
+
+  .carousel-slide-item {
+    width: 155px;
+    margin: 0 3px;
+  }
+
+  .carousel-plate-disc {
+    width: 140px;
+    height: 140px;
+    padding: 4px;
+  }
+
+  .carousel-arrow-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .detail-plate-disc {
+    width: 175px;
+    height: 175px;
+  }
+
+  .detail-dish-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .row-thumb-media {
+    width: 44px;
+    height: 44px;
+    margin-right: 0.65rem;
+  }
+
+  .row-title {
+    font-size: 0.95rem;
+  }
+
+  .row-price {
+    font-size: 1.05rem;
+  }
+
+  .dish-round-media {
+    width: 165px;
+    height: 165px;
+  }
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   .carousel-track-strip,
@@ -2580,16 +2655,6 @@ button {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-}
-  padding: 1.75rem 2.25rem;
-  border-radius: var(--radius-card);
-  border: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  box-shadow: var(--shadow-sm);
 }
 
 .google-rating-info {
