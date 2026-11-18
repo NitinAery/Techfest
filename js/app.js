@@ -311,7 +311,7 @@ const CAFE_GALLERY = [
 ];
 
 // ==========================================
-// 2B. SIGNATURE CAROUSEL DATASET (FROM REFERENCE VIDEO)
+// 2B. SIGNATURE SHOWCASE DATASET & SPECIFICATIONS (FROM REFERENCE VIDEO)
 // ==========================================
 const FEATURED_CAROUSEL_ITEMS = [
   {
@@ -320,11 +320,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Rajma Rice Special Combo',
     hindi: 'राजमा चावल कॉम्बो',
     price: '₹80',
-    tags: ['Pure Veg', 'College Favorite', 'Desi Ghee Tadka'],
-    desc: 'Homestyle slow-simmered Kashmiri Rajma in aromatic spices, paired with hot Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
+    priceNum: 80,
+    tags: ['Pure Veg', 'College Favorite', 'Desi Ghee Tadka', 'Kangri Taste'],
+    desc: 'Homestyle slow-simmered Kashmiri Rajma in fragrant aromatic spices, paired with hot steamed Basmati rice, fresh cucumber-onion salad, and chilled boondi raita.',
     serving: 'Rajma + Basmati Rice + Salad + Boondi Raita',
     image: 'assets/images/real-thali-plate.jpg',
-    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+    glow: 'rgba(16, 185, 129, 0.42)', // Emerald
+    specs: [
+      { label: 'Kitchen Special', value: 'Monika Rana Recipe' },
+      { label: 'Preparation', value: 'Freshly plated in 5-8 mins' },
+      { label: 'Dietary', value: '100% Pure Vegetarian' },
+      { label: 'Portion Size', value: 'Wholesome Student Meal' }
+    ],
+    options: [
+      { name: 'Standard Thali', price: '₹80', priceNum: 80, desc: 'Rajma + Basmati Rice + Salad + Boondi Raita', icon: '🍛' },
+      { name: 'Desi Ghee Tadka', price: '₹90', priceNum: 90, desc: 'Standard Thali with rich pure Desi Ghee aroma', icon: '🧈' },
+      { name: 'With 2 Hot Phulkas', price: '₹100', priceNum: 100, desc: 'Complete meal + 2 freshly made tawa phulkas', icon: '🫓' }
+    ]
   },
   {
     id: 'samosa-1',
@@ -332,11 +344,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Golden Crispy Samosa',
     hindi: 'कुरकुरा समोसा',
     price: '₹15',
-    tags: ['Fresh Daily', 'Pocket Friendly', 'Golden Crust'],
+    priceNum: 15,
+    tags: ['Fresh Daily', 'Pocket Friendly', 'Golden Crust', 'Ajwain Infused'],
     desc: 'Crisp, golden flaky pastry crust stuffed with spiced potatoes, green peas, whole coriander, and ginger. Served piping hot with signature tamarind & mint chutneys.',
     serving: 'Single Samosa with 2 Chutneys',
     image: 'assets/images/card-samosa.jpg',
-    glow: 'rgba(245, 158, 11, 0.4)' // Amber/Gold
+    glow: 'rgba(245, 158, 11, 0.42)', // Amber/Gold
+    specs: [
+      { label: 'Freshness', value: 'Fried fresh every 30 mins' },
+      { label: 'Crust Type', value: 'Crispy Ajwain Flaky Dough' },
+      { label: 'Accompaniment', value: 'Sweet Saunth & Spicy Mint Chutney' },
+      { label: 'Price Guarantee', value: 'Best Student Value (₹15)' }
+    ],
+    options: [
+      { name: 'Single Samosa', price: '₹15', priceNum: 15, desc: '1 hot crispy samosa with both signature chutneys', icon: '🥟' },
+      { name: 'Samosa Duo (2 Pcs)', price: '₹30', priceNum: 30, desc: '2 crispy samosas with extra spicy green chutney', icon: '✌️' },
+      { name: 'Samosa Chaat Style', price: '₹60', priceNum: 60, desc: 'Crushed with chole curry, curd, and roasted jeera', icon: '🥣' }
+    ]
   },
   {
     id: 'pakoda-2',
@@ -344,11 +368,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Paneer Pakoda Platter',
     hindi: 'पनीर पकौड़ा',
     price: '₹70',
-    tags: ['Melt In Mouth', 'Evening Snack', 'Piping Hot'],
+    priceNum: 70,
+    tags: ['Melt In Mouth', 'Evening Snack', 'Piping Hot', 'Ajwain Batter'],
     desc: 'Generous cubes of fresh paneer coated in a spiced carom-seed besan batter, fried crisp outside and succulent within. Served with spicy green mint chutney.',
     serving: 'Generous Snack Portion with Chutney',
     image: 'assets/images/card-pakoda.jpg',
-    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+    glow: 'rgba(16, 185, 129, 0.42)', // Emerald
+    specs: [
+      { label: 'Paneer Quality', value: 'Fresh Malai Paneer Cubes' },
+      { label: 'Batter Recipe', value: 'Light Spiced Gram Flour & Ajwain' },
+      { label: 'Serving Style', value: 'Served hot with sliced onion & chutney' },
+      { label: 'Pairs Best With', value: 'Hot Evening Masala Chai' }
+    ],
+    options: [
+      { name: 'Standard Platter', price: '₹70', priceNum: 70, desc: 'Fresh crispy paneer pakoda platter with chutney', icon: '🧀' },
+      { name: 'With Kadak Chai', price: '₹85', priceNum: 85, desc: 'Paneer pakoda plate + steaming ginger tea', icon: '☕' },
+      { name: 'Mix Pakoda Combo', price: '₹80', priceNum: 80, desc: 'Assortment of paneer, onion, and potato pakodas', icon: '🥨' }
+    ]
   },
   {
     id: 'shake-2',
@@ -356,11 +392,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Rich Chocolate Thick Shake',
     hindi: 'चॉकलेट थिक शेक',
     price: '₹70',
-    tags: ['Thick & Creamy', 'Student Craving', 'Chilled'],
-    desc: 'Velvety blend of rich cocoa, creamy dairy milk, and chocolate swirl, crowned with crushed chocolate flakes. Served chilled in a frosted glass.',
+    priceNum: 70,
+    tags: ['Thick & Creamy', 'Student Craving', 'Chilled', 'Rich Cocoa'],
+    desc: 'Velvety blend of rich cocoa, chilled dairy milk, and chocolate swirl, crowned with crushed chocolate flakes. Served chilled in a tall frosted glass.',
     serving: 'Tall Frosted Glass Serving',
     image: 'assets/images/real-shake-cup.jpg',
-    glow: 'rgba(217, 119, 6, 0.4)' // Warm Gold
+    glow: 'rgba(217, 119, 6, 0.42)', // Warm Gold
+    specs: [
+      { label: 'Base', value: 'Chilled Full-Cream Milk & Cocoa' },
+      { label: 'Texture', value: 'Extra Thick & Velvety' },
+      { label: 'Topping', value: 'Dark Chocolate Curls & Drizzle' },
+      { label: 'Serving Size', value: '350ml Tall Frosted Glass' }
+    ],
+    options: [
+      { name: 'Classic Chocolate', price: '₹70', priceNum: 70, desc: 'Velvety cocoa shake in frosted glass', icon: '🥤' },
+      { name: 'Double Choco Drizzle', price: '₹80', priceNum: 80, desc: 'Extra rich chocolate sauce and double flakes', icon: '🍫' },
+      { name: 'Oreo Infusion Style', price: '₹80', priceNum: 80, desc: 'Blended with crunchy crushed Oreo cookies', icon: '🍪' }
+    ]
   },
   {
     id: 'rice-2',
@@ -368,11 +416,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Himachali Kadhi Rice Combo',
     hindi: 'कढ़ी चावल कॉम्बो',
     price: '₹80',
-    tags: ['Pure Veg', 'Himachali Style', 'Comfort Food'],
-    desc: 'Authentic curd kadhi simmered with fenugreek seeds, mustard seeds, and soft besan pakodis, ladled generously over hot steamed rice with crisp salad.',
+    priceNum: 80,
+    tags: ['Pure Veg', 'Himachali Style', 'Comfort Food', 'Methi Tadka'],
+    desc: 'Authentic sour curd kadhi simmered with fenugreek seeds, mustard seeds, and soft besan pakodis, ladled generously over hot steamed rice with crisp salad.',
     serving: 'Kadhi + Rice + Crisp Salad',
     image: 'assets/images/tiffin-dal-sabzi.jpg',
-    glow: 'rgba(234, 88, 12, 0.4)' // Saffron
+    glow: 'rgba(234, 88, 12, 0.42)', // Saffron
+    specs: [
+      { label: 'Kadhi Style', value: 'Authentic Kangri Sour Curd' },
+      { label: 'Dumplings', value: 'Melt-in-mouth Besan Pakodis' },
+      { label: 'Tadka', value: 'Whole Red Chillies, Hing & Methi' },
+      { label: 'Rice', value: 'Steamed Long Grain Basmati' }
+    ],
+    options: [
+      { name: 'Standard Combo', price: '₹80', priceNum: 80, desc: 'Kadhi + Steamed Rice + Fresh Salad', icon: '🍛' },
+      { name: 'With Boondi Raita', price: '₹95', priceNum: 95, desc: 'Kadhi Chawal combo with extra chilled raita', icon: '🥣' },
+      { name: 'With 2 Fresh Phulkas', price: '₹100', priceNum: 100, desc: 'Kadhi Chawal + 2 soft tawa rotis', icon: '🫓' }
+    ]
   },
   {
     id: 'dessert-3',
@@ -380,11 +440,23 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Shahi Gulab Jamun [2 Pcs]',
     hindi: 'शाही गुलाब जामुन',
     price: '₹50',
-    tags: ['Warm & Soft', 'Sweet Tooth', 'Desi Ghee'],
-    desc: 'Mawa dumplings fried to a warm mahogany hue and drenched in cardamom-saffron sugar syrup. Served delightfully warm.',
+    priceNum: 50,
+    tags: ['Warm & Soft', 'Sweet Tooth', 'Desi Ghee', 'Cardamom Rose'],
+    desc: 'Soft mawa dumplings fried to a warm mahogany hue and drenched in cardamom-saffron sugar syrup. Served delightfully warm.',
     serving: '2 Warm Pieces with Rose Syrup',
     image: 'assets/images/real-gulab-jamun.jpg',
-    glow: 'rgba(245, 158, 11, 0.4)' // Amber Glow
+    glow: 'rgba(245, 158, 11, 0.42)', // Amber Glow
+    specs: [
+      { label: 'Mawa Quality', value: 'Fresh Pure Khoya Dumplings' },
+      { label: 'Syrup Infusion', value: 'Green Cardamom & Rose Water' },
+      { label: 'Serving Temperature', value: 'Served Freshly Warm' },
+      { label: 'Pieces', value: '2 Large Pieces per plate' }
+    ],
+    options: [
+      { name: '2 Warm Pieces', price: '₹50', priceNum: 50, desc: 'Standard 2 warm pieces in rose syrup', icon: '🍯' },
+      { name: 'Party Pack (4 Pcs)', price: '₹95', priceNum: 95, desc: '4 warm pieces to share with hostel friends', icon: '🎉' },
+      { name: 'With Vanilla Scoop', price: '₹70', priceNum: 70, desc: 'Hot Gulab Jamun paired with cold ice cream', icon: '🍨' }
+    ]
   },
   {
     id: 'tiffin-service',
@@ -392,19 +464,39 @@ const FEATURED_CAROUSEL_ITEMS = [
     title: 'Ghar Ka Khana Daily Tiffin',
     hindi: 'घर जैसा शुद्ध टिफिन',
     price: '₹80 / meal',
-    tags: ['RGGEC Delivery', '100% Homestyle', 'Monika Rana Special'],
+    priceNum: 80,
+    tags: ['RGGEC Delivery', '100% Homestyle', 'Monika Rana Special', 'Freshly Packed'],
     desc: 'Wholesome student tiffin prepared with homestyle love: Dal Tadka, Seasonal Vegetable, 4 Soft Phulkas, Rice, and Salad delivered straight to college gates.',
     serving: 'Complete 5-Item Balanced Meal',
     image: 'assets/images/tiffin-stack.jpg',
-    glow: 'rgba(16, 185, 129, 0.4)' // Emerald
+    glow: 'rgba(16, 185, 129, 0.42)', // Emerald
+    specs: [
+      { label: 'Daily Delivery', value: 'Massal & RGGEC Hostel Gates' },
+      { label: 'Meal Composition', value: 'Dal + Sabzi + 4 Rotis + Rice + Salad' },
+      { label: 'Timing', value: 'Lunch (12:30 PM) & Dinner (7:30 PM)' },
+      { label: 'Monthly Discount', value: '₹70/meal on 30-day student pass' }
+    ],
+    options: [
+      { name: 'Single Daily Meal', price: '₹80', priceNum: 80, desc: 'One fresh lunch or dinner meal delivery', icon: '🍱' },
+      { name: 'Daily 2-Meal Plan', price: '₹160 / day', priceNum: 160, desc: 'Both lunch and dinner delivered hot', icon: '📦' },
+      { name: 'Monthly Student Pass', price: '₹2,100 / mo', priceNum: 2100, desc: '30-day single meal pass (saves ₹300)', icon: '🎓' }
+    ]
   }
 ];
+
+// Unified Showcase State Controller
+const ShowcaseState = {
+  currentIndex: 0,
+  viewMode: 'carousel', // 'carousel' | 'detail' | 'list'
+  originView: 'carousel',
+  selectedOptionIndex: 0
+};
 
 // ==========================================
 // 3. INITIALIZATION
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-  initSignatureCarousel();
+  initShowcaseTransformationEngine();
   renderMenu('all');
   initCategoryFilters();
   initMenuSearch();
@@ -416,10 +508,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// 3A. SIGNATURE DYNAMIC HORIZONTAL CAROUSEL CONTROLLER
+// 3A. ADVANCED DYNAMIC SHOWCASE TRANSFORMATION ENGINE (PHASE 4)
 // ==========================================
-function initSignatureCarousel() {
+function initShowcaseTransformationEngine() {
   const section = document.getElementById('featuredCarouselSection');
+  const carouselView = document.getElementById('showcaseCarouselView');
+  const detailView = document.getElementById('showcaseDetailView');
+  const listView = document.getElementById('showcaseListView');
+  const viewCarouselBtn = document.getElementById('viewModeCarouselBtn');
+  const viewListBtn = document.getElementById('viewModeListBtn');
+
+  // Carousel View Elements
   const viewport = document.getElementById('carouselViewportWindow');
   const track = document.getElementById('carouselTrackStrip');
   const prevBtn = document.getElementById('carouselPrevBtn');
@@ -429,22 +528,43 @@ function initSignatureCarousel() {
   const dotsRail = document.getElementById('carouselDotsRail');
   const counter = document.getElementById('carouselSlideCounter');
 
-  if (!section || !viewport || !track) return;
+  // Detail View Elements
+  const detailBackBtn = document.getElementById('detailBackBtn');
+  const detailBackBtnText = document.getElementById('detailBackBtnText');
+  const detailBreadcrumb = document.getElementById('detailBreadcrumbTitle');
+  const detailTagsRow = document.getElementById('detailTagsRow');
+  const detailDishTitle = document.getElementById('detailDishTitle');
+  const detailDishHindi = document.getElementById('detailDishHindi');
+  const detailDishDesc = document.getElementById('detailDishDesc');
+  const detailSpecsGrid = document.getElementById('detailSpecsGrid');
+  const detailOptionsSlider = document.getElementById('detailOptionsSlider');
+  const optionsSelectedBadge = document.getElementById('optionsSelectedBadge');
+  const detailPriceDisplay = document.getElementById('detailPriceDisplay');
+  const detailPriceSubtext = document.getElementById('detailPriceSubtext');
+  const detailWhatsAppOrderBtn = document.getElementById('detailWhatsAppOrderBtn');
+  const detailFindInMenuBtn = document.getElementById('detailFindInMenuBtn');
+  const detailPlateImg = document.getElementById('detailPlateImg');
+  const detailFloatingPricePill = document.getElementById('detailFloatingPricePill');
+  const detailHeroGlow = document.getElementById('detailHeroGlow');
 
-  let currentIndex = 0;
+  // List View Element
+  const compactDishesList = document.getElementById('compactDishesList');
+
+  if (!section || !carouselView || !detailView || !listView) return;
+
   const totalSlides = FEATURED_CAROUSEL_ITEMS.length;
 
-  // Render Slides
+  // 1. Render Carousel Slides
   track.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => `
     <div class="carousel-slide-item" data-index="${idx}" role="listitem" aria-label="${item.title}">
-      <div class="carousel-plate-disc">
+      <div class="carousel-plate-disc" title="Click to view full recipe & options">
         <img src="${item.image}" alt="${item.title}" class="carousel-plate-img" loading="${idx === 0 ? 'eager' : 'lazy'}" />
         <div class="carousel-plate-price-tag">${item.price}</div>
       </div>
     </div>
   `).join('');
 
-  // Render Dots
+  // 2. Render Pagination Dots
   if (dotsRail) {
     dotsRail.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => `
       <button type="button" class="carousel-dot ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Select ${item.title}"></button>
@@ -454,11 +574,56 @@ function initSignatureCarousel() {
   const slideElements = Array.from(track.querySelectorAll('.carousel-slide-item'));
   const dotElements = dotsRail ? Array.from(dotsRail.querySelectorAll('.carousel-dot')) : [];
 
+  // 3. Render Compact List View Items
+  function renderCompactListView() {
+    if (!compactDishesList) return;
+    compactDishesList.innerHTML = FEATURED_CAROUSEL_ITEMS.map((item, idx) => {
+      const isSelected = idx === ShowcaseState.currentIndex;
+      return `
+        <div class="compact-dish-row ${isSelected ? 'is-selected-row' : ''}" data-index="${idx}" role="button" tabindex="0" aria-label="View ${item.title}">
+          <div class="row-thumb-media">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" />
+          </div>
+          <div class="row-dish-info">
+            <h4 class="row-title">${item.title}</h4>
+            <span class="row-hindi">${item.hindi}</span>
+            <div class="row-meta-tags">
+              <span class="row-rating-badge">★ 4.7</span>
+              <span>•</span>
+              <span>${item.serving}</span>
+            </div>
+          </div>
+          <div class="row-price-action">
+            <span class="row-price">${item.price}</span>
+            <button type="button" class="row-inspect-btn" data-index="${idx}">
+              <span>Details →</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Attach click events on list rows
+    compactDishesList.querySelectorAll('.compact-dish-row').forEach(row => {
+      const idx = parseInt(row.getAttribute('data-index'), 10);
+      row.addEventListener('click', (e) => {
+        ShowcaseState.currentIndex = idx;
+        openDetailView(idx, 'list');
+      });
+      row.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          ShowcaseState.currentIndex = idx;
+          openDetailView(idx, 'list');
+        }
+      });
+    });
+  }
+
   function calculateTranslateX(targetIdx) {
     if (!slideElements[targetIdx]) return 0;
     const targetSlide = slideElements[targetIdx];
     const viewportWidth = viewport.clientWidth;
-    // Calculate slide center relative to track
     const slideCenter = targetSlide.offsetLeft + (targetSlide.offsetWidth / 2);
     return (viewportWidth / 2) - slideCenter;
   }
@@ -478,34 +643,27 @@ function initSignatureCarousel() {
         <div class="active-dish-serving-pill">🍱 Serving: ${item.serving}</div>
         <div class="active-dish-actions">
           <div class="active-dish-price-bubble">${item.price} <span>All-Inclusive</span></div>
+          <button type="button" class="btn-pill btn-primary-pill" id="carouselInspectDetailsBtn">
+            <span>Inspect Details & Options</span>
+            <span>→</span>
+          </button>
           <a 
             href="https://wa.me/918894616602?text=${encodeURIComponent('Hello Monika Ji! I would like to order ' + item.title + ' (' + item.price + ') from Magic Masala.')}" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn-pill btn-whatsapp-pill"
           >
-            <span>Order on WhatsApp</span>
+            <span>WhatsApp Order</span>
             <span>↗</span>
           </a>
-          <button type="button" class="btn-pill btn-outline-pill" id="carouselHighlightInGridBtn">
-            <span>Find in Menu Grid ↓</span>
-          </button>
         </div>
       `;
 
-      // Hook up highlight in grid button
-      const highlightBtn = metaPanel.querySelector('#carouselHighlightInGridBtn');
-      if (highlightBtn) {
-        highlightBtn.addEventListener('click', () => {
-          const filterBtn = document.querySelector(`.cat-tab-btn[data-filter="${item.category}"]`) ||
-                            document.querySelector('.cat-tab-btn[data-filter="all"]');
-          if (filterBtn) filterBtn.click();
-
-          const gridEl = document.getElementById('menuGridContainer');
-          if (gridEl) {
-            gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-          showToast(`Showing ${item.title} in Menu Card below!`);
+      // Hook up Inspect Details button
+      const inspectBtn = metaPanel.querySelector('#carouselInspectDetailsBtn');
+      if (inspectBtn) {
+        inspectBtn.addEventListener('click', () => {
+          openDetailView(ShowcaseState.currentIndex, 'carousel');
         });
       }
 
@@ -517,8 +675,8 @@ function initSignatureCarousel() {
     if (targetIdx < 0) targetIdx = 0;
     if (targetIdx >= totalSlides) targetIdx = totalSlides - 1;
 
-    currentIndex = targetIdx;
-    const currentItem = FEATURED_CAROUSEL_ITEMS[currentIndex];
+    ShowcaseState.currentIndex = targetIdx;
+    const currentItem = FEATURED_CAROUSEL_ITEMS[ShowcaseState.currentIndex];
 
     if (!animate) {
       track.classList.add('no-transition');
@@ -526,7 +684,7 @@ function initSignatureCarousel() {
       track.classList.remove('no-transition');
     }
 
-    const tx = calculateTranslateX(currentIndex);
+    const tx = calculateTranslateX(ShowcaseState.currentIndex);
     track.style.transform = `translate3d(${tx}px, 0, 0)`;
 
     if (!animate) {
@@ -537,7 +695,7 @@ function initSignatureCarousel() {
     // Update Slide Classes
     slideElements.forEach((slide, i) => {
       slide.classList.remove('is-active', 'is-adjacent', 'is-distant');
-      const dist = Math.abs(i - currentIndex);
+      const dist = Math.abs(i - ShowcaseState.currentIndex);
       if (dist === 0) {
         slide.classList.add('is-active');
         slide.setAttribute('aria-selected', 'true');
@@ -552,18 +710,18 @@ function initSignatureCarousel() {
 
     // Update Dots
     dotElements.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-      dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+      dot.classList.toggle('active', i === ShowcaseState.currentIndex);
+      dot.setAttribute('aria-selected', i === ShowcaseState.currentIndex ? 'true' : 'false');
     });
 
     // Update Counter
     if (counter) {
-      counter.textContent = `${currentIndex + 1} / ${totalSlides}`;
+      counter.textContent = `${ShowcaseState.currentIndex + 1} / ${totalSlides}`;
     }
 
     // Update Buttons
-    if (prevBtn) prevBtn.disabled = currentIndex === 0;
-    if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+    if (prevBtn) prevBtn.disabled = ShowcaseState.currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = ShowcaseState.currentIndex === totalSlides - 1;
 
     // Update Ambient Glow
     if (ambientGlow) {
@@ -574,22 +732,236 @@ function initSignatureCarousel() {
     updateMetaPanel(currentItem);
   }
 
-  // Prev / Next Controls
+  // ==========================================
+  // VIEW MODE SWITCHING (CAROUSEL VS COMPACT LIST)
+  // ==========================================
+  function switchViewMode(targetMode) {
+    if (ShowcaseState.viewMode === targetMode) return;
+    ShowcaseState.viewMode = targetMode;
+
+    if (targetMode === 'carousel') {
+      viewCarouselBtn.classList.add('active');
+      viewCarouselBtn.setAttribute('aria-selected', 'true');
+      viewListBtn.classList.remove('active');
+      viewListBtn.setAttribute('aria-selected', 'false');
+
+      detailView.classList.remove('is-active');
+      detailView.setAttribute('aria-hidden', 'true');
+      listView.classList.remove('is-active');
+      listView.setAttribute('aria-hidden', 'true');
+
+      carouselView.classList.add('is-active');
+      carouselView.setAttribute('aria-hidden', 'false');
+
+      goToSlide(ShowcaseState.currentIndex, false);
+      showToast('Switched to Signature 3D Carousel view');
+    } else if (targetMode === 'list') {
+      viewListBtn.classList.add('active');
+      viewListBtn.setAttribute('aria-selected', 'true');
+      viewCarouselBtn.classList.remove('active');
+      viewCarouselBtn.setAttribute('aria-selected', 'false');
+
+      detailView.classList.remove('is-active');
+      detailView.setAttribute('aria-hidden', 'true');
+      carouselView.classList.remove('is-active');
+      carouselView.setAttribute('aria-hidden', 'true');
+
+      listView.classList.add('is-active');
+      listView.setAttribute('aria-hidden', 'false');
+
+      renderCompactListView();
+      showToast('Switched to Compact Vertical List view');
+    }
+  }
+
+  if (viewCarouselBtn) {
+    viewCarouselBtn.addEventListener('click', () => switchViewMode('carousel'));
+  }
+  if (viewListBtn) {
+    viewListBtn.addEventListener('click', () => switchViewMode('list'));
+  }
+
+  // ==========================================
+  // DETAIL VIEW TRANSFORMATION (PHASE 4 A, B, D, E)
+  // ==========================================
+  function openDetailView(itemIdx, origin = 'carousel') {
+    ShowcaseState.currentIndex = itemIdx;
+    ShowcaseState.originView = origin;
+    ShowcaseState.viewMode = 'detail';
+    ShowcaseState.selectedOptionIndex = 0; // Default to standard option
+
+    const item = FEATURED_CAROUSEL_ITEMS[itemIdx];
+
+    // Hide other views smoothly
+    carouselView.classList.remove('is-active');
+    carouselView.setAttribute('aria-hidden', 'true');
+    listView.classList.remove('is-active');
+    listView.setAttribute('aria-hidden', 'true');
+
+    // Show Detail View
+    detailView.classList.add('is-active');
+    detailView.setAttribute('aria-hidden', 'false');
+
+    // Back button text
+    if (detailBackBtnText) {
+      detailBackBtnText.textContent = origin === 'list' ? 'Back to List View' : 'Back to Carousel';
+    }
+
+    // Breadcrumb
+    if (detailBreadcrumb) {
+      detailBreadcrumb.textContent = `Signature Specials • ${item.title}`;
+    }
+
+    // Populate Dish Info
+    detailDishTitle.textContent = item.title;
+    detailDishHindi.textContent = item.hindi;
+    detailDishDesc.textContent = item.desc;
+
+    // Badges Row
+    if (detailTagsRow) {
+      detailTagsRow.innerHTML = item.tags.map((tag, i) => `
+        <span class="detail-tag-pill ${i === 0 ? 'tag-emerald' : ''}">• ${tag}</span>
+      `).join('');
+    }
+
+    // Specifications Grid
+    if (detailSpecsGrid) {
+      detailSpecsGrid.innerHTML = item.specs.map(spec => `
+        <div class="detail-spec-card">
+          <div class="spec-label">${spec.label}</div>
+          <div class="spec-value">${spec.value}</div>
+        </div>
+      `).join('');
+    }
+
+    // Visual Continuity Hero Plate
+    if (detailPlateImg) {
+      detailPlateImg.src = item.image;
+      detailPlateImg.alt = item.title;
+    }
+    if (detailFloatingPricePill) {
+      detailFloatingPricePill.textContent = item.price;
+    }
+    if (detailHeroGlow) {
+      detailHeroGlow.style.background = `radial-gradient(circle, ${item.glow} 0%, rgba(245, 158, 11, 0.15) 50%, transparent 75%)`;
+    }
+
+    // Render Options & Accompaniment Selector (Section E)
+    renderOptionsSelector(item);
+
+    // Initial Option sync
+    updateSelectedOption(item, 0);
+
+    // Hook Find In Menu Grid button
+    if (detailFindInMenuBtn) {
+      detailFindInMenuBtn.onclick = () => {
+        const filterBtn = document.querySelector(`.cat-tab-btn[data-filter="${item.category}"]`) ||
+                          document.querySelector('.cat-tab-btn[data-filter="all"]');
+        if (filterBtn) filterBtn.click();
+
+        const gridEl = document.getElementById('menuGridContainer');
+        if (gridEl) {
+          gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        showToast(`Showing ${item.title} in Menu Card below!`);
+      };
+    }
+
+    // Ambient glow sync
+    if (ambientGlow) {
+      ambientGlow.style.background = `radial-gradient(circle, ${item.glow} 0%, rgba(245, 158, 11, 0.15) 50%, transparent 75%)`;
+    }
+
+    // Scroll smoothly to section if needed
+    section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function renderOptionsSelector(item) {
+    if (!detailOptionsSlider) return;
+
+    detailOptionsSlider.innerHTML = item.options.map((opt, i) => `
+      <div class="option-thumb-card ${i === 0 ? 'active' : ''}" data-opt-index="${i}" role="radio" aria-checked="${i === 0}">
+        <span class="opt-indicator"></span>
+        <span class="opt-name">${opt.icon} ${opt.name}</span>
+        <span class="opt-price">${opt.price}</span>
+      </div>
+    `).join('');
+
+    // Attach click events on option cards
+    detailOptionsSlider.querySelectorAll('.option-thumb-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const optIdx = parseInt(card.getAttribute('data-opt-index'), 10);
+        updateSelectedOption(item, optIdx);
+      });
+    });
+  }
+
+  function updateSelectedOption(item, optIdx) {
+    ShowcaseState.selectedOptionIndex = optIdx;
+    const opt = item.options[optIdx];
+    if (!opt) return;
+
+    // Update cards active state
+    if (detailOptionsSlider) {
+      detailOptionsSlider.querySelectorAll('.option-thumb-card').forEach((card, i) => {
+        card.classList.toggle('active', i === optIdx);
+        card.setAttribute('aria-checked', i === optIdx ? 'true' : 'false');
+      });
+    }
+
+    // Update text & price displays
+    if (optionsSelectedBadge) {
+      optionsSelectedBadge.textContent = opt.name;
+    }
+    if (detailPriceDisplay) {
+      detailPriceDisplay.textContent = opt.price;
+    }
+    if (detailPriceSubtext) {
+      detailPriceSubtext.textContent = opt.desc;
+    }
+    if (detailFloatingPricePill) {
+      detailFloatingPricePill.textContent = opt.price;
+    }
+
+    // Update WhatsApp Order Link
+    if (detailWhatsAppOrderBtn) {
+      const msg = `Hello Monika Ji! I want to order ${item.title} (Option: ${opt.name} at ${opt.price}) from Magic Masala. Please confirm availability!`;
+      detailWhatsAppOrderBtn.href = `https://wa.me/918894616602?text=${encodeURIComponent(msg)}`;
+    }
+  }
+
+  function closeDetailView() {
+    if (ShowcaseState.originView === 'list') {
+      switchViewMode('list');
+    } else {
+      switchViewMode('carousel');
+    }
+  }
+
+  if (detailBackBtn) {
+    detailBackBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeDetailView();
+    });
+  }
+
+  // ==========================================
+  // CAROUSEL INTERACTION LISTENERS
+  // ==========================================
   if (prevBtn) {
     prevBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (currentIndex > 0) goToSlide(currentIndex - 1);
+      if (ShowcaseState.currentIndex > 0) goToSlide(ShowcaseState.currentIndex - 1);
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1);
+      if (ShowcaseState.currentIndex < totalSlides - 1) goToSlide(ShowcaseState.currentIndex + 1);
     });
   }
 
-  // Dots Interaction
   dotElements.forEach(dot => {
     dot.addEventListener('click', () => {
       const idx = parseInt(dot.getAttribute('data-index'), 10);
@@ -597,7 +969,7 @@ function initSignatureCarousel() {
     });
   });
 
-  // Slide Direct Click & Drag
+  // Slide Direct Click: Center if inactive, or open detail view if active!
   let isDragging = false;
   let startX = 0;
   let currentTranslateX = 0;
@@ -607,8 +979,11 @@ function initSignatureCarousel() {
   slideElements.forEach((slide, idx) => {
     slide.addEventListener('click', () => {
       if (hasMoved) return;
-      if (currentIndex !== idx) {
+      if (ShowcaseState.currentIndex !== idx) {
         goToSlide(idx);
+      } else {
+        // Tapping the active centered dish opens the detail presentation!
+        openDetailView(idx, 'carousel');
       }
     });
   });
@@ -619,7 +994,7 @@ function initSignatureCarousel() {
     hasMoved = false;
     startX = clientX;
     dragOffset = 0;
-    currentTranslateX = calculateTranslateX(currentIndex);
+    currentTranslateX = calculateTranslateX(ShowcaseState.currentIndex);
     track.classList.add('no-transition');
     viewport.classList.add('is-dragging');
   }
@@ -631,9 +1006,8 @@ function initSignatureCarousel() {
       hasMoved = true;
     }
 
-    // Boundary resistance
     let effectiveDiff = diff;
-    if ((currentIndex === 0 && diff > 0) || (currentIndex === totalSlides - 1 && diff < 0)) {
+    if ((ShowcaseState.currentIndex === 0 && diff > 0) || (ShowcaseState.currentIndex === totalSlides - 1 && diff < 0)) {
       effectiveDiff = diff * 0.28;
     }
 
@@ -648,12 +1022,12 @@ function initSignatureCarousel() {
     track.classList.remove('no-transition');
 
     const threshold = 45;
-    if (dragOffset < -threshold && currentIndex < totalSlides - 1) {
-      goToSlide(currentIndex + 1);
-    } else if (dragOffset > threshold && currentIndex > 0) {
-      goToSlide(currentIndex - 1);
+    if (dragOffset < -threshold && ShowcaseState.currentIndex < totalSlides - 1) {
+      goToSlide(ShowcaseState.currentIndex + 1);
+    } else if (dragOffset > threshold && ShowcaseState.currentIndex > 0) {
+      goToSlide(ShowcaseState.currentIndex - 1);
     } else {
-      goToSlide(currentIndex);
+      goToSlide(ShowcaseState.currentIndex);
     }
 
     setTimeout(() => {
@@ -661,7 +1035,6 @@ function initSignatureCarousel() {
     }, 60);
   }
 
-  // Touch Events
   viewport.addEventListener('touchstart', (e) => {
     if (e.touches.length === 1) {
       startDrag(e.touches[0].clientX);
@@ -677,7 +1050,6 @@ function initSignatureCarousel() {
   viewport.addEventListener('touchend', endDrag);
   viewport.addEventListener('touchcancel', endDrag);
 
-  // Mouse Events
   viewport.addEventListener('mousedown', (e) => {
     startDrag(e.clientX);
   });
@@ -692,26 +1064,36 @@ function initSignatureCarousel() {
     if (isDragging) endDrag();
   });
 
-  // Keyboard Navigation
+  // Global Keyboard Navigation
   section.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'Escape' && ShowcaseState.viewMode === 'detail') {
       e.preventDefault();
-      if (currentIndex > 0) goToSlide(currentIndex - 1);
-    } else if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1);
-    } else if (e.key === 'Home') {
-      e.preventDefault();
-      goToSlide(0);
-    } else if (e.key === 'End') {
-      e.preventDefault();
-      goToSlide(totalSlides - 1);
+      closeDetailView();
+    } else if (ShowcaseState.viewMode === 'carousel') {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (ShowcaseState.currentIndex > 0) goToSlide(ShowcaseState.currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (ShowcaseState.currentIndex < totalSlides - 1) goToSlide(ShowcaseState.currentIndex + 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        goToSlide(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        goToSlide(totalSlides - 1);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        openDetailView(ShowcaseState.currentIndex, 'carousel');
+      }
     }
   });
 
-  // Window Resize
+  // Window Resize Handling
   window.addEventListener('resize', () => {
-    goToSlide(currentIndex, false);
+    if (ShowcaseState.viewMode === 'carousel') {
+      goToSlide(ShowcaseState.currentIndex, false);
+    }
   });
 
   // Initial Placement
