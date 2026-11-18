@@ -1,59 +1,84 @@
 /* ==========================================================================
-   MAGIC MASALA CAFE & RESTAURANT - MODERN UI/UX
-   Inspired by award-winning restaurant UI design (uiuxmanuel design style):
-   "Take a taste • Come join us • Life is so endlessly delicious"
-   "What's on our Plate" • "Let's see what other says"
-   Massal Chowk, near RGGEC Kangra | Owner: Monika Rana | Pure Veg
+   MAGIC MASALA CAFE & RESTAURANT — PREMIUM DARK DESIGN SYSTEM
+   Phase 1: Design Tokens, Global Typography, Component Hierarchy & Ambient Glow
+   Massal Chowk, near RGGEC Kangra | Owner: Monika Rana | 100% Pure Veg
    ========================================================================== */
 
+/* ==========================================================================
+   1. DESIGN TOKENS SYSTEM
+   ========================================================================== */
 :root {
-  /* Color Palette - Clean, Modern & Appetizing */
-  --color-bg: #F8F9FA;
-  --color-canvas: #FFFFFF;
-  --color-card-surface: #FFFFFF;
-  --color-surface-soft: #F1F3F5;
-  --color-surface-hover: #E9ECEF;
+  /* Surface & Canvas System — Deep Obsidian, Charcoal & Elevated Glass */
+  --color-canvas: #07090E;                  /* Ultra-deep cinematic canvas */
+  --color-bg: #0C1017;                      /* Deep charcoal primary background */
+  --color-bg-secondary: #111622;            /* Secondary section backdrop */
+  --color-card-surface: #141A26;            /* Primary dark card surface */
+  --color-card-surface-elevated: #1B2333;   /* Elevated / active card surface */
+  --color-card-surface-translucent: rgba(20, 26, 38, 0.78); /* Glassmorphic panel */
 
-  --color-primary: #EA580C;       /* Warm Spiced Terracotta */
-  --color-primary-hover: #C2410C;
-  --color-primary-light: #FFEDD5;
-  --color-primary-subtle: #FFF7ED;
+  --color-surface-soft: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-surface-active: rgba(255, 255, 255, 0.12);
 
+  /* Primary Accent — Spiced Saffron / Amber */
+  --color-primary: #F97316;
+  --color-primary-hover: #EA580C;
+  --color-primary-light: rgba(249, 115, 22, 0.15);
+  --color-primary-subtle: rgba(249, 115, 22, 0.08);
+  --color-primary-glow: 0 0 28px -4px rgba(249, 115, 22, 0.35);
+
+  /* Secondary Accent — Pure-Veg Emerald (Subtle Ambient / Health) */
+  --color-veg: #10B981;
+  --color-veg-hover: #059669;
+  --color-veg-light: rgba(16, 185, 129, 0.14);
+  --color-veg-subtle: rgba(16, 185, 129, 0.07);
+  --color-veg-glow: 0 0 24px -4px rgba(16, 185, 129, 0.35);
+
+  /* Tertiary Accent — Warm Gold / Verified Ratings */
   --color-accent-gold: #F59E0B;
-  --color-accent-subtle: #FEF3C7;
+  --color-accent-gold-light: rgba(245, 158, 11, 0.15);
 
-  --color-veg: #16A34A;           /* 100% Pure Veg Green */
-  --color-veg-light: #DCFCE7;
+  /* Typography & Foreground Text Tokens */
+  --color-text-title: #F8FAFC;              /* Slate 50 — Crisp white for headlines */
+  --color-text-strong: #E2E8F0;             /* Slate 200 — High-contrast labels & prices */
+  --color-text-body: #94A3B8;               /* Slate 400 — Legible, clean body text */
+  --color-text-muted: #64748B;              /* Slate 500 — Metadata, captions */
+  --color-text-dim: #475569;                /* Slate 600 — Placeholders, subtle marks */
 
-  --color-text-title: #0F172A;    /* Slate Dark 900 */
-  --color-text-body: #475569;     /* Slate Medium 600 */
-  --color-text-muted: #94A3B8;    /* Slate Light 400 */
-
-  --color-border: #E2E8F0;
-  --color-border-light: #F1F5F9;
-
-  /* Typography */
+  /* Typography Families */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Elevation Shadows (Soft & Realistic Floating Dishes) */
-  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04);
-  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.05);
-  --shadow-hover: 0 20px 40px rgba(234, 88, 12, 0.12);
-  --shadow-dish-float: 0 16px 36px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(15, 23, 42, 0.05);
+  /* Micro Borders — Controlled, Refined & Subtle */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.04);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
+  --color-border-primary: rgba(249, 115, 22, 0.4);
+  --color-border-emerald: rgba(16, 185, 129, 0.35);
 
-  /* Radius */
-  --radius-sm: 8px;
+  /* Shadows — Deep, Soft & Ambient */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.65), 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 24px 54px -10px rgba(0, 0, 0, 0.8), 0 0 24px -2px rgba(249, 115, 22, 0.2);
+  --shadow-dish-float: 0 20px 48px -10px rgba(0, 0, 0, 0.85), 0 0 26px rgba(16, 185, 129, 0.18);
+  --shadow-glow-emerald: 0 0 40px -8px rgba(16, 185, 129, 0.25);
+
+  /* Controlled Corner Radii Scale */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
   --radius-md: 16px;
-  --radius-card: 24px;
+  --radius-card: 22px;
   --radius-pill: 9999px;
 
-  /* Transitions */
-  --transition-fast: 180ms ease;
-  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Transitions & Fluid Physics */
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Base Reset */
+/* ==========================================================================
+   2. BASE RESET & GLOBAL TYPOGRAPHY
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -64,14 +89,20 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-canvas);
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-canvas);
   color: var(--color-text-body);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 18% 12%, rgba(249, 115, 22, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 82% 38%, rgba(16, 185, 129, 0.04) 0%, transparent 45%);
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-title);
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -107,6 +139,7 @@ button, input, select, textarea {
 
 button {
   cursor: pointer;
+  user-select: none;
 }
 
 /* Container */
@@ -123,19 +156,24 @@ button {
   }
 }
 
+/* ==========================================================================
+   3. REUSABLE BADGES & CHIPS
+   ========================================================================== */
 /* Pure Veg Tag Badge */
 .pure-veg-tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.2rem 0.65rem;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
   background-color: var(--color-veg-light);
   color: var(--color-veg);
+  border: 1px solid var(--color-border-emerald);
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15);
 }
 
 .veg-dot-icon {
@@ -156,7 +194,7 @@ button {
   background-color: var(--color-veg);
 }
 
-/* Section Header Structure (Matching Video UI) */
+/* Section Header Typography Structure */
 .section-header-centered {
   text-align: center;
   max-width: 680px;
@@ -166,87 +204,102 @@ button {
 .section-eyebrow {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .section-main-title {
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.1rem);
   font-weight: 800;
   color: var(--color-text-title);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.025em;
 }
 
 .section-subtext {
   font-size: 1.05rem;
   color: var(--color-text-body);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* Pill Action Buttons */
+/* ==========================================================================
+   4. REUSABLE PILL BUTTONS & MICRO-INTERACTIONS
+   ========================================================================== */
 .btn-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   padding: 0.75rem 1.75rem;
   border-radius: var(--radius-pill);
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
   min-height: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pill:active {
+  transform: scale(0.97);
 }
 
 .btn-primary-pill {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #D95D0B 100%);
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 18px rgba(249, 115, 22, 0.35);
 }
 
 .btn-primary-pill:hover {
-  background: var(--color-primary-hover);
+  background: linear-gradient(135deg, #FB923C 0%, var(--color-primary) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.38);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.45);
 }
 
 .btn-outline-pill {
-  background: transparent;
+  background: var(--color-surface-soft);
   color: var(--color-text-title);
   border: 1.5px solid var(--color-border);
+  backdrop-filter: blur(8px);
 }
 
 .btn-outline-pill:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
+  background: var(--color-surface-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .btn-whatsapp-pill {
-  background: #25D366;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.3);
 }
 
 .btn-whatsapp-pill:hover {
-  background: #20BD5A;
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.42);
 }
 
 /* ==========================================================================
-   1. TOP CAMPUS STRIP
+   5. TOP CAMPUS NOTICE STRIP
    ========================================================================== */
 .top-campus-strip {
-  background: var(--color-text-title);
-  color: #F8FAFC;
-  padding: 0.5rem 1.25rem;
+  background: #05070A;
+  color: var(--color-text-body);
+  padding: 0.55rem 1.25rem;
   font-size: 0.8rem;
   font-weight: 500;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .campus-strip-inner {
@@ -266,10 +319,11 @@ button {
 .campus-badge-solid {
   background: var(--color-primary);
   color: #FFFFFF;
-  padding: 0.15rem 0.55rem;
+  padding: 0.15rem 0.6rem;
   border-radius: var(--radius-pill);
   font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .campus-strip-right {
@@ -285,16 +339,16 @@ button {
 }
 
 /* ==========================================================================
-   2. STICKY MODERN HEADER
+   6. STICKY MODERN HEADER (DARK GLASSMORPHISM)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 9, 14, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
   transition: all var(--transition-fast);
@@ -317,12 +371,13 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #C2410C 100%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .brand-text h1 {
@@ -340,7 +395,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   display: block;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .nav-links-menu {
@@ -358,15 +413,28 @@ button {
 
 .nav-link-item {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--color-text-body);
   transition: color var(--transition-fast);
   padding: 0.5rem 0;
+  position: relative;
 }
 
 .nav-link-item:hover, .nav-link-item.active {
-  color: var(--color-primary);
+  color: var(--color-text-title);
+}
+
+.nav-link-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--color-primary);
 }
 
 .header-actions {
@@ -385,6 +453,7 @@ button {
   padding: 8px;
   border-radius: var(--radius-sm);
   background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
 }
 
 @media (min-width: 960px) {
@@ -406,7 +475,9 @@ button {
   top: 76px;
   left: 0;
   width: 100%;
-  background: #FFFFFF;
+  background: rgba(12, 16, 23, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--color-border);
   padding: 1.5rem;
   box-shadow: var(--shadow-card);
@@ -416,6 +487,12 @@ button {
 
 .mobile-nav-panel.open {
   display: block;
+  animation: slideDownFade 220ms ease;
+}
+
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .mobile-menu-items {
@@ -432,18 +509,21 @@ button {
   color: var(--color-text-title);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* ==========================================================================
-   3. HERO SECTION (INSPIRED BY VIDEO: "TAKE A TASTE • COME JOIN US")
-   ========================================================================== */
+   7. HERO SHOWCASE SECTION (DARK AMBIENT GLOW)
+   ========================================================================= */
 .hero-showcase {
   position: relative;
-  padding: 4rem 0 5.5rem;
-  background: radial-gradient(circle at 15% 25%, rgba(254, 243, 199, 0.6) 0%, transparent 55%),
-              radial-gradient(circle at 85% 75%, rgba(255, 237, 213, 0.5) 0%, transparent 50%),
-              var(--color-bg);
+  padding: 4.5rem 0 6rem;
+  background: 
+    radial-gradient(circle at 82% 24%, rgba(16, 185, 129, 0.12) 0%, transparent 48%),
+    radial-gradient(circle at 12% 70%, rgba(249, 115, 22, 0.10) 0%, transparent 45%),
+    var(--color-bg);
   overflow: hidden;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .hero-grid-2col {
@@ -466,23 +546,22 @@ button {
   align-items: flex-start;
 }
 
-/* Video exact phrase badge: "Take a taste" */
 .hero-eyebrow-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  background: var(--color-primary-light);
-  border: 1px solid rgba(234, 88, 12, 0.25);
+  gap: 0.55rem;
+  padding: 0.45rem 1.05rem;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-primary-hover);
-  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1.35rem;
+  backdrop-filter: blur(8px);
 }
 
-/* Video exact phrase: "Come join us. Life is so endlessly delicious." */
 .hero-title-main {
   font-size: clamp(2.6rem, 5vw, 4.2rem);
   line-height: 1.08;
@@ -495,6 +574,9 @@ button {
 .hero-title-main em {
   font-style: normal;
   color: var(--color-primary);
+  background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-description-lead {
@@ -505,11 +587,15 @@ button {
   max-width: 520px;
 }
 
+.hero-description-lead strong {
+  color: var(--color-text-strong);
+}
+
 .hero-action-group {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.75rem;
 }
 
 .hero-stats-row {
@@ -522,7 +608,7 @@ button {
 }
 
 .hero-stat-block h4 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--color-primary);
   margin-bottom: 2px;
@@ -534,7 +620,7 @@ button {
   font-weight: 600;
 }
 
-/* Hero Restaurant Showcase Frame (Replaced very first photo) */
+/* Hero Showcase Frame */
 .hero-plate-visual {
   position: relative;
   display: flex;
@@ -547,11 +633,11 @@ button {
   width: 100%;
   max-width: 480px;
   aspect-ratio: 4 / 3.2;
-  border-radius: 28px;
-  padding: 10px;
-  background: #FFFFFF;
-  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12), 0 4px 16px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: var(--radius-card);
+  padding: 8px;
+  background: var(--color-card-surface);
+  box-shadow: var(--shadow-card), 0 0 35px -8px rgba(16, 185, 129, 0.2);
+  border: 1px solid var(--color-border);
   animation: floatSubtle 5s ease-in-out infinite alternate;
 }
 
@@ -563,23 +649,30 @@ button {
 .hero-visual-frame img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: calc(var(--radius-card) - 6px);
   object-fit: cover;
 }
 
-/* Floating Review Chips around plate */
+/* Floating Chips Around Hero */
 .floating-chip {
   position: absolute;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
+  background: rgba(20, 26, 38, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: var(--radius-md);
   padding: 0.85rem 1.15rem;
   box-shadow: var(--shadow-card);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   gap: 0.75rem;
   z-index: 2;
+  transition: transform var(--transition-fast);
+}
+
+.floating-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
 }
 
 .chip-top-right {
@@ -604,18 +697,20 @@ button {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--color-primary-light);
+  background: var(--color-surface-soft);
   color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
   flex-shrink: 0;
+  border: 1px solid var(--color-border);
 }
 
 .chip-text h5 {
   font-size: 0.88rem;
   font-weight: 700;
+  color: var(--color-text-title);
   margin-bottom: 2px;
 }
 
@@ -625,14 +720,15 @@ button {
 }
 
 /* ==========================================================================
-   4. "WHAT'S ON OUR PLATE" (THE SIGNATURE MENU SECTION - FROM VIDEO)
+   8. "WHAT'S ON OUR PLATE" MENU SECTION (DARK INTERFACE)
    ========================================================================== */
 .whats-on-plate-section {
-  padding: 5.5rem 0;
-  background: #FFFFFF;
+  padding: 6rem 0;
+  background: var(--color-canvas);
+  position: relative;
 }
 
-/* Category Filter Bar */
+/* Category Filter Tabs */
 .plate-category-tabs {
   display: flex;
   justify-content: center;
@@ -648,56 +744,63 @@ button {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-text-body);
-  background: var(--color-surface-soft);
+  background: var(--color-card-surface);
   border: 1px solid var(--color-border);
   transition: all var(--transition-fast);
 }
 
 .cat-tab-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-border-hover);
+  color: var(--color-text-title);
+  background: var(--color-card-surface-elevated);
 }
 
 .cat-tab-btn.active {
   background: var(--color-primary);
   color: #FFFFFF;
   border-color: var(--color-primary);
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.28);
+  box-shadow: 0 4px 18px rgba(249, 115, 22, 0.4);
 }
 
 /* Search Box */
 .plate-search-box {
-  max-width: 460px;
+  max-width: 480px;
   margin: 0 auto 3.5rem;
   position: relative;
 }
 
 .plate-search-box input {
   width: 100%;
-  height: 50px;
-  padding: 0 1.25rem 0 2.85rem;
+  height: 52px;
+  padding: 0 1.25rem 0 3rem;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--color-border);
-  background: var(--color-bg);
+  background: var(--color-card-surface);
+  color: var(--color-text-title);
   font-size: 0.95rem;
   box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.plate-search-box input::placeholder {
+  color: var(--color-text-muted);
 }
 
 .plate-search-box input:focus {
   border-color: var(--color-primary);
-  background: #FFFFFF;
+  background: var(--color-card-surface-elevated);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
 }
 
 .plate-search-box svg {
   position: absolute;
-  left: 1.1rem;
+  left: 1.15rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-muted);
 }
 
-/* Menu Grid (Cards with Floating Circular Dishes - Video UI Style) */
+/* Menu Grid */
 .plate-dish-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -732,20 +835,20 @@ button {
 .dish-plate-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(234, 88, 12, 0.35);
+  border-color: var(--color-border-primary);
+  background: var(--color-card-surface-elevated);
 }
 
-/* Circular Round Dish Container that pops out */
 .dish-round-media {
   position: relative;
   width: 190px;
   height: 190px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
-  padding: 8px;
-  background: #FFFFFF;
+  padding: 6px;
+  background: #090C12;
   box-shadow: var(--shadow-dish-float);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   transition: transform 400ms ease;
 }
@@ -790,7 +893,7 @@ button {
 
 .dish-price-pill {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-primary);
   white-space: nowrap;
@@ -809,7 +912,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .dish-serving-note {
@@ -822,11 +925,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.45rem 0.95rem;
+  padding: 0.45rem 1rem;
   border-radius: var(--radius-pill);
-  background: var(--color-primary-subtle);
+  background: var(--color-primary-light);
   color: var(--color-primary);
-  border: 1px solid rgba(234, 88, 12, 0.25);
+  border: 1px solid var(--color-border-primary);
   font-size: 0.82rem;
   font-weight: 700;
   transition: all var(--transition-fast);
@@ -835,18 +938,20 @@ button {
 .add-order-btn:hover {
   background: var(--color-primary);
   color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
 }
 
 /* ==========================================================================
-   5. "GHAR KA KHANA" TIFFIN SERVICE (CAMPUS SPECIAL)
+   9. "GHAR KA KHANA" TIFFIN SERVICE (DARK CARD)
    ========================================================================== */
 .tiffin-showcase-section {
-  padding: 5.5rem 0;
+  padding: 6rem 0;
   background: var(--color-bg);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .tiffin-card-box {
-  background: #FFFFFF;
+  background: var(--color-card-surface);
   border-radius: var(--radius-card);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
@@ -863,7 +968,7 @@ button {
 
 .tiffin-visual-wrap {
   position: relative;
-  background: #0F172A;
+  background: #07090E;
   min-height: 380px;
 }
 
@@ -881,11 +986,11 @@ button {
 }
 
 /* ==========================================================================
-   6. "LET'S SEE WHAT OTHER SAYS" (TESTIMONIALS - FROM VIDEO)
+   10. "LET'S SEE WHAT OTHER SAYS" REVIEWS SECTION
    ========================================================================== */
 .reviews-section {
-  padding: 5.5rem 0;
-  background: #FFFFFF;
+  padding: 6rem 0;
+  background: var(--color-canvas);
 }
 
 .reviews-grid-3col {
@@ -901,7 +1006,7 @@ button {
 }
 
 .review-modern-card {
-  background: var(--color-bg);
+  background: var(--color-card-surface);
   border-radius: var(--radius-card);
   border: 1px solid var(--color-border);
   padding: 2rem;
@@ -909,12 +1014,13 @@ button {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
 .review-modern-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-primary);
+  border-color: var(--color-border-primary);
+  background: var(--color-card-surface-elevated);
 }
 
 .review-stars-row {
@@ -926,7 +1032,7 @@ button {
 .review-quote-text {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--color-text-title);
+  color: var(--color-text-strong);
   margin-bottom: 1.5rem;
   font-style: italic;
 }
@@ -943,6 +1049,7 @@ button {
   border-radius: 50%;
   background: var(--color-primary-light);
   color: var(--color-primary);
+  border: 1px solid var(--color-border-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -962,34 +1069,39 @@ button {
 }
 
 /* ==========================================================================
-   7. "EASY RECIPES & SPECIALS SENT TO YOUR INBOX" (NEWSLETTER - FROM VIDEO)
+   11. NEWSLETTER SUBSCRIPTION (DARK AMBIENT GRADIENT)
    ========================================================================== */
 .inbox-newsletter-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   background: var(--color-bg);
 }
 
 .newsletter-curved-card {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 50%),
+    var(--color-card-surface);
   color: #FFFFFF;
   border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
   padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
 
 .newsletter-title-video {
   font-size: clamp(2rem, 3.8vw, 2.75rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--color-text-title);
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
 
 .newsletter-subtitle-video {
   font-size: 1.05rem;
-  color: #94A3B8;
+  color: var(--color-text-body);
   max-width: 540px;
   margin: 0 auto 2.25rem;
 }
@@ -998,23 +1110,28 @@ button {
   display: flex;
   max-width: 500px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-pill);
   padding: 5px;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletter-input-pill-form:focus-within {
+  border-color: var(--color-primary);
 }
 
 .newsletter-input-pill-form input {
   flex-grow: 1;
   height: 48px;
   padding: 0 1.25rem;
-  color: #FFFFFF;
+  color: var(--color-text-title);
   font-size: 0.95rem;
 }
 
 .newsletter-input-pill-form input::placeholder {
-  color: #64748B;
+  color: var(--color-text-muted);
 }
 
 .newsletter-input-pill-form button {
@@ -1028,6 +1145,7 @@ button {
   font-size: 0.9rem;
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
 }
 
 .newsletter-input-pill-form button:hover {
@@ -1035,11 +1153,11 @@ button {
 }
 
 /* ==========================================================================
-   8. CAFE AMBIANCE GALLERY & OWNER
+   12. CAFE AMBIANCE GALLERY & OWNER
    ========================================================================== */
 .ambiance-gallery-section {
-  padding: 5.5rem 0;
-  background: #FFFFFF;
+  padding: 6rem 0;
+  background: var(--color-canvas);
 }
 
 .bento-gallery-wrap {
@@ -1071,7 +1189,8 @@ button {
   border-radius: var(--radius-card);
   overflow: hidden;
   cursor: pointer;
-  background: var(--color-surface-soft);
+  background: var(--color-card-surface);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   aspect-ratio: 4 / 3;
 }
@@ -1090,13 +1209,13 @@ button {
 }
 
 .bento-tile:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .bento-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(7, 9, 14, 0.92) 0%, transparent 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1106,21 +1225,22 @@ button {
 
 .bento-overlay h4 {
   font-size: 1.15rem;
-  color: #FFFFFF;
+  color: var(--color-text-title);
   margin-bottom: 2px;
 }
 
 .bento-overlay p {
   font-size: 0.78rem;
-  color: #CBD5E1;
+  color: var(--color-text-body);
 }
 
 /* Lightbox Modal */
 .lightbox-modal {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(12px);
+  background: rgba(7, 9, 14, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 200;
   display: flex;
   align-items: center;
@@ -1149,6 +1269,8 @@ button {
   max-height: 75vh;
   border-radius: var(--radius-md);
   overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 
 .lightbox-frame img {
@@ -1159,25 +1281,32 @@ button {
 
 .lightbox-close-btn {
   position: absolute;
-  top: -2.5rem;
+  top: -2.75rem;
   right: 0;
   color: #FFFFFF;
   font-size: 0.9rem;
   padding: 0.4rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
+  background: var(--color-surface-soft);
+}
+
+.lightbox-close-btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
 }
 
 /* ==========================================================================
-   9. TABLE RESERVATIONS & BOOKING
+   13. TABLE RESERVATIONS & BOOKING
    ========================================================================== */
 .booking-section {
-  padding: 5.5rem 0;
+  padding: 6rem 0;
   background: var(--color-bg);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .booking-split-box {
-  background: #FFFFFF;
+  background: var(--color-card-surface);
   border-radius: var(--radius-card);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
@@ -1193,7 +1322,7 @@ button {
 }
 
 .booking-info-pane {
-  background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+  background: var(--color-bg-secondary);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-right: 1px solid var(--color-border);
 }
@@ -1222,22 +1351,25 @@ button {
   border-radius: var(--radius-md);
   border: 1.5px solid var(--color-border);
   background: var(--color-bg);
+  color: var(--color-text-title);
   font-size: 0.95rem;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .form-input-ctrl:focus {
   border-color: var(--color-primary);
-  background: #FFFFFF;
+  background: var(--color-card-surface-elevated);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
 }
 
 /* ==========================================================================
-   10. SITE FOOTER
+   14. SITE FOOTER
    ========================================================================== */
 .modern-footer {
-  background: #0F172A;
-  color: #FFFFFF;
+  background: #05070A;
+  color: var(--color-text-body);
   padding: 5rem 0 2rem;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .footer-top-grid {
@@ -1261,12 +1393,12 @@ button {
 
 .footer-brand-title {
   font-size: 1.75rem;
-  color: #FFFFFF;
+  color: var(--color-text-title);
   margin-bottom: 0.5rem;
 }
 
 .footer-desc-p {
-  color: #94A3B8;
+  color: var(--color-text-body);
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -1274,11 +1406,11 @@ button {
 
 .footer-col-header {
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-accent-gold);
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
   margin-bottom: 1.25rem;
 }
 
@@ -1288,11 +1420,11 @@ button {
   flex-direction: column;
   gap: 0.75rem;
   font-size: 0.9rem;
-  color: #CBD5E1;
+  color: var(--color-text-body);
 }
 
 .footer-nav-list a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-text-title);
 }
 
 .footer-bottom-bar {
@@ -1302,9 +1434,9 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid #1E293B;
+  border-top: 1px solid var(--color-border-subtle);
   font-size: 0.82rem;
-  color: #64748B;
+  color: var(--color-text-muted);
 }
 
 @media (min-width: 768px) {
@@ -1313,7 +1445,9 @@ button {
   }
 }
 
-/* Toast */
+/* ==========================================================================
+   15. TOAST NOTIFICATION UTILITY
+   ========================================================================== */
 .toast-container {
   position: fixed;
   bottom: 2rem;
@@ -1326,18 +1460,21 @@ button {
 }
 
 .toast-message {
-  background: #0F172A;
-  color: #FFFFFF;
+  background: var(--color-card-surface-elevated);
+  color: var(--color-text-title);
   padding: 0.85rem 1.4rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-dish-float);
   font-size: 0.875rem;
   font-weight: 600;
+  border: 1px solid var(--color-border);
   border-left: 4px solid var(--color-primary);
   pointer-events: auto;
 }
 
-/* Floating Mobile Actions */
+/* ==========================================================================
+   16. FLOATING MOBILE ACTIONS BAR
+   ========================================================================== */
 .mobile-floating-bar {
   position: fixed;
   bottom: 1.25rem;
@@ -1364,5 +1501,5 @@ button {
   border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.9rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
